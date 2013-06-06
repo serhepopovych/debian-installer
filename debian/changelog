@@ -1,6 +1,11 @@
 debian-installer (2013XXXX) UNRELEASED; urgency=low
 
+  [ Samuel Thibault ]
   * Fix boot beep.
+
+  [ Cyril Brulebois ]
+  * Enable proposed updates in debian/rules for the wheezy point
+    releases.
 
  -- Samuel Thibault <sthibault@debian.org>  Wed, 01 May 2013 14:18:04 +0200
 
