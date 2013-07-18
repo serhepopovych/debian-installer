@@ -1,3 +1,10 @@
+debian-installer (2013XXXX) UNRELEASED; urgency=low
+
+  [ Martin Michlmayr ]
+  * Recognize QNAP TS-12x, TS-22x and TS-42x devices.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 18 Jul 2013 23:03:33 +0200
+
 debian-installer (20130613) wheezy; urgency=low
 
   [ Samuel Thibault ]
