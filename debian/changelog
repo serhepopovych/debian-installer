@@ -4,6 +4,11 @@ debian-installer (20130613+deb7u3) UNRELEASED; urgency=medium
   * Use APT `apt-config dump`s result to determine where to find the
     system's sources.list (Closes: #775136)
 
+  [ Cyril Brulebois ]
+  * build/Makefile: Move the drop_lang definition to the top of the file to
+    deal with incompatible changes in make 3.82 leading to the following
+    error: “recipe commences before first target” (Closes: #720719).
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 01 Sep 2015 15:06:16 +0200
 
 debian-installer (20130613+deb7u2) wheezy; urgency=low
