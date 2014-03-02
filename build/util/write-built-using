@@ -6,3 +6,10 @@ cat build/tmp/*/built-using.txt \
     | tr "\n" "," \
     | sed 's/,/, /g;s/, $//g' >> debian/debian-installer.substvars
 echo >> debian/debian-installer.substvars
+
+EXTRA_PACKAGES="bf-utf-source syslinux"
+echo -n "extra:Built-Using=" >> debian/debian-installer.substvars
+for package in $EXTRA_PACKAGES; do
+  dpkg-query -f '${source:Package} (= ${source:Version}), ' -W $package 2>/dev/null
+done >> debian/debian-installer.substvars
+echo >> debian/debian-installer.substvars
