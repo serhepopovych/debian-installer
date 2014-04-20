@@ -3,6 +3,11 @@ debian-installer (20130613+deb7u2) UNRELEASED; urgency=low
   [ Martin Michlmayr ]
   * Add support for QNAP HS-210.  Thanks to Kevin Woldt for the patch.
 
+  [ Cyril Brulebois ]
+  * Disable translation-status check when proposed-updates is enabled.
+    This file isn't going to be updated during stable's lifecycle, so
+    avoid pointless warning and sleeping.
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 03 Apr 2014 02:37:45 +0200
 
 debian-installer (20130613+deb7u1) wheezy; urgency=low

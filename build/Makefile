@@ -312,6 +312,7 @@ ifdef TRANSSTATUS
 	# Do this first to make possible warnings more visible.
 	@echo; \
 	if [ -f "$(TRANSSTATUS)" ]; then \
+		if [ "$(USE_PROPOSED_UPDATES)" != 1 ]; then \
 		olddate=$$(grep "^# Generated on:" $(TRANSSTATUS) | sed "s/.*: //"); \
 		if [ "$$olddate" ]; then \
 			if [ $$(( $$(date -u "+%s") - \
@@ -324,6 +325,7 @@ ifdef TRANSSTATUS
 		else \
 			echo "WARNING: no timestamp found in $(TRANSSTATUS)."; \
 			sleep 15; \
+		fi; \
 		fi; \
 		mkdir -p $(TREE)/usr/share/localechooser; \
 		cp $(TRANSSTATUS) $(TREE)/usr/share/localechooser/translation-status; \
