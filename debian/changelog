@@ -1,3 +1,10 @@
+debian-installer (20150428) UNRELEASED; urgency=medium
+
+  * In syslinux configuration, drop default64 statements that have not
+    been working since Squeeze
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
+
 debian-installer (20150422) unstable; urgency=medium
 
   * Update translation-status for the release.
