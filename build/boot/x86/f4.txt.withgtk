@@ -2,10 +2,10 @@
 
 0fUse one of these boot methods to rescue an existing install:07
 
-0frescue07
-  Boot into rescue mode.
 0frescuegui07
   Boot into rescue mode using the graphical installer.
+0frescue07
+  Boot into rescue mode.
 
 
 

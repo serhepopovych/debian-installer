@@ -4,6 +4,8 @@ debian-installer (20150428) UNRELEASED; urgency=medium
     been working since Squeeze
   * In syslinux configuration, reorder alternatives to put the gtk
     option first
+  * Default to graphical install, reorder and rephrase the help texts
+    (Closes: #485586)
 
  -- Didier Raboud <odyx@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
 
