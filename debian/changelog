@@ -2,6 +2,8 @@ debian-installer (20150428) UNRELEASED; urgency=medium
 
   * In syslinux configuration, drop default64 statements that have not
     been working since Squeeze
+  * In syslinux configuration, reorder alternatives to put the gtk
+    option first
 
  -- Didier Raboud <odyx@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
 
