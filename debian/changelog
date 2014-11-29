@@ -21,6 +21,9 @@ debian-installer (201410XX) UNRELEASED; urgency=medium
   * Update (linux) i386 config to pull 586 packages instead of 486 ones,
     since the minimal requirements on i386 (consistency!) have been bumped.
 
+  [ Samuel Thibault ]
+  * Update documentation of required minimum disk size.
+
  -- Karsten Merker <merker@debian.org>  Thu, 02 Oct 2014 20:12:28 +0200
 
 debian-installer (20141002) unstable; urgency=low
