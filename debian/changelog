@@ -23,6 +23,7 @@ debian-installer (201410XX) UNRELEASED; urgency=medium
 
   [ Samuel Thibault ]
   * Update documentation of required minimum disk size.
+  * hurd: Also create /servers/startup
 
  -- Karsten Merker <merker@debian.org>  Thu, 02 Oct 2014 20:12:28 +0200
 

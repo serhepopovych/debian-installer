@@ -533,8 +533,9 @@ ifeq ($(DEB_HOST_ARCH_OS),hurd)
 	# be copying it along with the libraries.
 	ln -sf ld.so.1 $(TREE)/lib/ld.so
 
-	# We need /servers/exec at boot time
+	# We need /servers/exec and startup at boot time
 	touch $(TREE)/servers/exec
+	touch $(TREE)/servers/startup
 endif
 endif
 
