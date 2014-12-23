@@ -25,6 +25,10 @@ debian-installer (201410XX) UNRELEASED; urgency=medium
   * Update documentation of required minimum disk size.
   * hurd: Also create /servers/startup
 
+  [ Didier Raboud ]
+  * Add Lines boot pictures for x86 Linux, Hurd and kFreeBSD; also make
+    these default
+
  -- Karsten Merker <merker@debian.org>  Thu, 02 Oct 2014 20:12:28 +0200
 
 debian-installer (20141002) unstable; urgency=low
