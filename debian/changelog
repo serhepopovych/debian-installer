@@ -8,6 +8,10 @@ debian-installer (20150108) UNRELEASED; urgency=medium
     0.7.3-1 because d-i uses options that are not supported in the wheezy
     version of the package.
 
+  [ Karsten Merker ]
+  * Add boot/arm/u-boot-image-config (a list of u-boot components and their
+    offsets on disk, needed to create bootable images for arm-based systems).
+
  -- Didier Raboud <odyx@debian.org>  Wed, 07 Jan 2015 21:47:10 +0100
 
 debian-installer (20150107) unstable; urgency=medium
