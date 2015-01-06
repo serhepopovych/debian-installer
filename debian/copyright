@@ -25,3 +25,11 @@ a rebuilt-from-scratch "debian" word.
     build/boot/hurd/pics/joy-hurd.{svg,png}
     build/boot/kfreebsd/pics/joy-kbsd.{svg,png}
     build/boot/x86/pics/joy.{svg,png}
+
+The Lines theme images (list of files below) have been designed from the
+Lines theme (© 2014 Juliette Taka BELIN, GPLv2+) but use the klowner
+layout and.
+
+    build/boot/hurd/pics/lines-hurd.svg
+    build/boot/kfreebsd/pics/lines-kbsd.svg
+    build/boot/x86/pics/lines.svg
