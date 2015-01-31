@@ -2,6 +2,8 @@ debian-installer (20150108) UNRELEASED; urgency=medium
 
   [ Didier Raboud ]
   * Correct typo and joy images paths in debian/copyright
+  * Use APT `apt-config dump`s result to determine where to find the
+    system's sources.list (Closes: #775136)
 
   [ Raphaël Hertzog ]
   * Bump Build-Depends on dns323-firmware-tools to require version

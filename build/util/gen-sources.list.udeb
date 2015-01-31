@@ -45,8 +45,20 @@ get_mirrors() {
 	done
 }
 
+# Cache the apt configuration dump, with only the needed namespace
+APT_CONFIG=$(apt-config dump | grep '^Dir::Etc')
+
+# Get the system apt directory
+APT_DIR_ETC=$(echo "$APT_CONFIG" | sed -n -e 's/^Dir::Etc *\"\(.*\)\";$/\1/p')
+
+# Fetch APT's sources.list
+APT_SOURCELIST=$(echo "$APT_CONFIG" | sed -n -e 's/^Dir::Etc::sourcelist *\"\(.*\)\";$/\1/p')
+
+# Fetch APT' sources.list.d
+APT_SOURCEPARTS=$(echo "$APT_CONFIG" | sed -n -e 's/^Dir::Etc::sourceparts *\"\(.*\)\";$/\1/p')
+
 # Also use mirrors defined in files in $SOURCES_LIST.d/
-MIRRORS="$(get_mirrors $SOURCES_LIST $SOURCES_LIST.d/*)"
+MIRRORS="$(get_mirrors $SOURCES_LIST /$APT_DIR_ETC/$APT_SOURCELIST /$APT_DIR_ETC/$APT_SOURCEPARTS)"
 
 if ! which 'wget' >/dev/null; then
 	echo "ERROR: the command wget is not available; please install it" >&2
