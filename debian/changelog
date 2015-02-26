@@ -13,6 +13,9 @@ debian-installer (20150108) UNRELEASED; urgency=medium
     offsets on disk, needed to create bootable images for arm-based systems).
   * Provide u-boot binaries for armhf systems without u-boot in flash.
 
+  [ Helge Deller ]
+  * alpha: Switch to KERNELVERSION
+
  -- Didier Raboud <odyx@debian.org>  Wed, 07 Jan 2015 21:47:10 +0100
 
 debian-installer (20150107) unstable; urgency=medium
