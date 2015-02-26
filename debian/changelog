@@ -18,6 +18,9 @@ debian-installer (20150108) UNRELEASED; urgency=medium
   [ Helge Deller ]
   * alpha: Switch to KERNELVERSION
 
+  [ Michael Walle ]
+  * Add support for the Buffalo Linkstation LS-CHLv2/LS-XHL (Closes: #744716).
+
  -- Didier Raboud <odyx@debian.org>  Wed, 07 Jan 2015 21:47:10 +0100
 
 debian-installer (20150107) unstable; urgency=medium
