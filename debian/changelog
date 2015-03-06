@@ -17,6 +17,7 @@ debian-installer (20150108) UNRELEASED; urgency=medium
 
   [ Helge Deller ]
   * alpha: Switch to KERNELVERSION
+  * alpha,hppa: add debian-ports gpg keyring
 
   [ Michael Walle ]
   * Add support for the Buffalo Linkstation LS-CHLv2/LS-XHL (Closes: #744716).
