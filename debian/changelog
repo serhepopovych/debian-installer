@@ -1,3 +1,11 @@
+debian-installer (20150401) UNRELEASED; urgency=medium
+
+  [ Karsten Merker ]
+  * Add util/gen-hd-image (a script to create partitioned harddisk images
+    from a directory and optionally install a bootloader into the image).
+
+ -- Karsten Merker <merker@debian.org>  Wed, 01 Apr 2015 22:36:01 +0200
+
 debian-installer (20150324) unstable; urgency=medium
 
   [ Didier Raboud ]

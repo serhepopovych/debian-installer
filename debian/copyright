@@ -33,3 +33,8 @@ layout.
     build/boot/hurd/pics/lines-hurd.svg
     build/boot/kfreebsd/pics/lines-kbsd.svg
     build/boot/x86/pics/lines.svg
+
+The gen-hd-image tool, used to build bootable partitioned disk images, is
+Copyright 2014,2015 Karsten Merker <merker@debian.org> and is dual-licensed.
+It is provided under the terms of the GNU GPL version 2 or any later
+version, or alternatively under the terms of the X11 license.

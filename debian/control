@@ -68,11 +68,12 @@ Build-Depends:
 #		default.)
 	hfsutils [powerpc],
 #		For making bootable HFS USB sticks for powerpc.
-	dosfstools [i386 ia64 m68k amd64 arm64],
+	dosfstools [i386 ia64 m68k amd64 armhf arm64],
 #		For creating FAT filesystems with mkfs.msdos.
 #		Of course i386/amd64 use this for floppies, CDs etc.
 #		ia64 uses it for floppies (?)
 #		m68k uses it for atari floppies
+#		armhf uses it for building bootable SD card images
 	cpio,
 #		For creating initramfs images.
 	xz-utils,
@@ -142,7 +143,7 @@ Build-Depends:
 	tofrodos [i386 amd64 kfreebsd-i386 kfreebsd-amd64],
 #		For todos, used on files that need to be accessible from
 #		DOS.
-	mtools [i386 ia64 m68k amd64 arm64 kfreebsd-i386 kfreebsd-amd64 hurd-i386],
+	mtools [i386 ia64 m68k amd64 armhf arm64 kfreebsd-i386 kfreebsd-amd64 hurd-i386],
 #		mcopy is used to put files onto FAT filesystems w/o
 #		mounting them.
 # 
