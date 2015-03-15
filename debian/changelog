@@ -14,6 +14,8 @@ debian-installer (20150108) UNRELEASED; urgency=medium
   * Add boot/arm/u-boot-image-config (a list of u-boot components and their
     offsets on disk, needed to create bootable images for arm-based systems).
   * Provide u-boot binaries for armhf systems without u-boot in flash.
+  * Add a workaround for the console baudrate mismatch on some i.MX6-based
+    systems in boot/arm/bootscr.mainline_common.
 
   [ Helge Deller ]
   * alpha: Switch to KERNELVERSION
