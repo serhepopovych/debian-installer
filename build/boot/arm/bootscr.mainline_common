@@ -22,6 +22,11 @@ if test ! -e ${devtype} ${devnum}:${bootpart} dtbs/${fdtfile}; then
   exit 0
 fi
 
+# Some i.MX6-based systems do not encode the baudrate in the console variable
+if test "${console}" = "ttymxc0" && test -n "${baudrate}"; then
+  setenv console "${console},${baudrate}"
+fi
+
 if test -n "${console}"; then
   setenv bootargs "${bootargs} console=${console}"
 fi
