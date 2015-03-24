@@ -29,6 +29,7 @@ debian-installer (20150108) UNRELEASED; urgency=medium
     substvar, making it possible to track packages mentioned in the
     EXTRA_PACKAGES variable (currently set to "bf-utf-source syslinux").
     Thanks to Ansgar Burchardt for the reports (Closes: #696418, #700026).
+  * Update translation-status for the release.
 
  -- Didier Raboud <odyx@debian.org>  Wed, 07 Jan 2015 21:47:10 +0100
 
