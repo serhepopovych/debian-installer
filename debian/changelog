@@ -6,6 +6,8 @@ debian-installer (20150401) UNRELEASED; urgency=medium
   * Add SD-card image build support for hd-media builds on armhf.
   * Add SD-card image and tftpboot tarball build support for netboot builds
     on armhf.
+  * Add u-boot-imx, u-boot-omap and u-boot-sunxi to the "built-using"
+    package list.
 
  -- Karsten Merker <merker@debian.org>  Wed, 01 Apr 2015 22:36:01 +0200
 
