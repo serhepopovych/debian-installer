@@ -364,6 +364,7 @@ case "${BUILDTYPE}" in
     ;;
   partition)
     mv "${TEMP_FS_IMAGEFILE}" "${IMAGEFILE}"
+    chmod +r "${IMAGEFILE}"
     ;;
 esac
 

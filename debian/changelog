@@ -8,6 +8,8 @@ debian-installer (20150401) UNRELEASED; urgency=medium
     on armhf.
   * Add u-boot-imx, u-boot-omap and u-boot-sunxi to the "built-using"
     package list.
+  * util/gen-hd-image: set proper permissions for the generated partition
+    image.
 
  -- Karsten Merker <merker@debian.org>  Wed, 01 Apr 2015 22:36:01 +0200
 
