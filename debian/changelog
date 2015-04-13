@@ -13,6 +13,9 @@ debian-installer (20150401) UNRELEASED; urgency=medium
   * Add a symlink boot.scr.uimg -> debian-installer/armhf/tftpboot.scr
     in the armhf netboot.tar.gz to support network autoboot with modern
     u-boot versions.
+  * Provide u-boot and SD-card images for the Olimex A20-OLinuXino-MICRO
+    and for the LinkSprite pcDuino3 (support for both has been added
+    in u-boot 2014.10+dfsg1-5).
 
   [ Ben Hutchings ]
   * Include fb-modules on powerpc if available (Closes: #782059).
