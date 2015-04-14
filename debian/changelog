@@ -25,6 +25,7 @@ debian-installer (20150401) UNRELEASED; urgency=medium
     screens by restoring the menu.cfg include which was probably dropped
     accidentally (Closes: #764154, #781853, #781992), as pointed out by
     Vaclav Ovsik. Thanks!
+  * Update translation-status for the release.
 
  -- Karsten Merker <merker@debian.org>  Wed, 01 Apr 2015 22:36:01 +0200
 
