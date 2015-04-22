@@ -1,3 +1,9 @@
+debian-installer (20150419) UNRELEASED; urgency=medium
+
+  * Update translation-status for the release.
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 22 Apr 2015 21:40:57 +0200
+
 debian-installer (20150418) unstable; urgency=medium
 
   [ Karsten Merker ]
