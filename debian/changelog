@@ -9,11 +9,12 @@ debian-installer (20150428) UNRELEASED; urgency=medium
     (Closes: #485586)
 
   [ Steven Chamberlain]
-  * Rebuild using udebs from the jessie-kfreebsd suite, also using
-    that as /etc/default-release, as used by choose-mirror.
   * Slightly reduce kfreebsd-amd64 MFSROOT to 68 MiB, reducing total
     memory requirement to 160 MiB and leaving about 4 MiB safety margin.
     (Closes: #783773)
+  * For kfreebsd, override /etc/default-release to unstable, and use
+    jessie-kfreebsd as the default stable release, as used by
+    choose-mirror.
 
  -- Didier Raboud <odyx@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
 
