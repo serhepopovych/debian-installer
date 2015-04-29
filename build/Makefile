@@ -144,7 +144,8 @@ endef
 ifeq ($(DEB_HOST_ARCH),kfreebsd-i386)
 MFSROOT_LIMIT := 42m
 else ifeq ($(DEB_HOST_ARCH),kfreebsd-amd64)
-MFSROOT_LIMIT := 72m
+# See Bug#783773 for derivation.
+MFSROOT_LIMIT := 68m
 endif
 
 define mkfs.ufs1
