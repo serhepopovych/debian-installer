@@ -1,6 +1,11 @@
 debian-installer (20150428) UNRELEASED; urgency=medium
 
   [ Didier Raboud ]
+  * jessie is released! The next target is stretch; update those files accordingly:
+    - build/boot/x86/xen/debian.cfg
+    - build/config/common
+    - doc/devel/internals/building.xml
+    - debian/rules
   * In syslinux configuration, drop default64 statements that have not
     been working since Squeeze
   * In syslinux configuration, reorder alternatives to put the gtk
