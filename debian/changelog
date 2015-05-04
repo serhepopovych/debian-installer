@@ -12,6 +12,8 @@ debian-installer (20150428) UNRELEASED; urgency=medium
     option first
   * Default to graphical install, reorder and rephrase the help texts
     (Closes: #485586)
+  * Swap amd64 and i386 to let the first be the norm, and the latter be
+    the special case
 
   [ Steven Chamberlain]
   * Slightly reduce kfreebsd-amd64 MFSROOT to 68 MiB, reducing total

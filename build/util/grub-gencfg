@@ -9,9 +9,9 @@
 #    INITRD             Normal initrd to use (required)
 #    INITRD_GTK         Graphical installer initrd (optional)
 #
-#    KERNEL64           Alternative kernel for optional 64-bit entries
-#    INITRD64           Alternative initrd for optional 64-bit entries
-#    INITRD64_GTK       Alternative graphical initrd for optional 64-bit entries
+#    KERNEL32           Alternative kernel for optional 32-bit entries
+#    INITRD32           Alternative initrd for optional 32-bit entries
+#    INITRD32_GTK       Alternative graphical initrd for optional 32-bit entries
 #
 #    THEME_PATH         Path (in boot env) where themes are kept
 #    HEADER             Local path to file cat include as a header
@@ -28,11 +28,11 @@
 #
 #  ./gen-grub-cfg \
 #    KERNEL "/%install%/vmlinuz" \
-#    KERNEL64 "/%install-amd%/vmlinuz" \
+#    KERNEL32 "/%install-x86%/vmlinuz" \
 #    INITRD "/%install%/initrd.gz" \
-#    INITRD64 "/%install-amd%/initrd.gz" \
+#    INITRD32 "/%install-x86%/initrd.gz" \
 #    INITRD_GTK "/%install%/gtk/initrd.gz" \
-#    INITRD64_GTK "/%install-amd%/gtk/initrd.gz" \
+#    INITRD32_GTK "/%install-x86%/gtk/initrd.gz" \
 #    THEME_PATH "/boot/grub/theme/" \
 #    HEADER "build/boot/x86/grub/grub-efi.cfg" \
 #    -- vga=788
@@ -60,8 +60,8 @@ die "No kernel?" unless $VARS{KERNEL};
 die "No initrd?" unless $VARS{INITRD};
 
 my $graphical = defined $VARS{INITRD_GTK};
-my $sixtyfour = defined $VARS{KERNEL64} && defined $VARS{INITRD64}
-    && (!$graphical || defined $VARS{INITRD64_GTK});
+my $thirtytwo = defined $VARS{KERNEL32} && defined $VARS{INITRD32}
+    && (!$graphical || defined $VARS{INITRD32_GTK});
 my $themed = defined $VARS{THEME_PATH};
 
 my @menu_number = (1);
@@ -113,7 +113,7 @@ sub menuentry ($;%)
 {
     my ($title,%xattr) = @_;
 
-    $xattr{SixtyFour} ||= 0;
+    $xattr{ThirtyTwo} ||= 0;
     $xattr{Graphical} ||= 0;
 
     $xattr{Expert} ||= 0;
@@ -124,14 +124,14 @@ sub menuentry ($;%)
     $xattr{Quiet} = !$xattr{Expert} unless defined $xattr{Quiet};
 
     return if $xattr{Graphical} && !$graphical;
-    return if $xattr{SixtyFour} && !$sixtyfour;
+    return if $xattr{ThirtyTwo} && !$thirtytwo;
 
     die "automated expert?" if $xattr{Expert} && $xattr{Auto};
 
-    my $kernel = $xattr{SixtyFour} ? $VARS{KERNEL64} : $VARS{KERNEL};
+    my $kernel = $xattr{ThirtyTwo} ? $VARS{KERNEL32} : $VARS{KERNEL};
     my $initrd = $xattr{Graphical} ? $VARS{INITRD_GTK} : $VARS{INITRD};
-    $initrd = $xattr{Graphical} ? $VARS{INITRD64_GTK} : $VARS{INITRD64}
-        if $xattr{SixtyFour};
+    $initrd = $xattr{Graphical} ? $VARS{INITRD32_GTK} : $VARS{INITRD32}
+        if $xattr{ThirtyTwo};
 
     die "no kernel" unless $kernel;
     die "no initrd" unless $initrd;
@@ -201,8 +201,8 @@ start_submenu("Advanced options ..."); {
 
                 $one->("... Install with speech synthesis", Speach => 1);
                 $one->("... Install with speech synthesis", Graphical => 1, Speach => 1);
-                $one->("... 64 bit speech install", SixtyFour => 1, Graphical => 1, Speach => 1)
-                    if $sixtyfour;
+                $one->("... 32 bit speech install", ThirtyTwo => 1, Graphical => 1, Speach => 1)
+                    if $thirtytwo;
             } end_submenu(); # $desktop submenu
         } # Desktop loop
     } end_submenu(); # Desktop submenu
