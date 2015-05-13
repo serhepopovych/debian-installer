@@ -13,6 +13,7 @@ debian-installer (20150428) UNRELEASED; urgency=medium
       (Closes: #485586)
     - Swap amd64 and i386 to let the first be the norm, and the latter be the
       special case, rename labels
+  * Bump linux kernel version from 3.16.0-4 to 4.0.0-1
 
   [ Steven Chamberlain]
   * Slightly reduce kfreebsd-amd64 MFSROOT to 68 MiB, reducing total
