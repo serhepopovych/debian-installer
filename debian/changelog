@@ -23,6 +23,9 @@ debian-installer (20150428) UNRELEASED; urgency=medium
     jessie-kfreebsd as the default stable release, as used by
     choose-mirror.
 
+  [ Aurelien Jarno ]
+  * Use mklibs-copy instead of mklibs, as discussed on the mailing list.
+
  -- Didier Raboud <odyx@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
 
 debian-installer (20150422) unstable; urgency=medium
