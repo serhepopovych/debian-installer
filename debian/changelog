@@ -1,3 +1,11 @@
+debian-installer (20150422+deb8u1) UNRELEASED; urgency=medium
+
+  [ Martin Michlmayr ]
+  * Append DTB for SheevaPlug, SheevaPlug eSATA and GuruPlug. (Closes:
+    #785588)
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
+
 debian-installer (20150422) unstable; urgency=medium
 
   * Update translation-status for the release.
