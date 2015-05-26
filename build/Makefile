@@ -859,7 +859,7 @@ $(STAMPS)extra-$(targetstring)-stamp: $(STAMPS)get_udebs-$(targetstring)-stamp
 	mkdir -p $(TREE)
 	echo -n > $(TEMP)/diskusage.txt
 	echo -n > $(TEMP_UDEB_LIST)
-	
+
 	set -e; \
 	for file in $(UDEBS); do \
 		cp $(UDEBDIR)/$$file* $(TREE) ; \
