@@ -30,6 +30,15 @@ debian-installer (20150428) UNRELEASED; urgency=medium
   * Append DTB for SheevaPlug, SheevaPlug eSATA and GuruPlug. (Closes:
     #785588)
 
+  [ Cyril Brulebois ]
+  * Adjust u-boot-image-config, thanks to Vagrant Cascadian
+    (Closes: #786369):
+    - MX6_Cubox-i is now upstream, under a different name, with support
+      for hummingboard-i1 and hummingboard-i2ex.
+    - Wandboard now supports all three variants (Solo, Dual-Lite, and
+      Quad), instead of just the Quad one.
+    - PandaBoard: use u-boot.img instead of u-boot.bin
+
  -- Didier Raboud <odyx@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
 
 debian-installer (20150422) unstable; urgency=medium

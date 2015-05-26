@@ -5,12 +5,12 @@
 #
 # Images from u-boot-imx
 MX53LOCO /usr/lib/u-boot/mx53loco/u-boot.imx 2
-MX6_Cubox-i /usr/lib/u-boot/mx6_cubox-i/SPL 2 /usr/lib/u-boot/mx6_cubox-i/u-boot.img 84
-Wandboard_Quad /usr/lib/u-boot/wandboard_quad/u-boot.imx 2
+MX6_Cubox-i /usr/lib/u-boot/mx6cuboxi/SPL 2 /usr/lib/u-boot/mx6cuboxi/u-boot.img 138
+Wandboard /usr/lib/u-boot/wandboard/SPL 2 /usr/lib/u-boot/wandboard/u-boot.img 138
 #
 # Images from u-boot-omap
 BeagleBoneBlack /usr/lib/u-boot/am335x_boneblack/MLO 256 /usr/lib/u-boot/am335x_boneblack/u-boot.img 768
-PandaBoard /usr/lib/u-boot/omap4_panda/MLO 256 /usr/lib/u-boot/omap4_panda/u-boot.bin 768
+PandaBoard /usr/lib/u-boot/omap4_panda/MLO 256 /usr/lib/u-boot/omap4_panda/u-boot.img 768
 #
 # Images from u-boot-sunxi
 A10-OLinuXino-Lime /usr/lib/u-boot/A10-OLinuXino-Lime/u-boot-sunxi-with-spl.bin 16
