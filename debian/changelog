@@ -38,6 +38,7 @@ debian-installer (20150428) UNRELEASED; urgency=medium
     - Wandboard now supports all three variants (Solo, Dual-Lite, and
       Quad), instead of just the Quad one.
     - PandaBoard: use u-boot.img instead of u-boot.bin
+  * Bump linux kernel version from 4.0.0-1 to 4.0.0-2
 
   [ Ian Campbell ]
   * Adjust build to handle DTBs in subdirectories, currently the case on arm64
