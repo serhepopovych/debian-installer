@@ -16,11 +16,6 @@ users during the installation of the <emphasis>desktop</emphasis> and
 <emphasis>desktop</emphasis> tasks of <classname>tasksel</classname>.
 </para>
 
-<para>
-Given its great importance in a localized desktop system, the
-<classname>menu</classname> package (menu sections) has been added to
-this list.</para>
-
 <para>This includes one package maintained by the &d-i; team (win32-loader) as well as a few
 other Debian packages:
 </para>
