@@ -33,6 +33,8 @@ debian-installer (20150428) UNRELEASED; urgency=medium
   * Drop kirkwood/netboot-gtk image since it's never been used.
   * Append DTB for OpenRD Base, Client and Ultimate.
   * Append DTB for LaCie NAS devices.
+  * Remove D-Link DNS-323 / Conceptronic CH3SNAS image since this device
+    is no longer supported in the kernel.
 
   [ Cyril Brulebois ]
   * Adjust u-boot-image-config, thanks to Vagrant Cascadian
