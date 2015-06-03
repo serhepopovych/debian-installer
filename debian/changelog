@@ -31,6 +31,7 @@ debian-installer (20150428) UNRELEASED; urgency=medium
     #785588)
   * Add image for Seagate DockStar.
   * Drop kirkwood/netboot-gtk image since it's never been used.
+  * Append DTB for OpenRD Base, Client and Ultimate.
 
   [ Cyril Brulebois ]
   * Adjust u-boot-image-config, thanks to Vagrant Cascadian
