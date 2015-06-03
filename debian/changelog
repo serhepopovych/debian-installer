@@ -30,6 +30,7 @@ debian-installer (20150428) UNRELEASED; urgency=medium
   * Append DTB for SheevaPlug, SheevaPlug eSATA and GuruPlug. (Closes:
     #785588)
   * Add image for Seagate DockStar.
+  * Drop kirkwood/netboot-gtk image since it's never been used.
 
   [ Cyril Brulebois ]
   * Adjust u-boot-image-config, thanks to Vagrant Cascadian
