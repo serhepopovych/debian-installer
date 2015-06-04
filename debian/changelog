@@ -4,6 +4,9 @@ debian-installer (20150422+deb8u1) UNRELEASED; urgency=medium
   * Append DTB for SheevaPlug, SheevaPlug eSATA and GuruPlug. (Closes:
     #785588)
 
+  [ Cyril Brulebois ]
+  * Enable p-u in debian/rules for the jessie point releases.
+
  -- Cyril Brulebois <kibi@debian.org>  Sun, 29 Mar 2015 17:43:38 +0200
 
 debian-installer (20150422) unstable; urgency=medium
