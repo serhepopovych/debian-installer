@@ -4,8 +4,13 @@
 
 # 1) Check the files are okay
 
-if [ ! -e kernel ]; then
-	echo "You have to download the kernel file from the debian-installer for QNAP."
+if [ ! -e kernel-6281 ]; then
+	echo "You have to download the kernel-6281 file from the debian-installer for QNAP."
+	exit 1
+fi
+
+if [ ! -e kernel-6282 ]; then
+	echo "You have to download the kernel-6282 file from the debian-installer for QNAP."
 	exit 1
 fi
 
@@ -61,7 +66,33 @@ if [ -n "$qnap" ]; then
 	fi
 fi
 
-# 3) Change the MAC address on Kirkwood-based QNAP devices
+# 3) Determine the CPU variant
+if [ ! -e /proc/cpuinfo ]; then
+	echo "Cannot determine CPU as /proc/cpuinfo doesn't exist"
+	exit 1
+fi
+
+# cpuinfo should contain "Processor name" or "Processor"
+cpu=$(grep "^Processor" /proc/cpuinfo)
+if [ -z "$cpu" ]; then
+	echo "Cannot determine CPU from /proc/cpuinfo"
+	exit 1
+fi
+
+case "$cpu" in
+	*"88F6281"*)
+		variant=6281
+		;;
+	*"88F6282"*)
+		variant=6282
+		;;
+	*)
+		echo "Cannot determine CPU variant"
+		exit 1
+		;;
+esac
+
+# 4) Change the MAC address on Kirkwood-based QNAP devices
 uboot_mac() {
 	ubootcfg -b 0 -f /dev/mtdblock4 -o - | grep "^ethaddr=" | sed "s/^ethaddr=//"
 }
@@ -133,7 +164,7 @@ rmdir $path
 
 # 5) Finally, write the installer to flash
 printf "Writing debian-installer to flash... "
-cat kernel > /dev/mtdblock1
+cat kernel-$variant > /dev/mtdblock1
 cat initrd.gz > /dev/mtdblock2
 echo "done."
 echo "Please reboot your QNAP device."

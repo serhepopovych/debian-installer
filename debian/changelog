@@ -36,6 +36,8 @@ debian-installer (20150428) UNRELEASED; urgency=medium
   * Remove D-Link DNS-323 / Conceptronic CH3SNAS image since this device
     is no longer supported in the Debian kernel due do size limitations.
   * Append DTB for QNAP NAS devices.
+  * Determine the CPU variant on QNAP NAS devices in order to use the
+    right DTB.
 
   [ Cyril Brulebois ]
   * Adjust u-boot-image-config, thanks to Vagrant Cascadian
