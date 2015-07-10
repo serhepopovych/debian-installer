@@ -48,6 +48,9 @@ debian-installer (20150428) UNRELEASED; urgency=medium
       Quad), instead of just the Quad one.
     - PandaBoard: use u-boot.img instead of u-boot.bin
   * Bump linux kernel version from 4.0.0-1 to 4.0.0-2
+  * Update partman-auto-raid-recipe.txt to mention support for <extra-args>,
+    thanks to partman-md and partman-auto-raid patches by Philipp Hahn
+    (See: #790941).
 
   [ Ian Campbell ]
   * Adjust build to handle DTBs in subdirectories, currently the case on arm64

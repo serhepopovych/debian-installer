@@ -5,11 +5,15 @@ it how to construct the RAID array(s).
 The preseedable parameter partman-auto-raid/recipe should consist of
 recipes separated by periods ("."). The recipes are of the form:
 
-<raidtype> <devcount> <sparecount> <fstype> <mountpoint> <devices> <sparedevices>
+<raidtype> <devcount> <sparecount> <fstype> <mountpoint> <devices> <sparedevices> <extra-args>
 
 where <devices> is a list of the devices to make up the RAID and
 <sparedevices> is a list of the spare devices in the array; devices are
 separated by hashes ("#").
+
+<extra-args> can be used to pass extra arguments to "mdadm --create", like
+"--layout o2". Blanks must be substituted by hashes ("#"), e.g. you have
+to specify "--layout#o2".
 
 For example:
 d-i partman-auto-raid recipe string  \
