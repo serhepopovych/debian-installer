@@ -51,6 +51,9 @@ debian-installer (20150428) UNRELEASED; urgency=medium
   * Update partman-auto-raid-recipe.txt to mention support for <extra-args>,
     thanks to partman-md and partman-auto-raid patches by Philipp Hahn
     (See: #790941).
+  * Drop all build-dep bits that are specific to ia64, as this architecture has
+    been discontinued for a while. This notably removes the reference to elilo
+    (See: #768427).
 
   [ Ian Campbell ]
   * Adjust build to handle DTBs in subdirectories, currently the case on arm64
