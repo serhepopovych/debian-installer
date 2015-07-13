@@ -54,6 +54,7 @@ debian-installer (20150428) UNRELEASED; urgency=medium
   * Drop all build-dep bits that are specific to ia64, as this architecture has
     been discontinued for a while. This notably removes the reference to elilo
     (Closes: #768427).
+  * Update translation-status for the release.
 
   [ Ian Campbell ]
   * Adjust build to handle DTBs in subdirectories, currently the case on arm64
