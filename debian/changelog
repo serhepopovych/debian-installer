@@ -1,7 +1,8 @@
 debian-installer (20150428) UNRELEASED; urgency=medium
 
   [ Didier Raboud ]
-  * jessie is released! The next target is stretch; update those files accordingly:
+  * jessie is released! The next target is stretch; update those files
+    accordingly:
     - build/boot/x86/xen/debian.cfg
     - build/config/common
     - doc/devel/internals/building.xml
