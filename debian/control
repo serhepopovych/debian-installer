@@ -175,6 +175,6 @@ Package: debian-installer
 Architecture: any
 Built-Using: ${initrd:Built-Using}, ${extra:Built-Using}
 Depends: ${misc:Depends}
-Description: Debian installer
+Description: Debian Installer documentation
  This package currently only contains some documentation for the Debian
  installer. We welcome suggestions about what else to put in it.

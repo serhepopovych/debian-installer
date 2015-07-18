@@ -56,6 +56,8 @@ debian-installer (20150428) UNRELEASED; urgency=medium
     been discontinued for a while. This notably removes the reference to elilo
     (Closes: #768427).
   * Update translation-status for the release.
+  * Mention documentation in short description, fixing description-is-pkg-name
+    lintian tag and reflecting the current contents of the .deb package.
 
   [ Ian Campbell ]
   * Adjust build to handle DTBs in subdirectories, currently the case on arm64
