@@ -1,7 +1,7 @@
 debian-installer (20150721) UNRELEASED; urgency=medium
 
   * Add missing 32bits rescue menu entries in multiarch 'Advanced
-    options' menu
+    options' menu (Closes: #793118)
 
  -- Didier Raboud <odyx@debian.org>  Tue, 21 Jul 2015 09:27:05 +0200
 
