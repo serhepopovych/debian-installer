@@ -9,6 +9,9 @@ debian-installer (20150721) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump linux kernel version from 4.0.0-2 to 4.1.0-1
+  * Replace ttf-cjk-compact-udeb with fonts-android-udeb, thanks to
+    Kenshi Muto for the input on the CJK front and for the patch!
+    (Closes: #794432).
 
  -- Didier Raboud <odyx@debian.org>  Tue, 21 Jul 2015 09:27:05 +0200
 

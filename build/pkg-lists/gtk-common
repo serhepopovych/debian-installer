@@ -8,9 +8,9 @@ xserver-xorg-core-udeb
 gtk2-engines-udeb
 
 # Fonts: see http://wiki.debian.org/DebianInstaller/GUIFonts
+fonts-android-udeb
 ttf-freefont-udeb
 fonts-farsiweb-udeb
-ttf-cjk-compact-udeb
 fonts-tibetan-machine-udeb
 ttf-dejavu-udeb
 fonts-khmeros-udeb
