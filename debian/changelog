@@ -12,6 +12,7 @@ debian-installer (20150721) UNRELEASED; urgency=medium
   * Replace ttf-cjk-compact-udeb with fonts-android-udeb, thanks to
     Kenshi Muto for the input on the CJK front and for the patch!
     (Closes: #794432).
+  * Update translation-status for the release.
 
  -- Didier Raboud <odyx@debian.org>  Tue, 21 Jul 2015 09:27:05 +0200
 
