@@ -1,3 +1,10 @@
+debian-installer (20150815) UNRELEASED; urgency=medium
+
+  * Add syslinux machinery to use ifcpu64.c32 on multi-arch CDs, for CPU
+    64-bits capability detection
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 15 Aug 2015 15:43:05 +0200
+
 debian-installer (20150813) unstable; urgency=medium
 
   [ Didier Raboud ]
