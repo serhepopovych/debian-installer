@@ -4,6 +4,7 @@ debian-installer (20150815) UNRELEASED; urgency=medium
     - Add syslinux machinery to use ifcpu64.c32 on multi-arch CDs, for CPU
       64-bit capability detection
     - Swap one-key shortcuts to let them access the graphical variants
+    - Add the correct one-key shortcuts to 32-bit variant
 
  -- Didier Raboud <odyx@debian.org>  Sat, 15 Aug 2015 15:43:05 +0200
 
