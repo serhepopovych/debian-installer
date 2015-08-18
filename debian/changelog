@@ -5,6 +5,9 @@ debian-installer (20150815) UNRELEASED; urgency=medium
       64-bit capability detection
     - Swap one-key shortcuts to let them access the graphical variants
     - Add the correct one-key shortcuts to 32-bit variant
+    - Replace (32 bits) prefix mentions by the correct "32-bit" in parentheses
+    - Shorten the 32-bits menu label to use the i386 Debian architecture name,
+      to make the whole label short enough
 
  -- Didier Raboud <odyx@debian.org>  Sat, 15 Aug 2015 15:43:05 +0200
 
