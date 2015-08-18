@@ -8,6 +8,7 @@ debian-installer (20150815) UNRELEASED; urgency=medium
     - Replace (32 bits) prefix mentions by the correct "32-bit" in parentheses
     - Shorten the 32-bits menu label to use the i386 Debian architecture name,
       to make the whole label short enough
+    - Shorten the 32-bit Graphical automated install entry label
     - Drop unused non-gtk speech synthesis entries
 
  -- Didier Raboud <odyx@debian.org>  Sat, 15 Aug 2015 15:43:05 +0200
