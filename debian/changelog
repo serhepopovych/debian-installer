@@ -13,7 +13,8 @@ debian-installer (20150815) UNRELEASED; urgency=medium
     - Drop unused non-gtk speech synthesis entries
 
   [ Samuel Thibault ]
-  * Add beep to UEFI x86 boot menu (Closes: #796591)
+  * Add beep to UEFI x86 boot menu (Closes: #796591).
+  * Add 's' shortcut for speech to UEFI x86 boot menu.
 
  -- Didier Raboud <odyx@debian.org>  Sat, 15 Aug 2015 15:43:05 +0200
 
