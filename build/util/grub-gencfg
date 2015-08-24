@@ -116,6 +116,8 @@ sub menuentry ($;%)
     $xattr{SixtyFour} ||= 0;
     $xattr{Graphical} ||= 0;
 
+    $xattr{Hotkey} ||= 0;
+
     $xattr{Expert} ||= 0;
     $xattr{Auto} ||= 0;
     $xattr{Rescue} ||= 0;
@@ -149,8 +151,12 @@ sub menuentry ($;%)
 
     my $cmdline = join(" ", @cmdline);
 
+    my $hotkey = "";
+    $hotkey = " --hotkey=".$xattr{Hotkey}
+        if $xattr{Hotkey};
+
     print_indented (<<EOE);
-menuentry '$title' {
+menuentry$hotkey '$title' {
     set background_color=black
     linux    $kernel $cmdline
     initrd   $initrd
@@ -200,11 +206,11 @@ start_submenu("Advanced options ..."); {
                 } end_submenu(); # $desktop advanced
 
                 $one->("... Install with speech synthesis", Speach => 1);
-                $one->("... Install with speech synthesis", Graphical => 1, Speach => 1);
+                $one->("... Install with speech synthesis", Graphical => 1, Speach => 1, Hotkey => 's');
                 $one->("... 64 bit speech install", SixtyFour => 1, Graphical => 1, Speach => 1)
                     if $sixtyfour;
             } end_submenu(); # $desktop submenu
         } # Desktop loop
     } end_submenu(); # Desktop submenu
 } end_submenu(); # Advanced
-menuentry('Install with speech synthesis', Graphical => $graphical, Speach => 1);
+menuentry('Install with speech synthesis', Graphical => $graphical, Speach => 1, Hotkey => 's')
