@@ -1,5 +1,6 @@
 debian-installer (20150815) UNRELEASED; urgency=medium
 
+  [ Didier Raboud ]
   * In the syslinux menu tree:
     - Add syslinux machinery to use ifcpu64.c32 on multi-arch CDs, for CPU
       64-bit capability detection
@@ -10,6 +11,9 @@ debian-installer (20150815) UNRELEASED; urgency=medium
       to make the whole label short enough
     - Shorten the 32-bit Graphical automated install entry label
     - Drop unused non-gtk speech synthesis entries
+
+  [ Samuel Thibault ]
+  * Add beep to UEFI x86 boot menu (Closes: #796591)
 
  -- Didier Raboud <odyx@debian.org>  Sat, 15 Aug 2015 15:43:05 +0200
 
