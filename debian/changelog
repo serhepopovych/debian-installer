@@ -16,6 +16,10 @@ debian-installer (20150815) UNRELEASED; urgency=medium
   * Add beep to UEFI x86 boot menu (Closes: #796591).
   * Add 's' shortcut for speech to UEFI x86 boot menu.
 
+  [ Aurelien Jarno ]
+  * Drop r4k-ip22, r5k-ip32 and sb1-bcm91250a images on mips.
+  * Drop sb1-bcm91250a images on mipsel.
+
  -- Didier Raboud <odyx@debian.org>  Sat, 15 Aug 2015 15:43:05 +0200
 
 debian-installer (20150813) unstable; urgency=medium

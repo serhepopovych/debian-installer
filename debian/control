@@ -107,12 +107,6 @@ Build-Depends:
 #		include it for completeness.
 	sparc-utils [sparc sparc64],
 #		For elftoaout and piggyback, to make netboot images.
-	genisovh [mips],
-#		Makes mini iso images bootable on SGI MIPSen.
-	tip22 [mips],
-#		Piggyback netboot images.
-	sibyl [mips mipsel],
-# 		For booting the SWARM board.
 	atari-bootstrap [m68k],
 #		Booting and other tools for Atari systems.
 	vmelilo [m68k],
