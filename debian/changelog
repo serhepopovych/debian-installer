@@ -1,6 +1,7 @@
 debian-installer (20150829) UNRELEASED; urgency=medium
 
   * Bump linux kernel version from 4.1.0-1 to 4.1.0-2
+  * Update translation-status for the release.
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 07 Sep 2015 04:06:58 +0200
 
