@@ -4,6 +4,7 @@ debian-installer (201509XX) UNRELEASED; urgency=medium
     - Otherwise netboot/gtk/mini.iso (which is gtk only) does not contain the
       speech entry.
     - Avoid including them on non-gtk netboot image, though.
+  * Bump linux kernel version from 4.1.0-2 to 4.2.0-1
 
  -- Samuel Thibault <sthibault@debian.org>  Tue, 15 Sep 2015 01:04:37 +0200
 
