@@ -1,3 +1,10 @@
+debian-installer (20151024) UNRELEASED; urgency=medium
+
+  [ Karsten Merker ]
+  * Provide u-boot and SD-card images for the LinkSprite pcDuino.
+
+ -- Karsten Merker <karsten@eirene>  Wed, 28 Oct 2015 23:10:45 +0100
+
 debian-installer (20151023) unstable; urgency=medium
 
   [ Samuel Thibault ]
