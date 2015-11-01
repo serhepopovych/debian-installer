@@ -3,6 +3,11 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   [ Karsten Merker ]
   * Provide u-boot and SD-card images for the LinkSprite pcDuino.
 
+  [ Cyril Brulebois ]
+  * Adjust p-u support to handle file:// instead of (f|ht)tp:// only,
+    thanks to Łukasz Stelmach for both the report and the patch
+    (Closes: #803711).
+
  -- Karsten Merker <karsten@eirene>  Wed, 28 Oct 2015 23:10:45 +0100
 
 debian-installer (20151023) unstable; urgency=medium
