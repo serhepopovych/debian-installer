@@ -18,6 +18,11 @@ debian-installer (20150422+deb8u3) UNRELEASED; urgency=medium
   * Re-introduce installer images for QNAP TS-x09.
   * Provide u-boot images for plug computers.
 
+  [ Cyril Brulebois ]
+  * Adjust p-u support to handle file:// instead of (f|ht)tp:// only,
+    thanks to Łukasz Stelmach for both the report and the patch
+    (Closes: #803711).
+
  -- Cyril Brulebois <kibi@debian.org>  Mon, 14 Sep 2015 09:53:05 +0200
 
 debian-installer (20150422+deb8u2) jessie; urgency=medium
