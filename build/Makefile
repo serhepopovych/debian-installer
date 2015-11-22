@@ -56,7 +56,7 @@
 # Add to PATH so dpkg will always work, and so local programs will be found.
 PATH := util:$(PATH):/usr/sbin:/sbin
 EATMYDATA = $(shell which eatmydata 2>/dev/null)
-GZIP = $(shell which pigz gzip | head -1)
+GZIP = $(shell which pigz gzip | head -1) -n
 
 # We don't want this to be run each time we re-enter.
 ifndef DEB_HOST_ARCH
