@@ -71,7 +71,7 @@ binary-arch: install
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
-	cd debian/tmp && tar czvf ../../../$(TARNAME) .
+	./build/util/gen-tarball debian/tmp ../$(TARNAME)
 	dpkg-distaddfile $(TARNAME) raw-installer -
 
 binary-indep:

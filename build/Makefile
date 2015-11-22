@@ -805,7 +805,7 @@ $(TEMP_MINIISO): $(TEMP_BOOT_SCREENS) arch_miniiso
 
 # various kinds of information, for use on debian-cd isos
 $(DEBIAN_CD_INFO): $(TEMP_BOOT_SCREENS) $(TEMP_CD_INFO_DIR)
-	(cd $(TEMP_CD_INFO_DIR); tar czf - .) > $@
+	gen-tarball $(TEMP_CD_INFO_DIR) $@
 	update-manifest $@ $(MANIFEST-DEBIAN_CD_INFO)
 
 # a directory full of files for netbooting
@@ -824,7 +824,7 @@ $(NETBOOT_TAR): $(TEMP_NETBOOT_DIR)
 	# Create an version info file.
 	echo 'Debian version:  $(DEBIAN_VERSION)' > $(TEMP_NETBOOT_DIR)/version.info
 	echo 'Installer build: $(BUILD_DATE)' >> $(TEMP_NETBOOT_DIR)/version.info
-	(cd $(TEMP_NETBOOT_DIR); tar czf - .) > $@
+	gen-tarball $(TEMP_NETBOOT_DIR) $@
 	update-manifest $@ $(MANIFEST-NETBOOT_TAR) $(UDEB_LISTS)
 
 $(TEMP_BOOT_SCREENS): arch_boot_screens

@@ -14,6 +14,19 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   [ Vagrant Cascadian ]
   * bootscr.mainline_common: Prefer newer u-boot distro_bootpart variable.
 
+  [ Cyril Brulebois ]
+  * Cherry-pick the following changes by Steven Chamberlain from the
+    jessie-kfreebsd branch.
+
+  [ Steven Chamberlain ]
+  * Improve reproducibility of debian-installer netboot images
+    (Closes: #805321):
+  * Add a new utility build/util/gen-tarball to make reproducible
+    tarballs, and use it for:
+    - netboot.tar.gz
+    - debian-cd_info.tar.gz
+    - the overall debian-installer-images tar.gz file.
+
  -- Karsten Merker <karsten@eirene>  Wed, 28 Oct 2015 23:10:45 +0100
 
 debian-installer (20151023) unstable; urgency=medium
