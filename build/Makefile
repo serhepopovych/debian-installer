@@ -150,7 +150,7 @@ MFSROOT_LIMIT := 68m
 endif
 
 define mkfs.ufs1
-  sh -c 'makefs -t ffs -s $(MFSROOT_LIMIT) -f 3000 -o minfree=0,version=1 $$0 ${TREE}'
+  sh -c 'makefs -t ffs -T $(SOURCE_DATE_EPOCH) -s $(MFSROOT_LIMIT) -f 3000 -o minfree=0,version=1 $$0 ${TREE}'
 endef
 
 define e2fsck

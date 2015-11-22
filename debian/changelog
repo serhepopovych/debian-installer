@@ -15,6 +15,11 @@ debian-installer (20160106) unstable; urgency=medium
   [ Martin Michlmayr ]
   * Provide u-boot images for plug computers.
 
+  [ Steven Chamberlain ]
+  * On kfreebsd, use the new makefs -T parameter to clamp mfsroot
+    timestamps to a reproducible maximum value;  raise Build-Depends: on
+    makefs to version (>= 20100306-5+kbsd8u1~).
+
  -- Cyril Brulebois <kibi@debian.org>  Wed, 06 Jan 2016 06:00:19 +0100
 
 debian-installer (20160101) unstable; urgency=medium
