@@ -3,6 +3,7 @@
 ARCH=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
 VERSION=$(shell LC_ALL=C dpkg-parsechangelog | grep ^Version: | cut -d ' ' -f 2)
 DATE=$(shell echo $(VERSION) | cut -d '.' -f 1)
+SOURCE_DATE_EPOCH = $(shell date -d "$$(dpkg-parsechangelog -SDate)" +%s)
 SUITE=$(shell LC_ALL=C dpkg-parsechangelog | grep ^Distribution: | cut -d ' ' -f 2)
 ifeq (${SUITE},UNRELEASED)
 USE_UDEBS_FROM=unstable
@@ -19,6 +20,8 @@ ARCHIVEDIR=debian/tmp/installer-$(ARCH)
 DESTDIR=$(ARCHIVEDIR)/$(DATE)
 IMAGEDIR=$(DESTDIR)/images
 TARNAME=debian-installer-images_$(VERSION)_$(ARCH).tar.gz
+
+export SOURCE_DATE_EPOCH
 
 clean:
 	dh_testdir

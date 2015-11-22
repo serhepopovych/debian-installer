@@ -27,6 +27,9 @@ debian-installer (20151024) UNRELEASED; urgency=medium
     - debian-cd_info.tar.gz
     - the overall debian-installer-images tar.gz file.
   * Inhibit gzip timestamp in initrd.gz
+  * Ensure SOURCE_DATE_EPOCH is exported throughout the build system,
+    define it if unset, or fall back to 'now' if build/Makefile is
+    directly invoked.
 
  -- Karsten Merker <karsten@eirene>  Wed, 28 Oct 2015 23:10:45 +0100
 

@@ -112,6 +112,7 @@ include config/dir
 export KEYRING
 export KERNELVERSION
 export LOCALUDEBDIR
+export SOURCE_DATE_EPOCH
 
 ifneq ($(shell id -u),0)
   ROOTCMD ?= fakeroot
