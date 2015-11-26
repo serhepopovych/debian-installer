@@ -17,6 +17,8 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Cherry-pick the following changes by Steven Chamberlain from the
     jessie-kfreebsd branch.
+  * build/Makefile: Rename GZIP into gzip, and pass an extra -T to pigz
+    (it needs both -n and -T to behave as gzip's -n).
 
   [ Steven Chamberlain ]
   * Improve reproducibility of debian-installer netboot images
