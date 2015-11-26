@@ -64,7 +64,7 @@ mkdir -p "$outdir/boot/grub/$platform"
 (cd "$workdir"; tar -cf - boot) >"$memdisk_img"
 grub-mkimage -O "$platform" -m "$memdisk_img" \
 	-o "$workdir/boot$efi_name.efi" -p '(memdisk)/boot/grub' \
-	search iso9660 configfile normal memdisk tar part_msdos fat
+	search iso9660 configfile normal memdisk tar part_msdos part_gpt fat
 
 grub-mkimage -O "$platform" \
 	-o "$outdir/bootnet$efi_name.efi" -p "$netboot_prefix/grub" \
