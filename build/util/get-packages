@@ -80,6 +80,7 @@ APT_GET="apt-get --assume-yes \
 	-o Dir::Etc::sourceparts=/dev/null \
 	-o Dir::Etc::Preferences=`pwd`/preferences.$TYPE.local \
 	-o Dir::State=`pwd`/$APTDIR/state \
+	-o Debug::NoDropPrivs=true \
 	-o Debug::NoLocking=true \
 	-o Debug::pkgDepCache::AutoInstall=true \
 	-o Dir::Cache=`pwd`/$APTDIR/cache \
