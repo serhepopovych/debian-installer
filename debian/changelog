@@ -4,6 +4,11 @@ debian-installer (20150422+deb8u3) UNRELEASED; urgency=medium
   * Add beep to UEFI x86 boot menu (Closes: #796591).
   * Add 's' shortcut for speech to UEFI x86 boot menu.
 
+  [ Steve McIntyre ]
+  * Add the part_gpt module into the core grub image to make it easier
+    for users doing slightly different things with our images; include
+    support for GPT partition tables as well as msdos (Closes: #789600).
+
  -- Cyril Brulebois <kibi@debian.org>  Mon, 14 Sep 2015 09:53:05 +0200
 
 debian-installer (20150422+deb8u2) jessie; urgency=medium
