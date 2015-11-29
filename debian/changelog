@@ -7,8 +7,6 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   * Adjust p-u support to handle file:// instead of (f|ht)tp:// only,
     thanks to Łukasz Stelmach for both the report and the patch
     (Closes: #803711).
-  * Set Debug::NoDropPrivs=true for apt-get calls, as a temporary
-    workaround for apt's #806475.
 
   [ Samuel Thibault ]
   * Bump hurd kernel version.
