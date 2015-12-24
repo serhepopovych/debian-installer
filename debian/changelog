@@ -24,6 +24,8 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   * Bump linux kernel version from 4.2.0-1 to 4.3.0-1
   * Replace the module-init-tools build-dep with a kmod one since the
     transitional package got dropped in kmod/22-1.
+  * Apply patch from gregor herrmann to fix new warnings with perl 5.22
+    (Closes: #808875). Thanks!
 
   [ Steven Chamberlain ]
   * Improve reproducibility of debian-installer netboot images

@@ -10,8 +10,8 @@ while (@ARGV) {
 }
 
 while (<>) {
-	s/\${BOOTPROMPT}\n?$//g; # special case
-	s/\${([a-zA-Z0-9_]+)}/$subst{$1}/g;
+	s/\$\{BOOTPROMPT\}\n?$//g; # special case
+	s/\$\{([a-zA-Z0-9_]+)\}/$subst{$1}/g;
 	
 	print;
 }

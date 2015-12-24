@@ -234,10 +234,10 @@ sub getlists {
 				next unless length;
 				
 				# normal kernel version substitution
-				if (/\${kernel:Version}/) {
+				if (/\$\{kernel:Version\}/) {
 					foreach my $v (@kernel_versions) {
 						my $l=$_;
-						$l=~s/\${kernel:Version}/$v-$kernel_flavour/g;
+						$l=~s/\$\{kernel:Version\}/$v-$kernel_flavour/g;
 						collectpackage($l, \%collect, \%exclude, \@postponed);
 					}
 					next; # move on to the next line
