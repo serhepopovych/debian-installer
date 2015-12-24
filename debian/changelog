@@ -47,6 +47,7 @@ debian-installer (20151024) UNRELEASED; urgency=medium
 
   [ Ben Hutchings ]
   * Include leds-modules on armhf if available
+  * Update i386 config to use 686 kernel flavour instead of 586
 
   [ Martin Michlmayr ]
   * Update docs to reflect that Package-Type and Installer-Menu-Item
