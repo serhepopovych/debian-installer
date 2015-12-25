@@ -53,6 +53,10 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   * Update docs to reflect that Package-Type and Installer-Menu-Item
     are official fields nowadays (Closes: #807716).
 
+  [ John Paul Adrian Glaubitz ]
+  * Set KERNELVERSION for sparc64 to $(LINUX_KERNEL_ABI)-sparc64.
+  * Set KEYRING to debian-ports on sparc64.
+
  -- Karsten Merker <merker@debian.org>  Wed, 28 Oct 2015 23:10:45 +0100
 
 debian-installer (20151023) unstable; urgency=medium
