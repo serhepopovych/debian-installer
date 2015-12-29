@@ -14,16 +14,16 @@ if [ ! -e kernel-6282 ]; then
 	exit 1
 fi
 
-if [ ! -e initrd.gz ]; then
-	echo "You have to download the initrd.gz file from the debian-installer for QNAP."
+if [ ! -e initrd ]; then
+	echo "You have to download the initrd file from the debian-installer for QNAP."
 	exit 1
 fi
 
-ifilesize=$(ls -l initrd.gz | awk '{print $5}')
+ifilesize=$(ls -l initrd | awk '{print $5}')
 # The ramdisk partition is 4 MB on the QNAP TS-109 and TS-209, and
 # 9 MB on the QNAP TS-119, TS-219 and TS-219P.
 if [ $ifilesize -ne 4194304 -a $ifilesize -ne 9437184 ]; then
-	echo "The initrd.gz file is corrupt"
+	echo "The initrd file is corrupt"
 	exit 1
 fi
 
@@ -165,7 +165,7 @@ rmdir $path
 # 5) Finally, write the installer to flash
 printf "Writing debian-installer to flash... "
 cat kernel-$variant > /dev/mtdblock1
-cat initrd.gz > /dev/mtdblock2
+cat initrd > /dev/mtdblock2
 echo "done."
 echo "Please reboot your QNAP device."
 
