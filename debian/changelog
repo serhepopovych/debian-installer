@@ -52,6 +52,9 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   [ Martin Michlmayr ]
   * Update docs to reflect that Package-Type and Installer-Menu-Item
     are official fields nowadays (Closes: #807716).
+  * Remove minix-modules from the orion5x network-console image since
+    it was only required by the D-Link DNS-323, a device that's no longer
+    supported.
 
   [ John Paul Adrian Glaubitz ]
   * Set KERNELVERSION for sparc64 to $(LINUX_KERNEL_ABI)-sparc64.
