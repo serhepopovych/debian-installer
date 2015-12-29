@@ -58,12 +58,12 @@ debian-installer (20151024) UNRELEASED; urgency=medium
   * Exclude usb-serial-modules from the armel network-console image
     since it's not useful there (Closes: #809301).
   * Exclude usb-modules explicitly on armel/orion5x network-console
-    to work around bug in util/pkg-list.
+    to work around a bug in util/pkg-list.
   * Stop including sata and ext2/ext3 modules on the armel/orion5x
     network-console image due to size limitations on QNAP TS-x09.
   * Drop the file extension from the initrd for QNAP devices.
   * Re-introduce installer images for QNAP TS-x09.
-  * Also recognize /dev/disk1_1 and /dev/ls_disk1_1 as boot devices
+  * Recognize /dev/disk1_1 and /dev/ls_disk1_1 as boot devices
     on Linkstation.  Thanks Roger Shimizu (Closes: 722735).
 
   [ John Paul Adrian Glaubitz ]
