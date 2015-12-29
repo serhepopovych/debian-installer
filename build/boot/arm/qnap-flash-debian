@@ -4,13 +4,8 @@
 
 # 1) Check the files are okay
 
-if [ ! -e kernel-6281 ]; then
-	echo "You have to download the kernel-6281 file from the debian-installer for QNAP."
-	exit 1
-fi
-
-if [ ! -e kernel-6282 ]; then
-	echo "You have to download the kernel-6282 file from the debian-installer for QNAP."
+if [ ! -e kernel ] && [ ! -e kernel-6281 ] && [ ! -e kernel-6282 ]; then
+	echo "You have to download the kernel file from the debian-installer for QNAP."
 	exit 1
 fi
 
@@ -80,11 +75,14 @@ if [ -z "$cpu" ]; then
 fi
 
 case "$cpu" in
+	*"ARM926EJ"*)
+		kernel="kernel"
+		;;
 	*"88F6281"*)
-		variant=6281
+		kernel="kernel-6281"
 		;;
 	*"88F6282"*)
-		variant=6282
+		kernel="kernel-6282"
 		;;
 	*)
 		echo "Cannot determine CPU variant"
@@ -164,7 +162,7 @@ rmdir $path
 
 # 5) Finally, write the installer to flash
 printf "Writing debian-installer to flash... "
-cat kernel-$variant > /dev/mtdblock1
+cat $kernel > /dev/mtdblock1
 cat initrd > /dev/mtdblock2
 echo "done."
 echo "Please reboot your QNAP device."
