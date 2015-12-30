@@ -101,7 +101,7 @@ Build-Depends:
 #		For all our powerpc boot needs. Well, not really.
 	aboot (>= 0.9b-2) [alpha],
 #		A previous version didn't have netabootwrap.
-	silo [sparc],
+	silo [sparc sparc64],
 #		Using silo is problimatic since it needs to run as root,
 #		so images that need it are not built by default, but we
 #		include it for completeness.
