@@ -67,6 +67,3 @@ debian-installer: we support installations via SSH (the default) as well as
 via the serial console. In the case of SSH, the password is either
 preseeded or the default password 'install' is used.
 
-Upstream contact:
-  Byron Bradley <byron.bbradley@gmail.com> (kernel)
-  Lennert Buytenhek <buytenh@wantstofly.org> (kernel)
