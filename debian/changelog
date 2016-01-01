@@ -26,6 +26,7 @@ debian-installer (20151024) UNRELEASED; urgency=medium
     transitional package got dropped in kmod/22-1.
   * Apply patch from gregor herrmann to fix new warnings with perl 5.22
     (Closes: #808875). Thanks!
+  * Update copyright years on the F10 help screen.
 
   [ Steven Chamberlain ]
   * Improve reproducibility of debian-installer netboot images
