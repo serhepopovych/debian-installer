@@ -25,11 +25,11 @@
 <!ENTITY backports "backports.debian.org">
 <!ENTITY url-backports "http://&backports;/">
 
-<!ENTITY url-status "http://d-i.debian.org/l10n-stats">
+<!ENTITY url-status "https://d-i.debian.org/l10n-stats">
 
-<!ENTITY url-languagelist "http://d-i.debian.org/doc/i18n/languages.html">
+<!ENTITY url-languagelist "https://d-i.debian.org/doc/i18n/languages.html">
 
-<!ENTITY url-spellchecker-status "http://d-i.debian.org/l10n-spellcheck/">
+<!ENTITY url-spellchecker-status "https://d-i.debian.org/l10n-spellcheck/">
 
 <!ENTITY url-d-i-translation-status "&url-status;/translation-status.html">
 

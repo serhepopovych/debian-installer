@@ -29,7 +29,7 @@ A cron job on <code>d-i.debian.org</code> generates an linux kernel
 ABI summary for the <code>testing</code>, <code>unstable</code>, and
 <code>experimental</code> suites, and also sends a notification when
 the ABI gets bumped in any of them. The summary is available here:
-<ulink url="http://d-i.debian.org/kernel-summary.html" />
+<ulink url="https://d-i.debian.org/kernel-summary.html" />
 
 </para><para>
 

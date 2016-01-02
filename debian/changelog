@@ -7,6 +7,9 @@ debian-installer (201601XX) UNRELEASED; urgency=medium
     - build/config/x86.cfg: Set IS_GTK when calling syslinux-cfgs to get the
     list.
 
+  [ Cyril Brulebois ]
+  * Switch d-i.debian.org URIs from http to https.
+
  -- Samuel thibault <sthibault@debian.org>  Sat, 02 Jan 2016 13:50:51 +0100
 
 debian-installer (20160101) unstable; urgency=medium
