@@ -21,7 +21,13 @@ if [ -z "$DST" ]; then
 	cd "$SRC"
 	# spk.cfg is only meant for the netboot-gtk image which has the gtk
 	# initrd at the root instead of gtk/
-	find . -type f | sed "s:\./::" | grep -v spk.cfg
+	if [ "$IS_GTK" = 1 ]
+	then
+		FILTER=
+	else
+		FILTER="! -name spk.cfg"
+	fi
+	find . -type f $FILTER | sed "s:\./::"
 	exit 0
 elif [ ! -d "$DST" ]; then
 	exit 1

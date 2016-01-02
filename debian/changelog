@@ -1,3 +1,14 @@
+debian-installer (201601XX) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * Fix missing speech entry in netboot mini.iso:
+    - build/util/syslinux-cfgs: Make the list-only behavior include spk.cfg file
+    when IS_GTK is 1.
+    - build/config/x86.cfg: Set IS_GTK when calling syslinux-cfgs to get the
+    list.
+
+ -- Samuel thibault <sthibault@debian.org>  Sat, 02 Jan 2016 13:50:51 +0100
+
 debian-installer (20160101) unstable; urgency=medium
 
   [ Karsten Merker ]
