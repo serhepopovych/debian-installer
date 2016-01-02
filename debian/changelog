@@ -1,4 +1,4 @@
-debian-installer (201601XX) unstable; urgency=medium
+debian-installer (201601XX) UNRELEASED; urgency=medium
 
   [ Samuel Thibault ]
   * Fix missing speech entry in netboot mini.iso:
