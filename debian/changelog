@@ -12,6 +12,8 @@ debian-installer (20150422+deb8u3) UNRELEASED; urgency=medium
   [ Martin Michlmayr ]
   * Exclude usb-serial-modules from the armel network-console image
     since it's not useful there (Closes: #809301).
+  * Exclude usb-modules explicitly on armel/orion5x network-console
+    to work around bug in util/pkg-list.
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 14 Sep 2015 09:53:05 +0200
 
