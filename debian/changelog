@@ -14,6 +14,7 @@ debian-installer (20150422+deb8u3) UNRELEASED; urgency=medium
     since it's not useful there (Closes: #809301).
   * Exclude usb-modules explicitly on armel/orion5x network-console
     to work around bug in util/pkg-list.
+  * Drop the file extension from the initrd for QNAP devices.
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 14 Sep 2015 09:53:05 +0200
 
