@@ -4,11 +4,6 @@
 
 # 1) Check the files are okay
 
-if [ ! -e kernel ] && [ ! -e kernel-6281 ] && [ ! -e kernel-6282 ]; then
-	echo "You have to download the kernel file from the debian-installer for QNAP."
-	exit 1
-fi
-
 if [ ! -e initrd ]; then
 	echo "You have to download the initrd file from the debian-installer for QNAP."
 	exit 1
@@ -89,6 +84,11 @@ case "$cpu" in
 		exit 1
 		;;
 esac
+
+if [ ! -e $kernel ]; then
+	echo "You have to download the $kernel file from the debian-installer for QNAP."
+	exit 1
+fi
 
 # 4) Change the MAC address on Kirkwood-based QNAP devices
 uboot_mac() {
