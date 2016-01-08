@@ -12,6 +12,9 @@ debian-installer (20160106) unstable; urgency=medium
   [ Cyril Brulebois ]
   * Switch d-i.debian.org URIs from http to https.
 
+  [ Martin Michlmayr ]
+  * Provide u-boot images for plug computers.
+
  -- Cyril Brulebois <kibi@debian.org>  Wed, 06 Jan 2016 06:00:19 +0100
 
 debian-installer (20160101) unstable; urgency=medium

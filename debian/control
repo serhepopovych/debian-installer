@@ -130,6 +130,8 @@ Build-Depends:
 	u-boot-omap [armhf],
 	u-boot-sunxi [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
+	u-boot [armel],
+#		U-boot binaries for armel systems
 # 
 # Architecture specific build dependencies:
 	tofrodos [i386 amd64 kfreebsd-i386 kfreebsd-amd64],
