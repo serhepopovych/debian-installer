@@ -1,3 +1,10 @@
+debian-installer (20160112) UNRELEASED; urgency=low
+
+  [ Martin Michlmayr ]
+  * Provide u-boot images for OpenRD.
+
+ -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
+
 debian-installer (20160106) unstable; urgency=medium
 
   [ Samuel Thibault ]

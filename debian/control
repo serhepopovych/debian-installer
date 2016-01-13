@@ -130,7 +130,7 @@ Build-Depends:
 	u-boot-omap [armhf],
 	u-boot-sunxi [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
-	u-boot [armel],
+	u-boot (>= 2016.01+dfsg1-1) [armel],
 #		U-boot binaries for armel systems
 # 
 # Architecture specific build dependencies:
