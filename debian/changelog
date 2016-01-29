@@ -6,6 +6,9 @@ debian-installer (20160112) UNRELEASED; urgency=low
   [ Samuel Thibault ]
   * config/hurd.cfg: Set ROOTCMD to fakeroot-tcp.
 
+  [ Colin Watson ]
+  * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
+
  -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
 
 debian-installer (20160106) unstable; urgency=medium

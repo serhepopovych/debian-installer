@@ -4,8 +4,8 @@ Priority: optional
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Uploaders: Cyril Brulebois <kibi@debian.org>
 Standards-Version: 3.9.5
-Vcs-Git: git://git.debian.org/d-i/debian-installer.git
-Vcs-Browser: http://git.debian.org/?p=d-i/debian-installer.git;a=summary
+Vcs-Git: https://anonscm.debian.org/git/d-i/debian-installer.git
+Vcs-Browser: https://anonscm.debian.org/cgit/d-i/debian-installer.git
 Build-Conflicts: libnewt-pic [mipsel]
 Build-Depends:
 # Base build dependencies:
