@@ -5,7 +5,7 @@
 NVRAM=$(which nvram)
 FW_PRINTENV=$(which fw_printenv)
 
-path=$(mount | grep ext[23] | sed -n '/sda2\|md0\|disk1_1/ {s/\/dev\/\(sda2\|md0\|.*disk1_1\) on \(.*\) type.*/\2/; p}'
+path=$(mount | grep ext[23] | sed -n '/sda2\|md0\|disk1_1/ {s/\/dev\/\(sda2\|md0\|.*disk1_1\) on \(.*\) type.*/\2/; p}')
 if [ -z "$path" ]; then
 	echo "You have to create an ext2 filesystem on the first physical partition"
 	exit 1
