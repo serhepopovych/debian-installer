@@ -2,6 +2,7 @@ debian-installer (20160112) UNRELEASED; urgency=low
 
   [ Martin Michlmayr ]
   * Provide u-boot images for OpenRD.
+  * Remove mipsel/bcm947xx config file.
 
   [ Samuel Thibault ]
   * config/hurd.cfg: Set ROOTCMD to fakeroot-tcp.
