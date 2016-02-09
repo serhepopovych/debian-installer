@@ -12,6 +12,15 @@ debian-installer (20160112) UNRELEASED; urgency=low
 
   [ Roger Shimizu ]
   * Fix typo in lspro-config-debian script
+  * ARM: add device tree support for armel/orion5x
+  * ARM: add/update a few Buffalo Linkstation support on
+    armel/{orion5x,kirkwood}
+      - Linkstation LS-WTGL
+      - Linkstation LS-WVL/VL
+      - Linkstation LS-WXL/WSXL
+      - Linkstation Mini (LS-WSGL)
+  * ARM: update kernel/initrd address for various Buffalo Linkstation
+    to be consistent with flash-kernel
 
  -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
 
