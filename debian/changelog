@@ -11,8 +11,8 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
 
   [ Roger Shimizu ]
-  * Fix typo in lspro-config-debian script
-  * ARM: add device tree support for armel/orion5x
+  * ARM: orion5x: Fix typo in lspro-config-debian script
+  * ARM: orion5x: add device tree support for armel/orion5x
   * ARM: add/update a few Buffalo Linkstation support on
     armel/{orion5x,kirkwood}
       - Linkstation LS-WTGL
@@ -21,6 +21,12 @@ debian-installer (20160112) UNRELEASED; urgency=low
       - Linkstation Mini (LS-WSGL)
   * ARM: update kernel/initrd address for various Buffalo Linkstation
     to be consistent with flash-kernel
+  * ARM: orion5x: share (symbolic link) the initrd for all Linkstation series
+  * ARM: orion5x: unify model name of Linkstation with kirkwood based ones
+  * ARM: orion5x: rename lspro-config-debian script to
+    linkstation-config-debian
+  * ARM: kirkwood: apply linkstation-config-debian script to all Linkstation
+    devices
 
  -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
 
