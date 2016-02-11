@@ -59,3 +59,5 @@ echo 1
 # Done!
 echo w
 ) | fdisk -C "$cylinders" -H "$heads" -S "$sectors" "$iso"
+
+isohybrid -u "$iso"
