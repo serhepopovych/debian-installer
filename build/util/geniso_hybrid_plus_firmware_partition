@@ -23,7 +23,7 @@ set -e
 heads=64
 sectors=32
 
-isohybrid -h "$heads" -s "$sectors" "$iso"
+isohybrid -h "$heads" -s "$sectors" -u "$iso"
 
 # Make the firmware volume.
 tmpdir="$(mktemp -d)"
@@ -47,17 +47,15 @@ cylinders="$(($(stat -c %s "$iso") / $heads / $sectors))"
 # Make new partition #2
 echo n
 echo p
-echo 2
+echo 3
 echo # use default start sector
 echo # use default end sector
 
 # Pedantically, set partition type to 1: FAT 16
 echo t
-echo 2
+echo 3
 echo 1
 
 # Done!
 echo w
 ) | fdisk -C "$cylinders" -H "$heads" -S "$sectors" "$iso"
-
-isohybrid -u "$iso"
