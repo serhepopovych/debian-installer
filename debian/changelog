@@ -5,6 +5,8 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * Remove mipsel/bcm947xx config file.
   * Use gpgv1.4-udeb for orion5x network-console so the ramdisk fits
     in flash on QNAP TS-x09 devices.
+  * Update QNAP TS-x09 kernel address to the new value used by
+    flash-kernel (see #809476).
 
   [ Samuel Thibault ]
   * config/hurd.cfg: Set ROOTCMD to fakeroot-tcp.
