@@ -3,7 +3,8 @@ debian-installer (20160112) UNRELEASED; urgency=low
   [ Martin Michlmayr ]
   * Provide u-boot images for OpenRD.
   * Remove mipsel/bcm947xx config file.
-  * Disable QNAP TS-x09 images due to size problems.
+  * Use gpgv1.4-udeb for orion5x network-console so the ramdisk fits
+    in flash on QNAP TS-x09 devices.
 
   [ Samuel Thibault ]
   * config/hurd.cfg: Set ROOTCMD to fakeroot-tcp.
