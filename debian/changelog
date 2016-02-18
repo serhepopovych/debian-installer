@@ -8,6 +8,7 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * Update QNAP TS-x09 kernel address to the new value used by
     flash-kernel (see #809476).
   * Bump Linux kernel version from 4.3.0-1 to 4.4.0-1
+  * Use new marvell kernel flavour for orion5x and kirkwood
 
   [ Samuel Thibault ]
   * config/hurd.cfg: Set ROOTCMD to fakeroot-tcp.
