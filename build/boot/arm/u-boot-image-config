@@ -24,3 +24,6 @@ Cubieboard2 /usr/lib/u-boot/Cubieboard2/u-boot-sunxi-with-spl.bin 16
 Cubietruck /usr/lib/u-boot/Cubietruck/u-boot-sunxi-with-spl.bin 16
 pcDuino /usr/lib/u-boot/Linksprite_pcDuino/u-boot-sunxi-with-spl.bin 16
 pcDuino3 /usr/lib/u-boot/Linksprite_pcDuino3/u-boot-sunxi-with-spl.bin 16
+#
+# Images from u-boot-rockchip
+Firefly-RK3288 /usr/lib/u-boot/firefly-rk3288/u-boot-spl-dtb.rksd 64 /usr/lib/u-boot/firefly-rk3288/u-boot-dtb.img 256
