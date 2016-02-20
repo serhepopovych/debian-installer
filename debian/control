@@ -129,6 +129,7 @@ Build-Depends:
 	u-boot-imx [armhf],
 	u-boot-omap [armhf],
 	u-boot-sunxi [armhf],
+	u-boot-rockchip [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
 	u-boot (>= 2016.01+dfsg1-1) [armel],
 #		U-boot binaries for armel systems
