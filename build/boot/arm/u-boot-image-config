@@ -15,6 +15,7 @@ BeagleBoard-X15 /usr/lib/u-boot/am57xx_evm/MLO 256 /usr/lib/u-boot/am57xx_evm/u-
 #
 # Images from u-boot-sunxi
 A10-OLinuXino-Lime /usr/lib/u-boot/A10-OLinuXino-Lime/u-boot-sunxi-with-spl.bin 16
+A20-Olimex-SOM-EVB /usr/lib/u-boot/A20-Olimex-SOM-EVB/u-boot-sunxi-with-spl.bin 16
 A20-OLinuXino-Lime /usr/lib/u-boot/A20-OLinuXino-Lime/u-boot-sunxi-with-spl.bin 16
 A20-OLinuXino-Lime2 /usr/lib/u-boot/A20-OLinuXino-Lime2/u-boot-sunxi-with-spl.bin 16
 A20-OLinuXino-MICRO /usr/lib/u-boot/A20-OLinuXino_MICRO/u-boot-sunxi-with-spl.bin 16
