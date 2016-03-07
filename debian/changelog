@@ -12,6 +12,8 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * Include mtd-modules in kirkwood images.
   * Include mtd-modules in armhf netboot images.
   * Provide kernel and ramdisk for kirkwood netboot.
+  * Fix syntax error in doc internals build script.  Thanks to
+    Josh Gadeken (Closes: #817073)
 
   [ Samuel Thibault ]
   * config/hurd.cfg: Set ROOTCMD to fakeroot-tcp.
