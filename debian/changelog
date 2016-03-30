@@ -58,6 +58,11 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * Drop references to libnss-files-udeb and libnss-dns-udeb, they're now
     provided by libc-udeb, as of glibc 2.22-5.
 
+  [ Aurelien Jarno ]
+  * Stop excluding libc{0.1,0.3,6,6.1} as we now use mklibs-copy for the
+    reduction pass. This avoids dropping libnss libraries and also avoids a
+    useless download of this udeb during the installation.
+
  -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
 
 debian-installer (20160106) unstable; urgency=medium
