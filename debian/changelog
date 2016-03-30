@@ -63,6 +63,8 @@ debian-installer (20160112) UNRELEASED; urgency=low
     reduction pass. This avoids dropping libnss libraries and also avoids a
     useless download of this udeb during the installation.
   * Drop build-dependency on glibc-pic.
+  * armhf: drop the compat ld.so symlink, all binaries in testing now use the
+    correct one.
 
  -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
 
