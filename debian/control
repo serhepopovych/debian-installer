@@ -35,8 +35,6 @@ Build-Depends:
 #		For bdftobogl used in font reduction.
 #	
 # Library build dependencies:
-	glibc-pic,
-#		For library reduction.
 	libslang2-pic (>= 2.0.6-4),
 #		Make dependency versioned temporarily to make sure we avoid #392942
 	libnewt-pic (>= 0.52.2-11.3) [!mipsel],
