@@ -707,6 +707,7 @@ endif
 
 	install -d $(TEMP)
 
+	set -e; \
 	case $(INITRD_FS) in \
 	ext2) \
 		$(genext2fs) $(TEMP)/initrd; \
