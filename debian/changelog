@@ -14,6 +14,7 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * Provide kernel and ramdisk for kirkwood netboot.
   * Fix syntax error in doc internals build script.  Thanks to
     Josh Gadeken (Closes: #817073)
+  * Add kernel/initrd manifest information for armhf.
 
   [ Samuel Thibault ]
   * config/hurd.cfg: Set ROOTCMD to fakeroot-tcp.
