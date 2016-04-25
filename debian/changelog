@@ -71,6 +71,9 @@ debian-installer (20160112) UNRELEASED; urgency=low
   [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.4.0-1 to 4.5.0-1
 
+  [ Steven Chamberlain ]
+  * Handle error creating initramfs (Closes: #821249)
+
  -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
 
 debian-installer (20160106) unstable; urgency=medium
