@@ -75,13 +75,10 @@ grub-mkimage -O "$platform" \
 mkfs.msdos -v -C "$outdir/efi.img" \
 	$(( ($(stat -c %s "$workdir/boot$efi_name.efi") / 1024 + 55) \
 	    / 32 * 32 ))
-# Workaround for #823881:
-export MTOOLS_SKIP_CHECK=1
 mmd -i "$outdir/efi.img" ::efi
 mmd -i "$outdir/efi.img" ::efi/boot
 mcopy -i "$outdir/efi.img" "$workdir/boot$efi_name.efi" \
 	"::efi/boot/boot$efi_name.efi"
-unset MTOOLS_SKIP_CHECK
 
 grub-cpmodules "$outdir" "$platform"
 

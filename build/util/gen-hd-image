@@ -342,10 +342,7 @@ case "${BUILDTYPE}" in
     case "${FSTYPE}" in
       fat16|fat32)
         mkfs.msdos -v -F "${FATSIZE}" "${TEMP_FS_IMAGEFILE}" "${TEMP_FS_IMAGESIZE}"
-        # Workaround for #823881:
-        export MTOOLS_SKIP_CHECK=1
         mcopy -s -i "${TEMP_FS_IMAGEFILE}" ${SOURCEDIR}// ::
-        unset MTOOLS_SKIP_CHECK
         # The trailing // is necessary to make mcopy copy the contents
         # of ${SOURCEDIR} but not ${SOURCEDIR} itself. Using ${SOURCEDIR}/*
         # would omit dotfiles and ${SOURCEDIR}/. does not work with mcopy.

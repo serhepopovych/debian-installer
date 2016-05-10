@@ -73,12 +73,12 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * efi-image: Make the mkfs.msdos call verbose; this might help track
     regressions or strange behaviours with new dosfstools upstream
     releases (See: #823881).
-  * efi-image: Export MTOOLS_SKIP_CHECK=1 before running mmd and mcopy
-    commands to work around an apparent regression in dosfstools 4.0-1
-    (See: #823881). Confirmed by Steve to produce an image that boots OK.
   * gen-hd-image: Make the mkfs.msdos call verbose.
-  * gen-hd-image: Export MTOOLS_SKIP_CHECK=1 before running mcopy.
   * x86.cfg: Make the mkfs.msdos call verbose.
+  * build/Makefile: Export MTOOLS_SKIP_CHECK=1 before running mmd and
+    mcopy commands to work around an apparent regression in dosfstools
+    4.0-1 (See: #823881). Confirmed by Steve to produce an image that
+    boots OK.
 
   [ Steven Chamberlain ]
   * Handle error creating initramfs (Closes: #821249)
