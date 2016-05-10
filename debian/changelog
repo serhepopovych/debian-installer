@@ -78,6 +78,7 @@ debian-installer (20160112) UNRELEASED; urgency=low
     (See: #823881). Confirmed by Steve to produce an image that boots OK.
   * gen-hd-image: Make the mkfs.msdos call verbose.
   * gen-hd-image: Export MTOOLS_SKIP_CHECK=1 before running mcopy.
+  * x86.cfg: Make the mkfs.msdos call verbose.
 
   [ Steven Chamberlain ]
   * Handle error creating initramfs (Closes: #821249)
