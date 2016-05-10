@@ -70,6 +70,9 @@ debian-installer (20160112) UNRELEASED; urgency=low
 
   [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.4.0-1 to 4.5.0-2
+  * efi-image: Make the mkfs.msdos call verbose; this might help track
+    regressions or strange behaviours with new dosfstools upstream
+    releases (See: #823881).
 
   [ Steven Chamberlain ]
   * Handle error creating initramfs (Closes: #821249)
