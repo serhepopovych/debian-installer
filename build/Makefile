@@ -53,6 +53,9 @@
 #     `-- vmlinuz
 #
 
+# Temporary workaround for #823881:
+export MTOOLS_SKIP_CHECK=1
+
 # Add to PATH so dpkg will always work, and so local programs will be found.
 PATH := util:$(PATH):/usr/sbin:/sbin
 
