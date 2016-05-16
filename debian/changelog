@@ -1,4 +1,4 @@
-debian-installer (20160112) UNRELEASED; urgency=low
+debian-installer (20160516) unstable; urgency=low
 
   [ Martin Michlmayr ]
   * Provide u-boot images for OpenRD.
@@ -85,7 +85,7 @@ debian-installer (20160112) UNRELEASED; urgency=low
   * Handle error creating initramfs (Closes: #821249)
   * Increase kfreebsd-amd64 MFSROOT to 72 MiB to allow for larger udebs
 
- -- Martin Michlmayr <tbm@cyrius.com>  Tue, 12 Jan 2016 20:28:57 -0800
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 16 May 2016 15:00:21 +0200
 
 debian-installer (20160106) unstable; urgency=medium
 
