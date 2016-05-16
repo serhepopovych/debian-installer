@@ -80,7 +80,7 @@ Build-Depends:
 #		kernels and add nslu2 boot magic.
 	slugimage (>= 0.10+r58-6) [armeb armel],
 #		For building nslu2 firmware images.
-	dns323-firmware-tools (>= 0.7.3-1) [armel],
+	dns323-firmware-tools (>= 0.7.3-1~) [armel],
 #		For building firmware images for the D-Link DNS-32(0|3).
 	u-boot-tools [armel armhf],
 #		For creating u-boot images
@@ -129,7 +129,7 @@ Build-Depends:
 	u-boot-sunxi [armhf],
 	u-boot-rockchip [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
-	u-boot (>= 2016.01+dfsg1-1) [armel],
+	u-boot (>= 2016.01+dfsg1-1~) [armel],
 #		U-boot binaries for armel systems
 # 
 # Architecture specific build dependencies:
