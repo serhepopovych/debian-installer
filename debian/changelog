@@ -1,3 +1,10 @@
+debian-installer (20150422+deb8u4) UNRELEASED; urgency=medium
+
+  [ Steve McIntyre ]
+  * Add sata-modules for arm64 - some machines do have SATA CD
+
+ -- Steve McIntyre <93sam@debian.org>  Wed, 18 May 2016 14:18:39 +0100
+
 debian-installer (20150422+deb8u3) jessie; urgency=medium
 
   [ Samuel Thibault ]
