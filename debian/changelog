@@ -1,7 +1,8 @@
 debian-installer (20160517) UNRELEASED; urgency=medium
 
+  [ Cyril Brulebois ]
   * Make version build-deps use -1~ version suffixes instead of -1 to
-    make lintian happy (build-depends-on-1-revision tag).
+    make lintian happy (build-depends-on-1-revision tag)
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 16 May 2016 22:31:50 +0200
 
@@ -91,6 +92,9 @@ debian-installer (20160516) unstable; urgency=low
   [ Steven Chamberlain ]
   * Handle error creating initramfs (Closes: #821249)
   * Increase kfreebsd-amd64 MFSROOT to 72 MiB to allow for larger udebs
+
+  [ Steve McIntyre ]
+  * Add sata-modules for arm64 - some machines do have SATA CD
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 16 May 2016 15:00:21 +0200
 
