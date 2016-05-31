@@ -16,6 +16,8 @@ debian-installer (20160517) UNRELEASED; urgency=medium
   [ Roger Shimizu ]
   * ARM: orion5x: Add a few Linkstation devices to netboot target.
     Those devices are still in network-console target.
+  * ARM: orion5x: Change initrd to XZ compression for all orion5x-based
+    Linkstation devices.
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 16 May 2016 22:31:50 +0200
 
