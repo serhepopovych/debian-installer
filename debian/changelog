@@ -3,6 +3,7 @@ debian-installer (20160517) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Make version build-deps use -1~ version suffixes instead of -1 to
     make lintian happy (build-depends-on-1-revision tag)
+  * Bump Linux kernel version from 4.5.0-2 to 4.6.0-1
 
   [ Aurelien Jarno ]
   * Add mipsel octeon images.
