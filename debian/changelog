@@ -24,6 +24,9 @@ debian-installer (20160517) UNRELEASED; urgency=medium
   [ Steven Chamberlain ]
   * Bump kfreebsd (kernel) version to 10.3.
 
+  [ Martin Michlmayr ]
+  * Use XZ compression for QNAP on Kirkwood due to size restrictions.
+
  -- Cyril Brulebois <kibi@debian.org>  Mon, 16 May 2016 22:31:50 +0200
 
 debian-installer (20160516) unstable; urgency=low
