@@ -26,6 +26,7 @@ debian-installer (20160517) UNRELEASED; urgency=medium
 
   [ Martin Michlmayr ]
   * Use XZ compression for QNAP on Kirkwood due to size restrictions.
+  * Mark fb-modules as required for armhf's netboot-gtk flavour.
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 16 May 2016 22:31:50 +0200
 
