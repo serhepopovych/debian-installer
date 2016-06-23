@@ -9,6 +9,7 @@ debian-installer (20160517) UNRELEASED; urgency=medium
   * Add mipsel octeon images.
   * Drop mipsel cobalt support.
   * Add mips64el support.
+  * Drop mipsel/loongson-2e ang mipsel/loongson-2f images.
 
   [ Samuel Thibault ]
   * Produce two beeps when booted with grub instead of one, so the user knows
