@@ -17,6 +17,7 @@ udpkg
 rescue-check
 env-preseed
 pciutils-udeb
+screen-udeb
 
 #include "udev"
 
