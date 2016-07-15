@@ -3,6 +3,9 @@ debian-installer (20160704) UNRELEASED; urgency=medium
   [ Roger Shimizu ]
   * Add generic GNU/screen support, except gtk installer.
 
+  [ Martin Michlmayr ]
+  * Exclude dependency of screen-udeb on orion5x image.
+
  -- Roger Shimizu <rogershimizu@gmail.com>  Mon, 04 Jul 2016 23:43:17 +0200
 
 debian-installer (20160630) unstable; urgency=medium
