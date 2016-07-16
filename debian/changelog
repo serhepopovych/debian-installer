@@ -2,6 +2,7 @@ debian-installer (20160704) UNRELEASED; urgency=medium
 
   [ Roger Shimizu ]
   * Add generic GNU/screen support, except gtk installer.
+    So screen is started by default except running in gtk mode.
 
   [ Martin Michlmayr ]
   * Exclude dependency of screen-udeb on orion5x image.
