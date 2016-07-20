@@ -599,12 +599,6 @@ endif
 	fi
 
 
-	# Strip all kernel modules, just in case they haven't already been
-	set -e; \
-	for module in `find $(TREE)/lib/modules/ -name '*.o' -or -name '*.ko'`; do \
-	    strip -R .comment -R .note -g $$module || true; \
-	done
-
 	# Remove some unnecessary dpkg files.
 	set -e; \
 	for file in `find $(TREE)/var/lib/dpkg/info -name '*.md5sums' -o \

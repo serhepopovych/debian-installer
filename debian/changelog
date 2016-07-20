@@ -12,6 +12,9 @@ debian-installer (20160704) UNRELEASED; urgency=medium
     - Exclude the text frontend.
     - Exclude qcontrol due to size constraints.
 
+  [ Adam Conrad ]
+  * build/Makefile: Don't strip modules; this removes sigs (LP: #1604441)
+
  -- Roger Shimizu <rogershimizu@gmail.com>  Mon, 04 Jul 2016 23:43:17 +0200
 
 debian-installer (20160630) unstable; urgency=medium
