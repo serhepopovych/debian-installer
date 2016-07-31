@@ -10,6 +10,8 @@ debian-installer (20160704) UNRELEASED; urgency=medium
     - Split orion5x into orion5x and orion5x-qnap.  This is based on
       work done by Roger Shimizu.
     - Exclude the text frontend.
+  * HP mv2120: Move kernel load address higher (see #809611 for
+    background).
 
   [ Adam Conrad ]
   * build/Makefile: Don't strip modules; this removes sigs (LP: #1604441)
