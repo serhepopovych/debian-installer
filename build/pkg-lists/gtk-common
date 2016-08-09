@@ -25,5 +25,9 @@ fonts-ukij-uyghur-udeb
 fonts-sil-padauk-udeb
 fonts-lohit-guru-udeb
 
+# Graphical accessibility
+libgail18-udeb
+libatk-adaptor-udeb
+
 # Exclude screen support
 screen-udeb -
