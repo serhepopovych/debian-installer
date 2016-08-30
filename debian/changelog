@@ -12,6 +12,8 @@ debian-installer (20160704) UNRELEASED; urgency=medium
     - Exclude the text frontend.
   * HP mv2120: Move kernel load address higher (see #809611 for
     background).
+  * Add firmware.none.img on armhf (hd-media and netboot) to allow the
+    creation of generic SD cards.
 
   [ Adam Conrad ]
   * build/Makefile: Don't strip modules; this removes sigs (LP: #1604441)
