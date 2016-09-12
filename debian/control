@@ -125,9 +125,9 @@ Build-Depends:
 	grub-ieee1275-bin [ppc64el],
 #		IEEE1275 bootloader support.
 	u-boot-imx [armhf],
-	u-boot-omap [armhf],
+	u-boot-omap (>= 2016.09~rc1) [armhf],
 	u-boot-sunxi [armhf],
-	u-boot-rockchip [armhf],
+	u-boot-rockchip (>= 2016.09~rc1) [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
 	u-boot (>= 2016.01+dfsg1-1~) [armel],
 #		U-boot binaries for armel systems

@@ -28,6 +28,10 @@ debian-installer (20160704) UNRELEASED; urgency=medium
   [ Steven Chamberlain ]
   * Increase kfreebsd-amd64 MFSROOT to 74 MiB to allow for the new udebs
 
+  [ Vagrant Cascadian ]
+  * Update u-boot targets for BeagleBoard-X15 and Firefly-RK3288 to use
+    files without the -dtb suffix, which was obsoleted in u-boot 2016.09.
+
  -- Roger Shimizu <rogershimizu@gmail.com>  Mon, 04 Jul 2016 23:43:17 +0200
 
 debian-installer (20160630) unstable; urgency=medium
