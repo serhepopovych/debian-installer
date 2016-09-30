@@ -33,6 +33,9 @@ debian-installer (20160704) UNRELEASED; urgency=medium
     files without the -dtb suffix, which was obsoleted in u-boot 2016.09.
   * Add support for the orangepi_plus.
 
+  [ Cyril Brulebois ]
+  * Bump Linux kernel version from 4.6.0-1 to 4.7.0-1.
+
  -- Roger Shimizu <rogershimizu@gmail.com>  Mon, 04 Jul 2016 23:43:17 +0200
 
 debian-installer (20160630) unstable; urgency=medium
