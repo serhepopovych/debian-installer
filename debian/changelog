@@ -24,6 +24,7 @@ debian-installer (20160704) UNRELEASED; urgency=medium
 
   [ Samuel Thibault ]
   * Add gail and atk udebs for graphical accessibility.
+  * x86-image: Pass -p parameter to grub-mkimage which now requires it.
 
   [ Steven Chamberlain ]
   * Increase kfreebsd-amd64 MFSROOT to 74 MiB to allow for the new udebs
