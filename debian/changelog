@@ -1,4 +1,4 @@
-debian-installer (20160704) UNRELEASED; urgency=medium
+debian-installer (20161027) unstable; urgency=medium
 
   [ Roger Shimizu ]
   * Add generic GNU/screen support, except gtk installer.
@@ -42,7 +42,7 @@ debian-installer (20160704) UNRELEASED; urgency=medium
   * arm64: cdrom: Configure GRUB to load the gzio module, adding support
     for compressed kernels (LP: #1632473).
 
- -- Roger Shimizu <rogershimizu@gmail.com>  Mon, 04 Jul 2016 23:43:17 +0200
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Oct 2016 22:09:07 +0200
 
 debian-installer (20160630) unstable; urgency=medium
 
