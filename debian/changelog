@@ -36,6 +36,7 @@ debian-installer (20160704) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.6.0-1 to 4.7.0-1.
+  * Update translation-status for the release.
 
   [ dann frazier ]
   * arm64: cdrom: Configure GRUB to load the gzio module, adding support
