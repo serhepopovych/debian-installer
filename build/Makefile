@@ -369,9 +369,14 @@ endif
 			source=`dpkg-deb --info $$udeb | sed -n 's/^ Source: //p'` ; \
 			if [ -z "$$source" ]; then \
 				source=`dpkg-deb --info $$udeb | awk '/ Package: / { print $$2 }'` ; \
+				source_version="$$source (= $$version)" ; \
+			elif echo "$$source" | grep -qs '(.*)'; then \
+				source_version=`echo $$source|sed 's/(/(= /'`; \
+			else \
+				source_version="$$source (= $$version)" ; \
 			fi ; \
 			echo " $$usedsize B - $$usedblocks blocks - $$usedcount files from $$pkg (version $$version)" >>$(TEMP)/diskusage.txt;\
-			echo "$$source (= $$version)" >>$(TEMP)/built-using.txt;\
+			echo "$$source_version" >>$(TEMP)/built-using.txt;\
 			oldsize=$$newsize ; \
 			oldblocks=$$newblocks ; \
 			oldcount=$$newcount ; \
