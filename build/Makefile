@@ -370,6 +370,8 @@ endif
 			if [ -z "$$source" ]; then \
 				source=`dpkg-deb --info $$udeb | awk '/ Package: / { print $$2 }'` ; \
 				source_version="$$source (= $$version)" ; \
+			elif echo "$$source" | grep -qs '^linux-signed'; then \
+				source_version="linux (= $$version)" ; \
 			elif echo "$$source" | grep -qs '(.*)'; then \
 				source_version=`echo $$source|sed 's/(/(= /'`; \
 			else \
