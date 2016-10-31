@@ -3,6 +3,12 @@ debian-installer (201610XX) UNRELEASED; urgency=medium
   [ Samuel Thibault ]
   * x86-image: Fix -p parameter value.
 
+  [ Cyril Brulebois ]
+  * Fix Built-Using generation: the Source field of a binary package can
+    contain a version between parentheses. So let's use that if it's
+    present, instead of picking the binary version in all cases. This
+    should fix the REJECT from ftp-master due to unknown packages.
+
  -- Samuel Thibault <sthibault@debian.org>  Fri, 28 Oct 2016 00:57:16 +0200
 
 debian-installer (20161027) unstable; urgency=medium
