@@ -1,6 +1,15 @@
 debian-installer (201611XX) UNRELEASED; urgency=medium
 
+  [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.7.0-1 to 4.8.0-1.
+
+  [ Adam Conrad ]
+  * build/util/efi-image: Fix up FAT filesystem size calculation:
+    - We appear to need 32k headroom, not 24k; this was masked
+      by rounding errors and blind luck until grub grew 1.5kB.
+    - Break out the magic headroom number into 32+31 to match
+      the comment and make the arithmetic more obvious to read.
+    - Round file sizes up, not down, so we don't break in future.
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 06 Nov 2016 05:18:02 +0100
 
