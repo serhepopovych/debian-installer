@@ -1,6 +1,6 @@
 debian-installer (201611XX) UNRELEASED; urgency=medium
 
-  * ump Linux kernel version from 4.7.0-1 to 4.8.0-1.
+  * Bump Linux kernel version from 4.7.0-1 to 4.8.0-1.
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 06 Nov 2016 05:18:02 +0100
 
