@@ -11,6 +11,10 @@ debian-installer (201611XX) UNRELEASED; urgency=medium
       the comment and make the arithmetic more obvious to read.
     - Round file sizes up, not down, so we don't break in future.
 
+  [ Martin Michlmayr ]
+  * Disable u-boot images for OpenRD because they've been removed
+    (see #837629).
+
  -- Cyril Brulebois <kibi@debian.org>  Sun, 06 Nov 2016 05:18:02 +0100
 
 debian-installer (20161031) unstable; urgency=medium
