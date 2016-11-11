@@ -2,6 +2,8 @@ debian-installer (201611XX) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.7.0-1 to 4.8.0-1.
+  * Add “set -e;” before while loops in a few arm* config files
+    to make sure errors are reported (Closes: #843916).
 
   [ Adam Conrad ]
   * build/util/efi-image: Fix up FAT filesystem size calculation:
