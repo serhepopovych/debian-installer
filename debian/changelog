@@ -17,6 +17,9 @@ debian-installer (201611XX) UNRELEASED; urgency=medium
   * Disable u-boot images for OpenRD because they've been removed
     (see #837629).
 
+  [ Aurélien COUDERC ]
+  * Update theme to Soft Waves by Juliette Belin.
+
  -- Cyril Brulebois <kibi@debian.org>  Sun, 06 Nov 2016 05:18:02 +0100
 
 debian-installer (20161031) unstable; urgency=medium
