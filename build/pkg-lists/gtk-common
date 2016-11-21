@@ -19,7 +19,8 @@ fonts-mlym-udeb
 fonts-knda-udeb
 fonts-telu-udeb
 fonts-sil-abyssinica-udeb
-fonts-lklug-sinhala-udeb
+# For Sinhala
+fonts-noto-hinted-udeb
 fonts-lao-udeb
 fonts-ukij-uyghur-udeb
 fonts-sil-padauk-udeb
