@@ -54,11 +54,13 @@ fi
 # when fakeroot is used.
 # As we start with an empty file, we can use -i also on first invocation.
 ROOTCMDOPTS=""
-if [ "$ROOTCMD" = fakeroot ]; then
+case "$ROOTCMD" in
+    *fakeroot*)
 	FRSAVE="$(mktemp -t d-i_daily-build.XXXXXX)"
 	trap 'rm -f $FRSAVE' 0 HUP INT QUIT TERM
 	ROOTCMDOPTS="-i $FRSAVE -s $FRSAVE"
-fi
+	;;
+esac
 
 LOG_TO_STDOUT=${LOG_TO_STDOUT:-0}
 
