@@ -47,7 +47,7 @@ fi
 
 # Overridable environment variables for building.
 if [ -z "$ROOTCMD" ]; then
-	ROOTCMD="fakeroot"
+	_ROOTCMD="fakeroot"
 else
 	_ROOTCMD=$ROOTCMD
 	unset ROOTCMD
