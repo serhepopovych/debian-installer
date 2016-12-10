@@ -30,6 +30,9 @@ debian-installer (201611XX) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.8.0-1 to 4.8.0-2.
 
+  [ Philipp Kern ]
+  * Add https support to the installer. (Closes: #842040)
+
  -- Cyril Brulebois <kibi@debian.org>  Sun, 06 Nov 2016 05:18:02 +0100
 
 debian-installer (20161031) unstable; urgency=medium
