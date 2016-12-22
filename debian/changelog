@@ -36,6 +36,9 @@ debian-installer (201611XY) UNRELEASED; urgency=medium
   [ Philip Hands ]
   * pkg-lists/gtk-common: ttf-dejavu-udeb is now called fonts-dejavu-udeb
 
+  [ Samuel Thibault ]
+  * Bump gnumach kernel version.
+
  -- Philip Hands <phil@hands.com>  Wed, 21 Dec 2016 11:11:04 +0100
 
 debian-installer (20161031) unstable; urgency=medium
