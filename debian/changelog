@@ -21,6 +21,8 @@ debian-installer (201611XY) UNRELEASED; urgency=medium
   [ Martin Michlmayr ]
   * Disable u-boot images for OpenRD because they've been removed
     (see #837629).
+  * Exclude wpasupplicant-udeb on orion5x-qnap because it brings in
+    libcrypto1.1-udeb.
 
   [ Aurélien COUDERC ]
   * Update theme to Soft Waves by Juliette Belin.
