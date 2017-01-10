@@ -7,6 +7,8 @@ debian-installer (201611XY) UNRELEASED; urgency=medium
   * Revert the following workaround after changes in grub2 2.02~beta3:
     config/kfreebsd.cfg: Put xorriso's -J flag after “--” to work around
     grub-mkrescue's change in option handling (See: #741656).
+  * Exclude libssl1.1-udeb as well for qnap, wget will likely depend on
+    it later on.
 
   [ Adam Conrad ]
   * build/util/efi-image: Fix up FAT filesystem size calculation:
