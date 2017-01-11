@@ -12,8 +12,9 @@ developers when i18n/l10n topics are involved.
 </para>
 
 <para>
-The source code of this document can be found under
-https://anonscm.debian.org/cgit/d-i/debian-installer.git/tree/doc/i18n.
+The source code of this document can be found in the
+<ulink url="https://anonscm.debian.org/cgit/d-i/debian-installer.git/tree/doc/i18n/">d-i
+git repository</ulink>.
 </para>
 </abstract>
 
