@@ -9,6 +9,7 @@ debian-installer (201611XY) UNRELEASED; urgency=medium
     grub-mkrescue's change in option handling (See: #741656).
   * Exclude libssl1.1-udeb as well for qnap, wget will likely depend on
     it later on.
+  * Update translation-status for the release.
 
   [ Adam Conrad ]
   * build/util/efi-image: Fix up FAT filesystem size calculation:
