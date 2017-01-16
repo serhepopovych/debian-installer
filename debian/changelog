@@ -1,3 +1,9 @@
+debian-installer (201701XX) UNRELEASED; urgency=medium
+
+  * Bump Linux kernel version from 4.8.0-2 to 4.9.0-1.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 16 Jan 2017 14:58:53 +0100
+
 debian-installer (20170112) unstable; urgency=medium
 
   [ Cyril Brulebois ]
