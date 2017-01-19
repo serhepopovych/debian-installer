@@ -6,6 +6,9 @@ debian-installer (201701XX) UNRELEASED; urgency=medium
   [ Martin Michlmayr ]
   * Drop armel/versatile flavour since kernel support was removed.
 
+  [ Aurelien Jarno ]
+  * Also copy *.so files in udeblibs (Closes: #851790).
+
  -- Cyril Brulebois <kibi@debian.org>  Mon, 16 Jan 2017 14:58:53 +0100
 
 debian-installer (20170112) unstable; urgency=medium
