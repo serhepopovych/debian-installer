@@ -2,6 +2,7 @@ debian-installer (201701XX) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.8.0-2 to 4.9.0-1.
+  * Update translation-status for the release.
 
   [ Martin Michlmayr ]
   * Drop armel/versatile flavour since kernel support was removed.
