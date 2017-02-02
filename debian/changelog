@@ -9,7 +9,7 @@ debian-installer (20170127) unstable; urgency=medium
 
   [ Aurelien Jarno ]
   * Also copy *.so files in udeblibs (Closes: #851790).
-  * mips*: install all NIC modules in the netbood initrd.
+  * mips*: install all NIC modules in the netboot initrd.
 
  -- Cyril Brulebois <kibi@debian.org>  Fri, 27 Jan 2017 23:23:37 +0100
 
