@@ -1,3 +1,13 @@
+debian-installer (201702XX) UNRELEASED; urgency=medium
+
+  * Add support for the unreleased suite, used by non-released ports to
+    carry packages or changes which don't really belong to the Debian
+    archive. Set USE_UNRELEASED=1 and USE_UDEBS_FROM=unstable when not
+    building for a release architecture, based on a patch by James
+    Clarke (Closes: #852215).
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 03 Feb 2017 15:07:49 +0000
+
 debian-installer (20170127) unstable; urgency=medium
 
   [ Cyril Brulebois ]

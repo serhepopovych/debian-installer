@@ -18,6 +18,13 @@ TRANSSTATUS=translation-status
 BOOTMENU_BEEP=y
 endif
 
+# Adjust for non-released ports if needed:
+RELEASE_ARCHES=amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x
+ifeq (,$(filter $(ARCH), $(RELEASE_ARCHES)))
+USE_UNRELEASED=1
+USE_UDEBS_FROM=unstable
+endif
+
 ARCHIVEDIR=debian/tmp/installer-$(ARCH)
 DESTDIR=$(ARCHIVEDIR)/$(DATE)
 IMAGEDIR=$(DESTDIR)/images
@@ -38,6 +45,7 @@ build-images:
 	$(MAKE) -C build all_build stats release \
 		USE_UDEBS_FROM=$(USE_UDEBS_FROM) BUILD_DATE=$(DATE) \
 		USE_PROPOSED_UPDATES=$(USE_PROPOSED_UPDATES) \
+		USE_UNRELEASED=$(USE_UNRELEASED) \
 		TRANSSTATUS=$(TRANSSTATUS) BOOTMENU_BEEP=$(BOOTMENU_BEEP)
 
 build: build-arch build-indep
