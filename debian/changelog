@@ -1,3 +1,12 @@
+debian-installer (201702XX) UNRELEASED; urgency=medium
+
+  * Add fb-modules to the following configurations, per YunQiang Su's
+    request (Closes: #854553):
+     - pkg-lists/netboot/mips64el/loongson-3.cfg
+     - pkg-lists/netboot/mipsel/loongson-3.cfg
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 10 Feb 2017 08:41:23 +0100
+
 debian-installer (20170127) unstable; urgency=medium
 
   [ Cyril Brulebois ]
