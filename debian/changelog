@@ -1,6 +1,14 @@
 debian-installer (20170128) UNRELEASED; urgency=medium
 
+  [ Samuel Thibault ]
   * Update minimum disk size value
+
+  [ Cyril Brulebois ]
+  * Add support for the unreleased suite, used by non-released ports to
+    carry packages or changes which don't really belong to the Debian
+    archive. Set USE_UNRELEASED=1 and USE_UDEBS_FROM=unstable when not
+    building for a release architecture, based on a patch by James
+    Clarke (Closes: #852215).
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 11 Feb 2017 14:20:14 +0100
 
