@@ -2,7 +2,9 @@ debian-installer (20170128) UNRELEASED; urgency=medium
 
   [ Samuel Thibault ]
   * Update minimum disk size value
-  * hurd-i386: Add missing trailing / to EXTRANAME.
+  * hurd-i386:
+    - Add missing trailing / to EXTRANAME.
+    - Fix path for mini-gtk case.
 
   [ Cyril Brulebois ]
   * Add support for the unreleased suite, used by non-released ports to
