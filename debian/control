@@ -99,6 +99,8 @@ Build-Depends:
 #		For all our powerpc boot needs. Well, not really.
 	aboot (>= 0.9b-2) [alpha],
 #		A previous version didn't have netabootwrap.
+	palo [hppa],
+#		Bootloader for hppa machines, to make netboot images.
 	silo [sparc sparc64],
 #		Using silo is problematic since it needs to run as root,
 #		so images that need it are not built by default, but we

@@ -10,6 +10,9 @@ debian-installer (20170128) UNRELEASED; urgency=medium
     building for a release architecture, based on a patch by James
     Clarke (Closes: #852215).
 
+  [ James Clarke ]
+  * Add missing build dependency on palo on hppa (Closes: #852260).
+
  -- Samuel Thibault <sthibault@debian.org>  Sat, 11 Feb 2017 14:20:14 +0100
 
 debian-installer (20170127) unstable; urgency=medium
