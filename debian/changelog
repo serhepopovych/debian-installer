@@ -12,6 +12,10 @@ debian-installer (20170128) UNRELEASED; urgency=medium
     archive. Set USE_UNRELEASED=1 and USE_UDEBS_FROM=unstable when not
     building for a release architecture, based on a patch by James
     Clarke (Closes: #852215).
+  * Add fb-modules to the following configurations, per YunQiang Su's
+    request (Closes: #854553):
+     - pkg-lists/netboot/mips64el/loongson-3.cfg
+     - pkg-lists/netboot/mipsel/loongson-3.cfg
 
   [ James Clarke ]
   * Add missing build dependency on palo on hppa (Closes: #852260).
