@@ -5,6 +5,8 @@ debian-installer (20170128) UNRELEASED; urgency=medium
   * hurd-i386:
     - Add missing trailing / to EXTRANAME.
     - Fix path for mini-gtk case.
+  * i386: Add missing IS_GTK variable definition, needed for speech synthesis
+    menu item.
 
   [ Cyril Brulebois ]
   * Add support for the unreleased suite, used by non-released ports to
