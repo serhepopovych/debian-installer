@@ -28,7 +28,12 @@ debian-installer (20170128) UNRELEASED; urgency=medium
     udebs that enabled HTTPS.
 
   [ Helge Deller ]
+  * hppa: Add virtio modules to cdrom/netboot images
+
+  [ Frederic Bonnard ]
   * powerpc: Add virtio modules to cdrom/netboot images (Closes: #767487)
+
+  [ Mark Cave-Ayland ]
   * sparc64: Add virtio modules to cdrom image
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 11 Feb 2017 14:20:14 +0100
