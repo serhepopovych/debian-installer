@@ -27,6 +27,10 @@ debian-installer (20170128) UNRELEASED; urgency=medium
   * Increase kfreebsd-amd64 MFSROOT to 78 MiB to make space for the new
     udebs that enabled HTTPS.
 
+  [ Helge Deller ]
+  * powerpc: Add virtio modules to cdrom/netboot images (Closes: #767487)
+  * sparc64: Add virtio modules to cdrom image
+
  -- Samuel Thibault <sthibault@debian.org>  Sat, 11 Feb 2017 14:20:14 +0100
 
 debian-installer (20170127) unstable; urgency=medium
