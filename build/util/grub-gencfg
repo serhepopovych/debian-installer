@@ -178,12 +178,15 @@ menuentry("Install");
 menuentry("Graphical install", Graphical => 1);
 
 start_submenu("Advanced options ..."); {
-    menuentry("... Expert install", Expert => 1);
-    menuentry("... Rescue mode", Rescue => 1);
-    menuentry("... Automated install", Auto => 1);
     menuentry("... Graphical expert install", Graphical => 1, Expert => 1);
     menuentry("... Graphical rescue mode", Graphical => 1, Rescue => 1);
     menuentry("... Graphical automated install", Graphical => 1, Auto => 1);
+    menuentry("... Expert install", Expert => 1);
+    menuentry("... Rescue mode", Rescue => 1);
+    menuentry("... Automated install", Auto => 1);
+    menuentry("... Expert install with speech synthesis", Expert => 1, Speech => 1, Hotkey => 'e');
+    menuentry("... Rescue mode with speech synthesis", Rescue => 1, Speech => 1, Hotkey => 'r');
+    menuentry("... Automated install with speech synthesis", Auto => 1, Speech => 1, Hotkey => 'a');
 
     start_submenu("... Desktop environment menu ..."); {
 
@@ -199,10 +202,10 @@ start_submenu("Advanced options ..."); {
                 $one->("... Graphical install", Graphical => 1);
 
                 start_submenu("... $desktop advanced options ..."); {
-                    $one->("... Expert install", Expert => 1);
-                    $one->("... Automated install", Auto => 1);
                     $one->("... Graphical expert install", Graphical => 1, Expert => 1);
                     $one->("... Graphical automated install", Graphical => 1, Auto => 1);
+                    $one->("... Expert install", Expert => 1);
+                    $one->("... Automated install", Auto => 1);
                 } end_submenu(); # $desktop advanced
 
                 $one->("... Install with speech synthesis", Graphical => 1, Speech => 1, Hotkey => 's');

@@ -7,6 +7,7 @@ debian-installer (20170128) UNRELEASED; urgency=medium
     - Fix path for mini-gtk case.
   * i386: Add missing IS_GTK variable definition, needed for speech synthesis
     menu item.
+  * EFI grub menu: set advanced graphical items first, as in syslinux.
 
   [ Cyril Brulebois ]
   * Add support for the unreleased suite, used by non-released ports to
