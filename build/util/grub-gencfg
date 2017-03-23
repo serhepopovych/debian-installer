@@ -121,7 +121,7 @@ sub menuentry ($;%)
     $xattr{Expert} ||= 0;
     $xattr{Auto} ||= 0;
     $xattr{Rescue} ||= 0;
-    $xattr{Speach} ||= 0;
+    $xattr{Speech} ||= 0;
 
     $xattr{Quiet} = !$xattr{Expert} unless defined $xattr{Quiet};
 
@@ -145,7 +145,7 @@ sub menuentry ($;%)
     push @cmdline, ("auto=true", "priority=critical") if $xattr{Auto};
     push @cmdline, @OPTS;
     push @cmdline, "rescue/enable=true" if $xattr{Rescue};
-    push @cmdline, "speakup.synth=soft" if $xattr{Speach};
+    push @cmdline, "speakup.synth=soft" if $xattr{Speech};
     push @cmdline, "---";
     push @cmdline, "quiet" if $xattr{Quiet};
 
@@ -205,11 +205,11 @@ start_submenu("Advanced options ..."); {
                     $one->("... Graphical automated install", Graphical => 1, Auto => 1);
                 } end_submenu(); # $desktop advanced
 
-                $one->("... Install with speech synthesis", Graphical => 1, Speach => 1, Hotkey => 's');
-                $one->("... 32 bit speech install", ThirtyTwo => 1, Graphical => 1, Speach => 1)
+                $one->("... Install with speech synthesis", Graphical => 1, Speech => 1, Hotkey => 's');
+                $one->("... 32 bit speech install", ThirtyTwo => 1, Graphical => 1, Speech => 1)
                     if $thirtytwo;
             } end_submenu(); # $desktop submenu
         } # Desktop loop
     } end_submenu(); # Desktop submenu
 } end_submenu(); # Advanced
-menuentry('Install with speech synthesis', Graphical => $graphical, Speach => 1, Hotkey => 's')
+menuentry('Install with speech synthesis', Graphical => $graphical, Speech => 1, Hotkey => 's')
