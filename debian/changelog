@@ -22,6 +22,7 @@ debian-installer (20170128) UNRELEASED; urgency=medium
      - pkg-lists/netboot/mips64el/loongson-3.cfg
      - pkg-lists/netboot/mipsel/loongson-3.cfg
   * Bump Linux kernel version from 4.9.0-1 to 4.9.0-2.
+  * Update translation-status for the release.
 
   [ James Clarke ]
   * Add missing build dependency on palo on hppa (Closes: #852260).
