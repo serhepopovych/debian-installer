@@ -40,6 +40,9 @@ debian-installer (20170128) UNRELEASED; urgency=medium
   [ Mark Cave-Ayland ]
   * sparc64: Add virtio modules to cdrom image
 
+  [ John Paul Adrian Glaubitz ]
+  * powerpc: Remove useless kernel version check in builtin_initrd.
+
  -- Samuel Thibault <sthibault@debian.org>  Sat, 11 Feb 2017 14:20:14 +0100
 
 debian-installer (20170127) unstable; urgency=medium
