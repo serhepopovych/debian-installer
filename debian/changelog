@@ -43,6 +43,7 @@ debian-installer (20170128) UNRELEASED; urgency=medium
   [ John Paul Adrian Glaubitz ]
   * powerpc: Remove useless kernel version check in builtin_initrd.
   * ppc64: Clone boot configuration files from powerpc.
+  * ppc64: Add config support based on powerpc config.
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 11 Feb 2017 14:20:14 +0100
 
