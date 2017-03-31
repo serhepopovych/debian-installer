@@ -95,7 +95,7 @@ Build-Depends:
 	pxelinux [i386 amd64],
 	syslinux-common (>= 3:6) [i386 amd64],
 #		With isohybrid.
-	yaboot [powerpc],
+	yaboot [powerpc ppc64],
 #		For all our powerpc boot needs. Well, not really.
 	aboot (>= 0.9b-2) [alpha],
 #		A previous version didn't have netabootwrap.
