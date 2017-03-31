@@ -48,6 +48,7 @@ debian-installer (20170128) UNRELEASED; urgency=medium
   * ppc64: Clone netboot pkg-lists from powerpc.
   * ppc64: Clone netboot-gtk pkg-lists from powerpc.
   * ppc64: Add yaboot to Build-Depends.
+  * ppc64: Add mkvmlinuz to Build-Depends.
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 11 Feb 2017 14:20:14 +0100
 

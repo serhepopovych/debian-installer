@@ -148,7 +148,7 @@ Build-Depends:
 	bf-utf-source [!s390 !s390x],
 #		Contains the unicode font we use. Not a udeb since we
 #		perform font reduction at build time.
-	mkvmlinuz [powerpc],
+	mkvmlinuz [powerpc ppc64],
 #		Used to make powerpc images that can boot direct from
 #		firmware w/o using a boot loader.
 	openssl,
