@@ -6,6 +6,7 @@ debian-installer (20170408) UNRELEASED; urgency=medium
   [ John Paul Adrian Glaubitz ]
   * m68k: Change configuration to use the common m68k kernel image.
   * m68k: Change KERNELMAJOR to 2.6.
+  * m68k: Clean up formatting of all configuration files.
 
  -- Samuel Thibault <sthibault@debian.org>  Mon, 10 Apr 2017 10:38:20 +0200
 
