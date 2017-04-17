@@ -2,6 +2,8 @@ debian-installer (20170408) UNRELEASED; urgency=medium
 
   [ Samuel Thibault ]
   * Fix showing the advanced speech entries.
+  * Move the advanced speech entries into a submenu, so that text entries have
+    shortcuts too, for people with a Braille device for instance.
 
   [ John Paul Adrian Glaubitz ]
   * m68k: Change configuration to use the common m68k kernel image.
