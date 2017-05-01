@@ -5,6 +5,7 @@ debian-installer (20170408) UNRELEASED; urgency=medium
   * Move the advanced speech entries into a submenu, so that text entries have
     shortcuts too, for people with a Braille device for instance.
   * Fix spurious 32bit speech entry on multiarch.
+  * Rename IS_GTK to IS_PURE_GTK to make it clearer.
 
   [ John Paul Adrian Glaubitz ]
   * m68k: Change configuration to use the common m68k kernel image.
