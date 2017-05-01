@@ -6,6 +6,7 @@ debian-installer (20170408) UNRELEASED; urgency=medium
     shortcuts too, for people with a Braille device for instance.
   * Fix spurious 32bit speech entry on multiarch.
   * Rename IS_GTK to IS_PURE_GTK to make it clearer.
+  * Add missing speech entries on a gtk-only cdrom image
 
   [ John Paul Adrian Glaubitz ]
   * m68k: Change configuration to use the common m68k kernel image.
