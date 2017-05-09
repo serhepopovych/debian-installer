@@ -21,6 +21,9 @@ debian-installer (20170408) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Bump Linux kernel version from 4.9.0-2 to 4.9.0-3.
 
+  [ Martin Michlmayr ]
+  * Re-enable u-boot images for OpenRD.
+
  -- Samuel Thibault <sthibault@debian.org>  Mon, 10 Apr 2017 10:38:20 +0200
 
 debian-installer (20170407) unstable; urgency=medium
