@@ -3,6 +3,8 @@ debian-installer (201706XX) UNRELEASED; urgency=medium
   * Add “set -e” statement to build/util/gen-hd-image so as to catch any
     issues. In particular, the “Disk full” emitted for some images like
     A10-OLinuXino-Lime (See: #864260).
+  * Adapt clean_tempfiles accordingly, since the previous compound
+    statements would fail under “set -e” with an undefined/empty variable.
 
  -- Cyril Brulebois <kibi@debian.org>  Wed, 07 Jun 2017 02:02:22 +0200
 
