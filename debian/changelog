@@ -1,3 +1,11 @@
+debian-installer (20170614) UNRELEASED; urgency=medium
+
+  [ Karsten Merker ]
+  * Include the i2c-modules udeb in the armhf netboot and hd-media builds.
+    (Closes: #864536, closes: #864457, closes: #856111)
+
+ -- Karsten Merker <merker@debian.org>  Wed, 14 Jun 2017 07:21:42 +0200
+
 debian-installer (20170608) unstable; urgency=medium
 
   [ Cyril Brulebois ]
