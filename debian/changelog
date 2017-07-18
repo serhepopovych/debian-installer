@@ -11,6 +11,11 @@ debian-installer (201709XX) UNRELEASED; urgency=medium
   [ Karsten Merker ]
   * Bump Linux kernel ABI from 4.12.0-2 to 4.13.0-1
 
+  [ Raphaël Hertzog ]
+  * Update the hd-media image to include udebs required to detect
+    LVM logical volumes too (so that we can find the ISO in logical
+    volumes too). Closes: #868852
+
  -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Thu, 07 Sep 2017 17:12:37 +0000
 
 debian-installer (20170828) unstable; urgency=medium
