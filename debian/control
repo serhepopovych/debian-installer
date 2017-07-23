@@ -78,8 +78,6 @@ Build-Depends:
 	devio [armeb armel],
 #		Tool to read and write from block devices, used to byteswap
 #		kernels and add nslu2 boot magic.
-	slugimage (>= 0.10+r58-6) [armeb armel],
-#		For building nslu2 firmware images.
 	dns323-firmware-tools (>= 0.7.3-1~) [armel],
 #		For building firmware images for the D-Link DNS-32(0|3).
 	u-boot-tools [armel armhf],
@@ -119,8 +117,6 @@ Build-Depends:
 	emile [m68k],
 	emile-bootblocks [m68k],
 #		Bootloader for m68k/mac machines.
-	apex-nslu2 [armeb armel],
-#		2nd stage bootloader for Linksys NSLU2.
 	grub-efi-amd64-bin [amd64], grub-efi-arm64-bin [arm64], grub-efi-ia32-bin [i386],
 	grub-common [amd64 arm64 i386], xorriso,
 #		Used to make EFI bootable images

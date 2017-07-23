@@ -5,6 +5,7 @@ debian-installer (201707XX) UNRELEASED; urgency=medium
 
   [ Martin Michlmayr ]
   * Drop orion5x-qnap image.
+  * Remove NSLU2 related build dependencies.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 22 Jun 2017 06:48:30 +0200
 
