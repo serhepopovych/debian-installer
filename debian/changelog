@@ -7,6 +7,10 @@ debian-installer (201707XX) UNRELEASED; urgency=medium
   * Drop orion5x-qnap image.
   * Remove NSLU2 related build dependencies.
 
+  [ Vagrant Cascadian ]
+  * [armhf] Fix build of Firefly-RK3288 images with recent u-boot
+    versions. (Closes: #8706150)
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 22 Jun 2017 06:48:30 +0200
 
 debian-installer (20170615) unstable; urgency=medium
