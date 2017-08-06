@@ -6,7 +6,6 @@ Uploaders: Cyril Brulebois <kibi@debian.org>
 Standards-Version: 3.9.5
 Vcs-Git: https://anonscm.debian.org/git/d-i/debian-installer.git
 Vcs-Browser: https://anonscm.debian.org/cgit/d-i/debian-installer.git
-Build-Conflicts: libnewt-pic [mipsel]
 Build-Depends:
 # Base build dependencies:
 	debhelper (>= 7.0.0),
@@ -35,14 +34,9 @@ Build-Depends:
 #		For bdftobogl used in font reduction.
 #	
 # Library build dependencies:
-	libslang2-pic (>= 2.0.6-4),
-#		Make dependency versioned temporarily to make sure we avoid #392942
-	libnewt-pic (>= 0.52.2-11.3) [!mipsel],
-#		Rather than use slang and newt udebs, reduced versions of
-#		the libraries are put onto images to save space.
-	libnewt-dev (>= 0.52.2-11.3) [mipsel],
-#		On mipsel, we can't use libnewt-pic right now due to bug
-#		#329733. See also Build-Conflicts above.
+	libnewt0.52,
+#		libnewt0.52 does not have a udeb, mklibs-copy will copy the
+#		the library from the debian package.
 	libgcc1 [i386 amd64],
 #		On x86 we need to include /lib/libgcc_s.so.1 in g-i initrds to
 #		work around #373253 until upstream can remove pthread_cancel()
