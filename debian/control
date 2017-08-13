@@ -157,7 +157,7 @@ Build-Depends:
 #		Used for architectures hosted on debian-ports.org
 	librsvg2-bin [any-amd64 any-i386],
 #		Used to convert splash SVG to splash PNG during build
-	fdisk | util-linux (<< 2.29.2-3~) [armhf],
+	fdisk [armhf] | util-linux (<< 2.29.2-3~) [armhf],
 #		sfdisk is used by util/gen-hd-image when creating SD card
 #		images for armhf systems. Starting with buster, it is no longer
 #		part of util-linux but split out into a separate, non-essential
