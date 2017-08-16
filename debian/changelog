@@ -22,6 +22,7 @@ debian-installer (201707XX) UNRELEASED; urgency=medium
     from util-linux into a separate, non-essential "fdisk" package:
     https://lists.debian.org/debian-devel-announce/2017/08/msg00005.html
     (Closes: #872091)
+  * Bump the Linux kernel ABI from 4.11.0-2 to 4.12.0-1.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 22 Jun 2017 06:48:30 +0200
 
