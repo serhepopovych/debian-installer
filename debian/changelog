@@ -21,6 +21,7 @@ debian-installer (201707XX) UNRELEASED; urgency=medium
     armhf systems, and starting with util-linux 2.29.2-3 it is split out
     from util-linux into a separate, non-essential "fdisk" package:
     https://lists.debian.org/debian-devel-announce/2017/08/msg00005.html
+    (Closes: #872091)
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 22 Jun 2017 06:48:30 +0200
 
