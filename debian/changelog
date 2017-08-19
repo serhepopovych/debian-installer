@@ -7,6 +7,11 @@ debian-installer (201709XX) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI from 4.12.0-1 to 4.12.0-2.
+  * Add support for SNAPSHOT_TS to use a specific timestamp of the Debian
+    archive on snapshot.debian.org instead of the detected mirror; disable
+    Valid-Until check when this is requested, since signatures are likely
+    expired. Most useful for bisecting when a specific regression was
+    introduced. (See: #872598)
 
   [ Karsten Merker ]
   * Bump Linux kernel ABI from 4.12.0-2 to 4.13.0-1
