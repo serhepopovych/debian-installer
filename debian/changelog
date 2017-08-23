@@ -1,6 +1,10 @@
 debian-installer (2018XXXX) UNRELEASED; urgency=medium
 
+  [ Cyril Brulebois ]
   * Bump Linux kernel ABI from 4.13.0-1 to 4.14.0-2
+
+  [ Paul Tagliamonte ]
+  * Add support for the NanoPiNeo
 
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
