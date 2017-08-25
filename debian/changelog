@@ -3,6 +3,9 @@ debian-installer (201707XX) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI from 4.9.0-3 to 4.11.0-2.
   * Update translation-status for the release.
+  * Adjust fontconfig's hinting and freetype's interpreter version to keep
+    the original rendering in the graphical installer for the time being
+    (See: #873462).
 
   [ Martin Michlmayr ]
   * Drop orion5x-qnap image.
