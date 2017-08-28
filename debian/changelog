@@ -15,7 +15,7 @@ debian-installer (201707XX) UNRELEASED; urgency=medium
 
   [ Vagrant Cascadian ]
   * [armhf] Fix build of Firefly-RK3288 images with recent u-boot
-    versions. (Closes: #8706150)
+    versions. (Closes: #870615)
 
   [ Aurelien Jarno ]
   * debian/control: do not build-depends on -pic libraries, that is not
