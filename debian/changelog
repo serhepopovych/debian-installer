@@ -6,6 +6,8 @@ debian-installer (201707XX) UNRELEASED; urgency=medium
   * Adjust fontconfig's hinting and freetype's interpreter version to keep
     the original rendering in the graphical installer for the time being
     (See: #873462).
+  * Update build/config/common and debian/rules to perform release builds
+    against buster now that stretch has been released.
 
   [ Martin Michlmayr ]
   * Drop orion5x-qnap image.

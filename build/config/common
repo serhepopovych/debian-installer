@@ -44,13 +44,13 @@ MKLIBS = mklibs-copy
 DPKG_UNPACK_OPTIONS = --force-overwrite
 
 # The codename of the Debian release that should be installed by default.
-DEBIAN_RELEASE = stretch
+DEBIAN_RELEASE = buster
 
 # The version (number and codename) of the Debian release targeted by the
 # installation images. (Only the codename is used while the version number
 # has not yet been determined.)
-DEBIAN_VERSION = 9 (stretch)
-DEBIAN_VERSION ?= stretch
+DEBIAN_VERSION = 10 (buster)
+DEBIAN_VERSION ?= buster
 
 # Define here from what release (codename!) components (udebs) should be taken
 # to build debian-installer. By default this is set to 'unstable' for building
