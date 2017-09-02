@@ -1,3 +1,8 @@
+debian-installer (201709XX) UNRELEASED; urgency=medium
+
+  [ John Paul Adrian Glaubitz ]
+  * m68k: Add pata-modules to cdrom package list.
+
 debian-installer (20170828) unstable; urgency=medium
 
   [ Cyril Brulebois ]
