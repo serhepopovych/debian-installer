@@ -1,3 +1,10 @@
+debian-installer (20170615+deb9u2) UNRELEASED; urgency=medium
+
+  * Bump Linux kernel version from 4.9.0-3 to 4.9.0-4. This is unusual,
+    but the linux kernel ABI got bumped in stable.
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Sep 2017 22:06:03 +0200
+
 debian-installer (20170615+deb9u1) stretch; urgency=medium
 
   * Enable proposed-updates for the stretch stable branch.
