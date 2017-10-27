@@ -331,7 +331,7 @@ Review changes to existing templates
 <para>Some peer review is strongly suggested when changing existing debconf templates and the changes are significant enough to motivate a peer review (maintainers should be aware that even minor changes might be inconsistent with the &d-i; writing style, so in doubt, any change should be considered as significant enough).</para>
 
 <para>
-In such case, it is recommended to first duplicate the existing template, with another name (for instance, the former name followed by <emphasis>_save</emphasis>.
+In such case, it is recommended to first duplicate the existing template, with another name (for instance, the former name followed by <emphasis>_save</emphasis>).
 </para>
 
 <para>The changed template is then unmarked for translation (by removing the leading "_" character) and a review may be requested in the mailing list.
@@ -417,11 +417,7 @@ chosen so that it matches only the occurrence that is changed.
 <para>
 The <classname>po4a</classname> package maintainers have written a
 special tool named <command>msguntypot</command> to handle
-such<emphasis>preventive unfuzzyfication</emphasis>. This utility will
-soon (at the moment of this writing) be included in the
-<classname>po4a</classname> package as it needs some of its Perl
-modules. In the meantime, maintainers may ask for it to the
-&i18n-coords;.
+such <emphasis>preventive unfuzzyfication</emphasis>.
 </para>
 
 <para>

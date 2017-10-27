@@ -29,34 +29,8 @@ Installing <acronym>SVN</acronym>
 
 <para>
 Translators and other &d-i; contributors need to install <acronym>SVN</acronym>
-(Subversion) on their system. For Debian <emphasis>sid</emphasis> or
-<emphasis>sarge</emphasis> users, just do <command>aptitude install
-subversion</command>. Users of Debian <emphasis>woody</emphasis>
-release may use backports from &backports;. The following entry to
-<filename>/etc/apt/sources.list</filename> may be used for this:
-</para>
-
-<informalexample>
-<screen>    
-    deb &url-backports;debian stable subversion
-</screen>
-</informalexample>
-
-<para>
-Alternatively, Adam Conrad's backports may be used:
-</para>
-
-<informalexample>
-<screen>
-    deb http://people.debian.org/~adconrad woody subversion
-</screen>
-</informalexample>
-
-<para>
-These backports are not officially supported by the Debian
-Project. Though their maintainers are well-known and respected Debian
-developers, they're the only people who can guarantee that these packages
-are well maintained and secured.
+(Subversion) on their system. Just do <command>aptitude install
+subversion</command>.
 </para>
 
 <para>
@@ -66,7 +40,7 @@ list.
 </para>
 
 <para>
-For MS-Windows users, a good <acronym>SVN</acronym> client is <emphasis>TortoiseSVN</emphasis> which is free software. It can be downloaded from <ulink url="http://tortoisesvn.tigris.org/">http://tortoisesvn.tigris.org/</ulink>.
+For MS-Windows users, a good <acronym>SVN</acronym> client is <emphasis>TortoiseSVN</emphasis>, which is free software. It can be downloaded from <ulink url="http://tortoisesvn.tigris.org/">http://tortoisesvn.tigris.org/</ulink>.
 </para>
 
 <para>
@@ -96,7 +70,7 @@ name before using the SVN pseudo-URLS.
 </para>
 
 <para>
-<filename>svn+ssh</filename> connections need that you use RSA key-based authentication to connect to &alioth;.
+<filename>svn+ssh</filename> connections require you to use RSA key-based authentication to connect to &alioth;.
 </para>
 
 <para>
@@ -249,10 +223,10 @@ user@host:~/level1-po> lokalize fr.po
 .../...
 </screen>
 <para>
-(use Lokalize or any other gettext utility, see <xref linkend="gettext-tools"/> for details about gettext files handling, editing and maintenance tools)
+(Use Lokalize or any other gettext utility, see <xref linkend="gettext-tools"/> for details about gettext files handling, editing and maintenance tools.)
 </para>
 <para>
-Once saved the modified version of the file, the status can be
+Once you have saved the modified version of the file, the status can be
 displayed with the <command>svn status</command> command:
 </para>
 <screen>
@@ -268,9 +242,9 @@ modifications. These modifications can be committed by using the <command>svn co
 user@host:~/level1-po> svn commit
 </screen>
 <para>
-The user will then be dropped in a file editor (either
+The user will then be dropped into a file editor (either
 <command>vi</command> or any other file editor pointed by the EDITOR
-variable. The changelog message can be then filled in the
+variable. The changelog message can then be typed in the
 editor. Saving it and exiting the editor will trigger the commit
 action to the <acronym>SVN</acronym> repository.
 </para>

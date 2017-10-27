@@ -397,7 +397,7 @@ every Debian system as it is part of what is called the
 This package installs scripts which periodically sends statistics about
 installed packages on the local system to Debian Developers.
 These statistics are used when building releases, for
-instances for getting informations about the most used architecture
+instances for getting information about the most used architecture
 ports as well as the most used packages.
 </para>
 

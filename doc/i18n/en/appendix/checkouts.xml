@@ -1,9 +1,5 @@
 <appendix id="checkouts"><title>Checkout commands</title>
 
-<sect1>
-<title>Translation checkout commands for d-i</title>
-</sect1>
-
 <para>
 First said, translators don't need to checkout the repositories by
 hand to translate the po files. They can get all files here:
