@@ -27,7 +27,7 @@ be automatically installed.
 </para>
 
 <para>
-<emphasis>Language tasks</emphasis> are separated in two type of tasks: the <emphasis>&language;</emphasis> task and the  <emphasis>&language;-desktop</emphasis> task. The former is installed for every standard system install while the latter is only installed if the <emphasis>desktop</emphasis> tasks is selected by the user (the <emphasis>desktop</emphasis> task installs a basic graphical environment, which can be completed with the <emphasis>Gnome</emphasis> or <emphasis>KDE</emphasis> tasks).
+<emphasis>Language tasks</emphasis> are separated in two types of tasks: the <emphasis>&language;</emphasis> task and the  <emphasis>&language;-desktop</emphasis> task. The former is installed for every standard system install while the latter is only installed if the <emphasis>desktop</emphasis> tasks is selected by the user (the <emphasis>desktop</emphasis> task installs a basic graphical environment, which can be completed with the <emphasis>Gnome</emphasis> or <emphasis>KDE</emphasis> tasks).
 </para>
 
 </sect1>
