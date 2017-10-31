@@ -500,10 +500,11 @@ Account creation on Alioth
 
 <para>
 All &d-i; work is maintained in a centralized revision control system,
-using <acronym>SVN</acronym>. For translators not familiar with
+using <acronym>SVN</acronym> and <acronym>git</acronym>. For translators not familiar with
 <acronym>SVN</acronym>, <xref linkend="svn-basics"/> will give them
 enough information to be able to commit their translations
-themselves.
+themselves. (The use of <acronym>git</acronym> is only required for developers
+working on the code of &d-i;, not for translators!)
 </para>
 
 <para>

@@ -138,5 +138,21 @@ Anonymous: <command>&svn-win32-loader-anon;</command>
 
 </sect3>
 
+<sect3>
+<title>Checkout commands for developers</title>
+
+<para>
+Developers need the following commands to checkout the whole source tree:
+</para>
+
+<informalexample>
+  <screen>
+svn co svn+ssh://svn.debian.org/svn/d-i/trunk debian-installer
+cd debian-installer
+scripts/git-setup
+mr -p checkout
+  </screen>
+</informalexample>
+</sect3>
 
 </appendix>

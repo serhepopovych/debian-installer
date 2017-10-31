@@ -2,6 +2,35 @@
 
 <sect1>
 <title>
+Checkout of the whole &d-i; source tree
+</title>
+
+<para>
+While translators can checkout only some subdirectories of the tree
+containing their translation files (done with subversion), developers
+need the whole source tree, which additionally requires the use of
+<command>git</command> and <command>mr</command>:
+</para>
+
+<informalexample>
+  <screen>
+svn co svn+ssh://svn.debian.org/svn/d-i/trunk debian-installer
+cd debian-installer
+scripts/git-setup
+mr -p checkout
+  </screen>
+</informalexample>
+
+<para>
+In the past, we had everything in one subversion repository. Then one day, the
+developer parts were migrated to git, while the translator files were left
+on subversion; this is why we have the project divided into two parts now.
+</para>
+
+</sect1>
+
+<sect1>
+<title>
 &d-i; packages internationalization and localization
 </title>
 

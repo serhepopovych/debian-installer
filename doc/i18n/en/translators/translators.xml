@@ -31,7 +31,7 @@ Debian translations.
 <para>
 Due to the granularity of Debian work and more specifically the
 packages system, translators may find differences between the various packages
-a bit annoying (some use <acronym>SVN</acronym>, some others <acronym>CVS</acronym>, some other no
+a bit annoying (some use <acronym>SVN</acronym>, some others <acronym>git</acronym>, some other no
 repository at all...). This is a consequence of the current work organization
 in Debian. 
 </para>

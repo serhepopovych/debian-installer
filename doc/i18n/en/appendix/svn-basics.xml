@@ -1,11 +1,11 @@
-<appendix id="svn-basics"><title>Some basic notions about <acronym>SVN</acronym></title>
+<appendix id="svn-basics"><title>Some basic notions about <acronym>SVN</acronym>/<acronym>git</acronym></title>
 
 <sect1>
 <title>Getting an account on &alioth;
 </title>
 
 <para>
-<acronym>SVN</acronym> commit access requires the creation of an account on the &alioth;
+<acronym>SVN</acronym>/<acronym>git</acronym> commit access requires the creation of an account on the &alioth;
 server. This is as simple as opening &url-alioth; and going to the
 account creation pages.
 </para>
@@ -24,18 +24,24 @@ administrators to know who is an official Debian developer.
 
 <sect1>
 <title>
-Installing <acronym>SVN</acronym>
+Installing <acronym>SVN</acronym> and <acronym>git</acronym>/<acronym>myrepos</acronym>
 </title>
 
 <para>
-Translators and other &d-i; contributors need to install <acronym>SVN</acronym>
-(Subversion) on their system. Just do <command>aptitude install
-subversion</command>.
+Translators need to install <acronym>SVN</acronym>
+(Subversion) on their system. Just do <command>apt-get install
+subversion</command>
+</para>
+
+<para>
+&d-i; contributors who want to work on the code of the installer (so not just translation
+work), additionally need to install <acronym>git</acronym> and <acronym>myrepos</acronym>
+by <command>apt-get install git myrepos</command>
 </para>
 
 <para>
 Users of non-Debian Linux distributions will probably easily find
-installation sources for Subversion in their distribution packages
+installation sources for Subversion and git in their distribution packages
 list.
 </para>
 
@@ -52,13 +58,19 @@ Successful attempts of using <emphasis>TortoiseSVN</emphasis> for &d-i; commits 
 
 <sect1>
 <title>
-Using <acronym>SVN</acronym> to get and commit files
+Using <acronym>SVN</acronym>/<acronym>git</acronym> to get and commit files
 </title>
 
 <para>
-Once their account is allowed to write to the project, translators and
-developers can download the full project source tree using the
+Once their account is allowed to write to the project, translators
+can download the translation files using the
 checkout commands mentioned in <xref linkend="translators"/>.
+</para>
+
+<para>
+Developers can download the full project source tree using
+svn and git checkout commands as detailed in <xref linkend="maintainers"/>.
+Note, that this is not necessary for translators!
 </para>
 
 <para>
