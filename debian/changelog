@@ -1,4 +1,4 @@
-debian-installer (201709XX) UNRELEASED; urgency=medium
+debian-installer (20171204) unstable; urgency=medium
 
   [ John Paul Adrian Glaubitz ]
   * m68k: Add pata-modules to cdrom package list.
@@ -22,7 +22,7 @@ debian-installer (201709XX) UNRELEASED; urgency=medium
     LVM logical volumes too (so that we can find the ISO in logical
     volumes too). Closes: #868852
 
- -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Thu, 07 Sep 2017 17:12:37 +0000
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 04 Dec 2017 08:25:55 +0100
 
 debian-installer (20170828) unstable; urgency=medium
 
