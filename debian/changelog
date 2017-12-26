@@ -1,3 +1,9 @@
+debian-installer (2018XXXX) UNRELEASED; urgency=medium
+
+  * Bump Linux kernel ABI from 4.13.0-1 to 4.14.0-2
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
+
 debian-installer (20171204) unstable; urgency=medium
 
   [ John Paul Adrian Glaubitz ]
