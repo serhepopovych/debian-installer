@@ -6,6 +6,9 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
   [ Paul Tagliamonte ]
   * Add support for the NanoPiNeo
 
+  [ Aurelien Jarno ]
+  * Drop the build-depends on libnewt0.52, the library now provides an udeb.
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
 debian-installer (20171204) unstable; urgency=medium
