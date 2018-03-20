@@ -9,6 +9,11 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
   [ Aurelien Jarno ]
   * Drop the build-depends on libnewt0.52, the library now provides an udeb.
 
+  [ Vagrant Cascadian ]
+  * [arm64] Generate u-boot media for pine64_plus:
+    - Add Build-Depends on u-boot-sunxi and atf-allwinner.
+    - Add atf-allwinner to Built-Using.
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
 debian-installer (20171204) unstable; urgency=medium
