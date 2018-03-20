@@ -71,7 +71,7 @@ Build-Depends:
 #		kernels and add nslu2 boot magic.
 	dns323-firmware-tools (>= 0.7.3-1~) [armel],
 #		For building firmware images for the D-Link DNS-32(0|3).
-	u-boot-tools [armel armhf],
+	u-boot-tools [armel armhf arm64],
 #		For creating u-boot images
 # 
 # Boot loaders:
@@ -120,6 +120,7 @@ Build-Depends:
 	u-boot-rockchip (>= 2017.07+dfsg1-3) [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
 	atf-allwinner [arm64],
+	device-tree-compiler [arm64],
 #		arm-trusted-firmware for allwinner, used in combination with
 #		u-boot-sunxi to produce bootable arm64 images.
 	u-boot (>= 2016.01+dfsg1-1~) [armel],

@@ -11,7 +11,8 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
 
   [ Vagrant Cascadian ]
   * [arm64] Generate u-boot media for pine64_plus:
-    - Add Build-Depends on u-boot-sunxi and atf-allwinner.
+    - Add Build-Depends on u-boot-sunxi, atf-allwinner, u-boot-tools and
+      device-tree-compiler.
     - Add atf-allwinner to Built-Using.
 
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
