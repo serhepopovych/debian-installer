@@ -5,6 +5,7 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
   * Replace c_rehash with openssl rehash (Closes: #895074). That should only
     affect builds with SSL_CERTS enabled; regular HTTPS support comes from
     ca-certificates anyway.
+  * Update Vcs-{Browser,Git} to point to salsa (alioth's replacement).
 
   [ Paul Tagliamonte ]
   * Add support for the NanoPiNeo
