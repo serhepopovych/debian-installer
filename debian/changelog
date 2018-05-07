@@ -20,6 +20,9 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
     - Add atf-allwinner to Built-Using.
   * [armhf] netboot: Enable grub-efi mini.iso.
 
+  [ John Paul Adrian Glaubitz ]
+  * hppa: Use compressed kernel image by default.
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
 debian-installer (20171204) unstable; urgency=medium
