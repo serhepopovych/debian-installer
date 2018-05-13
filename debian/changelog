@@ -22,6 +22,8 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
 
   [ John Paul Adrian Glaubitz ]
   * hppa: Use compressed kernel image by default.
+  * Use xz compression for initrd during netboot image build for sparc64
+    to get it down to acceptable size (otherwise it does not boot).
 
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
