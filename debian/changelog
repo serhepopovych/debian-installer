@@ -24,6 +24,9 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
   * hppa: Use compressed kernel image by default.
   * sparc64: Use xz compression for initrd during netboot image build.
 
+  [ Paul Wise ]
+  * Switch get-packages from using apt -o to APT_CONFIG
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
 debian-installer (20171204) unstable; urgency=medium
