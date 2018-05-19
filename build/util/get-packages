@@ -81,9 +81,11 @@ PWD="$(pwd)"
 mkdir -p $APTDIR
 cat > "$APT_CONFIG" <<EOF
 Dir "$PWD/$APTDIR";
+Dir::Etc::parts "/dev/null";
 Dir::Etc::sourcelist "$PWD/$LIST";
 Dir::Etc::sourceparts "/dev/null";
 Dir::Etc::Preferences "$PWD/preferences.$TYPE.local";
+Dir::Etc::PreferencesParts "/dev/null";
 Dir::State "$PWD/$APTDIR/state";
 Debug::NoLocking "true";
 Debug::pkgDepCache::AutoInstall "true";

@@ -7,6 +7,8 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
     ca-certificates anyway.
   * Update Vcs-{Browser,Git} to point to salsa (alioth's replacement).
   * Set Acquire::Languages to none since translations aren't needed.
+  * Avoid warnings regarding missing /etc/apt/{apt.conf.d,preferences.d}
+    by setting their respective apt config variables to /dev/null.
 
   [ Paul Tagliamonte ]
   * Add support for the NanoPiNeo
