@@ -9,6 +9,9 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
   * Set Acquire::Languages to none since translations aren't needed.
   * Avoid warnings regarding missing /etc/apt/{apt.conf.d,preferences.d}
     by setting their respective apt config variables to /dev/null.
+  * Duplicate Apt::Architecture into Apt::Architectures because of course
+    apt has two options, the latter getting foreign architectures if not
+    specified, even if the former is.
 
   [ Paul Tagliamonte ]
   * Add support for the NanoPiNeo
