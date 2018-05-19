@@ -78,6 +78,7 @@ fi
 export APT_CONFIG="$APTDIR/apt.conf"
 PWD="$(pwd)"
 
+mkdir -p $APTDIR
 cat > "$APT_CONFIG" <<EOF
 Dir "$PWD/$APTDIR";
 Dir::Etc::sourcelist "$PWD/$LIST";
