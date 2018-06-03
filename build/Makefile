@@ -490,9 +490,11 @@ endif
 
 	# Create a dev tree.
 	mkdir -p $(TREE)/dev
+ifneq ($(DEB_HOST_ARCH_OS),hurd)
 	# Always needed, in case udev is not mounted on boot.
 	mknod $(TREE)/dev/console c 5 1
 	mknod $(TREE)/dev/null c 1 3
+endif
 
 	mkdir -p $(EXTRAUDEBSDIR)
 	mkdir -p $(EXTRAUDEBSDPKGDIR)/info $(EXTRAUDEBSDPKGDIR)/updates
@@ -702,6 +704,7 @@ $(TREE)/lib/unifont.bdf: $(TEMP)/unifont.bdf
 
 # Create a compressed image of the root filesystem.
 $(TEMP_INITRD): $(STAMPS)tree-$(targetstring)-stamp arch_tree
+ifneq ($(DEB_HOST_ARCH_OS),hurd)
 	# Check for lost file attributes
 	@if [ -e $(TREE)/dev/console ] && \
 	    ! ls -l $(TREE)/dev/console | grep -q "^c"; then \
@@ -710,6 +713,7 @@ $(TEMP_INITRD): $(STAMPS)tree-$(targetstring)-stamp arch_tree
 		echo "See fakeroot(1) ('-s' and '-i' options) for additional information."; \
 		exit 1; \
 	fi
+endif
 
 	# Only build the font if we have installation-locale
 ifeq ($(DEB_HOST_ARCH_OS),linux)

@@ -35,6 +35,10 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
     line to writing a configuration file referred to by APT_CONFIG. The
     latter should ensure a stricter separation from the system config.
 
+  [ Samuel Thibault ]
+  * Do not create /dev/console and /dev/null on hurd-any, they are initialized
+    at runtime.
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
 debian-installer (20171204) unstable; urgency=medium
