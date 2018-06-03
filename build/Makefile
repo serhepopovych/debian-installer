@@ -291,6 +291,8 @@ build_%:
 _build:
 	@[ -n "$(SUBARCH) $(MEDIUM) $(FLAVOUR)" ] || { echo "invalid target"; false; }
 	@$(submake) tree_umount $(EXTRATARGETS) $(TARGET)
+	# Ensure build results have reproducible mtimes
+	@$(clamp_mtimes) $(BASE_DEST)
 
 # Convenience rules to clean and build.
 .PHONY: rebuild_%
