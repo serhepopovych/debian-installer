@@ -88,7 +88,7 @@ if [ $signed = 1 ]; then
 else
 	# Build the core image for disc/CD boot
 	echo "$0: Building non-signed grub-efi binaries for $efi_name"
-	(cd "$workdir"; tar -cf - boot) >"$memdisk_img"
+	(cd "$workdir"; find boot -print0 | LC_ALL=C sort -z | tar --null -T - -cf -) >"$memdisk_img"
 	grub-mkimage -O "$platform" -m "$memdisk_img" \
 		-o "$workdir/boot$efi_name.efi" -p '(memdisk)/boot/grub' \
 		search iso9660 configfile normal memdisk tar part_msdos part_gpt fat
