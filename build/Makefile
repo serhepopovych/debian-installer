@@ -310,6 +310,8 @@ release:
 	rm -f $(BASE_DEST)/MD5SUMS $(BASE_DEST)/SHA256SUMS
 	cd $(BASE_DEST) && md5sum `find -L . -type f | sort` > MD5SUMS # XXX remove this
 	cd $(BASE_DEST) && sha256sum `find -L . -type f | sort` > SHA256SUMS
+	# We have just modified files
+	$(clamp_mtimes) $(BASE_DEST)
 
 # The general tree target.
 $(STAMPS)tree-unpack-$(targetstring)-stamp: $(STAMPS)get_udebs-$(targetstring)-stamp
