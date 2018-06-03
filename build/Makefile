@@ -139,7 +139,7 @@ define recurse
 endef
 
 define mkinitramfs
-  (cd $(TREE) && find . | sort | cpio --quiet -o -H newc) > 
+  (cd $(TREE) && find . | sort | cpio --reproducible --quiet -o -H newc) >
 endef
 
 # Limit on mfsroot size. It is determined by NKPT (in <machine/pmap.h).

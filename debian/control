@@ -62,8 +62,8 @@ Build-Depends:
 #		Of course i386/amd64 use this for floppies, CDs etc.
 #		m68k uses it for atari floppies
 #		armhf uses it for building bootable SD card images
-	cpio,
-#		For creating initramfs images.
+	cpio (>= 2.11+dfsg-6),
+#		For creating (reproducible) initramfs images.
 	xz-utils,
 #		For compressing initramfs images.
 	devio [armeb armel],
