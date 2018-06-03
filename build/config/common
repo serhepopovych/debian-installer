@@ -60,11 +60,12 @@ USE_UDEBS_FROM ?= unstable
 # Archive components from which to fetch debian-installer modules.
 UDEB_COMPONENTS ?= main/debian-installer
 
-# The date the installer is built.
-BUILD_DATE ?= $(shell date -u '+%Y%m%d-%H:%M')
 # The date the installer source was last changed;  we prefer that the
 # caller defines a meaningful value, but below is a safe fallback.
 SOURCE_DATE_EPOCH ?= $(shell date '+%s')
+
+# The date the installer was built.
+BUILD_DATE ?= $(shell date -u '+%Y%m%d-%H:%M' -d '@$(SOURCE_DATE_EPOCH)')
 
 # Produce a beep at boot menu
 BOOTMENU_BEEP ?= n
