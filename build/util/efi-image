@@ -112,7 +112,10 @@ for file in $(find $workdir -type f -name *.efi -o -name grub.cfg); do
 	this_size=$(( ($(stat -c %s $file) / 1024 + 1 + 32 + 31) / 32 * 32 ))
 	size=$(($size + $this_size))
 done
-mkfs.msdos -v -C "$outdir/efi.img" $size
+
+# Specify a deterministic volume ID; we use DOS_VOLUME_ID here for
+# consistency.
+mkfs.msdos -v -i deb00001 -C "$outdir/efi.img" $size
 
 mmd -i "$outdir/efi.img" ::efi
 mmd -i "$outdir/efi.img" ::efi/boot
