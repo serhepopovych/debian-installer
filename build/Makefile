@@ -142,6 +142,10 @@ define mkinitramfs
   (cd $(TREE) && find . | sort | cpio --reproducible --quiet -o -H newc) >
 endef
 
+define clamp_mtimes
+  find $(1) -newermt "@$(SOURCE_DATE_EPOCH)" -print0 | xargs -0r touch --no-dereference --date="@$(SOURCE_DATE_EPOCH)"
+endef
+
 # Limit on mfsroot size. It is determined by NKPT (in <machine/pmap.h).
 # On amd64, it can be increased by increasing this variable.  On i386,
 # this is a hard limit due to constraints of 4 GiB VM space.
