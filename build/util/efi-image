@@ -115,7 +115,7 @@ done
 
 # Specify a deterministic volume ID; we use DOS_VOLUME_ID here for
 # consistency.
-mkfs.msdos -v -i deb00001 -C "$outdir/efi.img" $size
+mkfs.msdos --invariant -v -i deb00001 -C "$outdir/efi.img" $size
 
 mmd -i "$outdir/efi.img" ::efi
 mmd -i "$outdir/efi.img" ::efi/boot
