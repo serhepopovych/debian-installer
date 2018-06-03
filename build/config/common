@@ -64,8 +64,10 @@ UDEB_COMPONENTS ?= main/debian-installer
 # caller defines a meaningful value, but below is a safe fallback.
 SOURCE_DATE_EPOCH ?= $(shell date '+%s')
 
-# The date the installer was built.
-BUILD_DATE ?= $(shell date -u '+%Y%m%d-%H:%M' -d '@$(SOURCE_DATE_EPOCH)')
+# The date the installer was built. We use second-level resolution to ensure
+# the generated image implicitly contains the SOURCE_DATE_EPOCH value required
+# to reproduce the build.
+BUILD_DATE ?= $(shell date -u '+%Y%m%d-%H:%M:%S' -d '@$(SOURCE_DATE_EPOCH)')
 
 # Produce a beep at boot menu
 BOOTMENU_BEEP ?= n
