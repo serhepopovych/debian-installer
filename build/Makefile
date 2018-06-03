@@ -645,6 +645,10 @@ endif
 	# Remove extra udebs now that we're done with them.
 	rm -rf $(EXTRAUDEBSDIR)
 
+	# Clamp timestamps to be no later than SOURCE_DATE_EPOCH before they
+	# get added to media.
+	$(clamp_mtimes) $(TREE)
+
 	# Tree target ends here. Whew!
 	@touch $@
 
@@ -740,6 +744,10 @@ ifeq ($(DEB_HOST_ARCH_OS),hurd)
 		$(submake) $(TREE)/lib/unifont.bdf; \
 	fi
 endif
+
+	# We may have modified $(TREE)/lib, so re-clamp before placing these
+	# files into archives.
+	$(clamp_mtimes) $(TREE)/lib
 
 	install -d $(TEMP)
 
