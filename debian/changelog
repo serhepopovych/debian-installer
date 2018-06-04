@@ -39,6 +39,9 @@ debian-installer (2018XXXX) UNRELEASED; urgency=medium
   * Do not create /dev/console and /dev/null on hurd-any, they are initialized
     at runtime.
 
+  [ Vagrant Cascadian ]
+  * [armhf] Add support for Cubietruck_plus.
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 26 Dec 2017 15:10:47 +0100
 
 debian-installer (20171204) unstable; urgency=medium
