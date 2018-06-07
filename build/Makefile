@@ -617,6 +617,15 @@ endif
 			> "$(TREE)/lib/debian-installer.d/S63freetype-workaround"; \
 	fi
 
+	# Run fc-cache if needed, to avoid having to generate UUIDs
+	# at runtime, which can be hard because of missing entropy
+	# (#898468). Beware, fc-cache insists on having a directory
+	# under /usr/local:
+	if [ -e "$(TREE)/etc/fonts" ] || [ -e "$(TREE)/usr/share/fonts" ]; then \
+		mkdir -p "$(TREE)/usr/local/share/fonts"; \
+		fc-cache -s -y "$(TREE)"; \
+	fi
+
 	# Remove some unnecessary dpkg files.
 	set -e; \
 	for file in `find $(TREE)/var/lib/dpkg/info -name '*.md5sums' -o \
