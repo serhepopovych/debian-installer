@@ -166,6 +166,8 @@ Build-Depends:
 #		part of util-linux but split out into a separate, non-essential
 #		"fdisk" package. For more information, please cf.
 #		https://lists.debian.org/debian-devel-announce/2017/08/msg00005.html
+	fontconfig,
+#		Used to generate a font cache through fc-cache, for gtk flavours
 
 Package: debian-installer
 Architecture: any
