@@ -1,3 +1,9 @@
+debian-installer (20150422+deb8u5) UNRELEASED; urgency=medium
+
+  * Bump Linux kernel ABI from 3.16.0-4 to 3.16.0-6
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 18 Jun 2018 17:59:14 +0000
+
 debian-installer (20150422+deb8u4) jessie; urgency=medium
 
   [ Steve McIntyre ]
