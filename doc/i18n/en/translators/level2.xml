@@ -267,7 +267,7 @@ likely to be used in other parts of the Debian operating system.
 
 <para>
 For this reason, translators need to translate country names
-from ISO-3166 in the <classname>iso-codes</classname> package (ISO-3166 is the
+from ISO-3166-1 in the <classname>iso-codes</classname> package (ISO-3166-1 is the
 standard for country (and other <quote>areas of specific geographic
 interest</quote> names and codes)).
 </para>
@@ -294,7 +294,7 @@ As a consequence, references to GIT are kept here only for reference.
   <listitem>
 Anonymous GIT checkout command: <command>&git-iso-codes-anon;</command>
     <para>
-      The translation material is in directory <filename>iso_3166</filename> (working on <filename>iso_639</filename>, which contain language names, will be appreciated by maintainers, though not directly useful for &d-i;).
+      The translation material is in directory <filename>iso_3166-1</filename> (working on <filename>iso_639</filename>, which contain language names, will be appreciated by maintainers, though not directly useful for &d-i;).
     </para>
 
   </listitem>
@@ -306,21 +306,17 @@ Anonymous GIT checkout command: <command>&git-iso-codes-anon;</command>
     <itemizedlist>
       <listitem>
         <para>
-          <ulink url="&url-level2-pot;/iso-codes_iso_3166.pot">&url-level2-pot;/iso-codes_iso_3166.pot</ulink>
+          <ulink url="&url-level2-pot;/iso-codes_iso_3166-1.pot">&url-level2-pot;/iso-codes_iso_3166-1.pot</ulink>
         </para>
       </listitem>
       <listitem>
         <para>
-          &url-level2-po;/iso-codes_iso_3166_&language;.po
+          &url-level2-po;/iso-codes_iso_3166-1_&language;.po
         </para>
       </listitem>
     </itemizedlist>
   </listitem>
 </itemizedlist>
-
-<para>
-Hmm, iso-codes is missing in the level2 POT directory. What's wrong here? 26.10.2017
-</para>
 
 </sect3>
 
