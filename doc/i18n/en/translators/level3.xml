@@ -182,21 +182,17 @@ No public revision control repository is available for this package so access th
     <itemizedlist>
       <listitem>
         <para>
-          <ulink url="&url-level3-pot;/newt_newt_po.pot">&url-level3-pot;/newt_newt_po.pot</ulink>
+          <ulink url="&url-level3-pot;/newt_po.pot">&url-level3-pot;/newt_po.pot</ulink>
         </para>
       </listitem>
       <listitem>
         <para>
-          &url-level3-po;/newt_newt_po_&language;.po
+          &url-level3-po;/newt_po_&language;.po
         </para>
       </listitem>
     </itemizedlist>
   </listitem>
 </itemizedlist>
-
-<para>
-Hmm, newt is missing in the level3 POT directory. What's wrong here? 26.10.2017
-</para>
 
 </sect3>
 
