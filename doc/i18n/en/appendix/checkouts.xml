@@ -12,7 +12,8 @@ hand to translate the po files. They can get all files here:
 </informalexample>
 
 <para>
-where &lt;STAGE&gt; is either level1, level2, level3, level4 and level5 &lt;LANGUAGECODE&gt; your language code like de, es, zh_CN, ...
+where &lt;STAGE&gt; is either level1, level2, level3, level4 and
+level5 &lt;LANGUAGECODE&gt; your language code like de, es, zh_CN, ...
 </para>
 
 <para>
@@ -30,7 +31,9 @@ POT templates can be found at:
 </sect2>
 
 <para>
-For translators who prefer working from developer's repositories, the following lists, level by level, all checkout commands to get access to translation material.
+For translators who prefer working from developer's repositories, the
+following lists, level by level, all checkout commands to get access to
+translation material.
 </para>
 
 <sect3>
@@ -38,10 +41,10 @@ For translators who prefer working from developer's repositories, the following 
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&svn-level1-anon;</command>
+Anonymous: <command>&git-level1-anon;</command>
 </listitem>
 <listitem>
-Non anonymous: <command>&svn-level1;</command>
+Non anonymous: <command>&git-level1;</command>
 </listitem>
 </itemizedlist>
 
@@ -55,10 +58,10 @@ Non anonymous: <command>&svn-level1;</command>
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&svn-tasksel-anon;</command>
+Anonymous: <command>&git-tasksel-anon;</command>
 </listitem>
 <listitem>
-Non anonymous: <command>&svn-tasksel;</command>
+Non anonymous: <command>&git-tasksel;</command>
 </listitem>
 </itemizedlist>
 
@@ -79,22 +82,11 @@ Non anonymous: <command>&git-iso-codes;</command>
 </sect4>
 
 <sect4>
-<title>Console-data</title>
-
-<itemizedlist>
-<listitem>
-Anonymous: <command>&svn-console-data;</command>
-</listitem>
-</itemizedlist>
-
-</sect4>
-
-<sect4>
 <title>Popularity-contest</title>
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&svn-popcon;</command>
+Anonymous: <command>&git-popcon;</command>
 </listitem>
 </itemizedlist>
 
@@ -110,7 +102,7 @@ Anonymous: <command>&svn-popcon;</command>
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&svn-debconf;</command>
+Anonymous: <command>&git-debconf;</command>
 </listitem>
 </itemizedlist>
 
@@ -130,7 +122,7 @@ No repository yet
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&svn-win32-loader-anon;</command>
+Anonymous: <command>&git-win32-loader-anon;</command>
 </listitem>
 </itemizedlist>
 
@@ -147,10 +139,10 @@ Developers need the following commands to checkout the whole source tree:
 
 <informalexample>
   <screen>
-svn co svn+ssh://svn.debian.org/svn/d-i/trunk debian-installer
-cd debian-installer
-scripts/git-setup
-mr -p checkout
+git clone git@salsa.debian.org:installer-team/d-i.git
+cd d-i
+./scripts/git-setup
+mr checkout
   </screen>
 </informalexample>
 </sect3>

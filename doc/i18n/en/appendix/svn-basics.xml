@@ -1,12 +1,12 @@
-<appendix id="svn-basics"><title>Some basic notions about <acronym>SVN</acronym>/<acronym>git</acronym></title>
+<appendix id="svn-basics"><title>Some basic notions about <acronym>git</acronym></title>
 
 <sect1>
-<title>Getting an account on &alioth;
+<title>Getting an account on &salsa;
 </title>
 
 <para>
-<acronym>SVN</acronym>/<acronym>git</acronym> commit access requires the creation of an account on the &alioth;
-server. This is as simple as opening &url-alioth; and going to the
+<acronym>git</acronym> commit access requires the creation of an account on the &salsa;
+server. This is as simple as opening &url-salsa; and going to the
 account creation pages.
 </para>
 
@@ -14,9 +14,9 @@ account creation pages.
 Official Debian developers will probably use the same login as their
 Debian login, but must go through the account creation process
 anyway. Non-Debian developers should be aware that the login they
-will choose on &alioth; will be followed by <quote>-guest</quote>. This has
+will choose on &salsa; will be followed by <quote>-guest</quote>. This has
 absolutely no meaning of any kind of <emphasis>second class
-citizens</emphasis> but is just an easy way for &alioth; system
+citizens</emphasis> but is just an easy way for &salsa; system
 administrators to know who is an official Debian developer.
 </para>
 
@@ -24,19 +24,18 @@ administrators to know who is an official Debian developer.
 
 <sect1>
 <title>
-Installing <acronym>SVN</acronym> and <acronym>git</acronym>/<acronym>myrepos</acronym>
+Installing <acronym>git</acronym> and <acronym>myrepos</acronym>
 </title>
 
 <para>
-Translators need to install <acronym>SVN</acronym>
-(Subversion) on their system. Just do <command>apt-get install
-subversion</command>
+Translators need to install <acronym>git</acronym>
+on their system. Just do <command>apt-get install git</command>
 </para>
 
 <para>
 &d-i; contributors who want to work on the code of the installer (so not just translation
-work), additionally need to install <acronym>git</acronym> and <acronym>myrepos</acronym>
-by <command>apt-get install git myrepos</command>
+work), additionally need to install <acronym>myrepos</acronym>
+by <command>apt-get install myrepos</command>
 </para>
 
 <para>
@@ -45,20 +44,12 @@ installation sources for Subversion and git in their distribution packages
 list.
 </para>
 
-<para>
-For MS-Windows users, a good <acronym>SVN</acronym> client is <emphasis>TortoiseSVN</emphasis>, which is free software. It can be downloaded from <ulink url="http://tortoisesvn.tigris.org/">http://tortoisesvn.tigris.org/</ulink>.
-</para>
-
-<para>
-Successful attempts of using <emphasis>TortoiseSVN</emphasis> for &d-i; commits have been reported. The only trick is to feed the checkout URL alone to the "svn import" command of <emphasis>TortoiseSVN</emphasis>, without the leading "svn co" part.
-</para>
-
 
 </sect1>
 
 <sect1>
 <title>
-Using <acronym>SVN</acronym>/<acronym>git</acronym> to get and commit files
+Using <acronym>git</acronym> to get and commit files
 </title>
 
 <para>
@@ -76,17 +67,19 @@ Note, that this is not necessary for translators!
 <para>
 For doing <filename>svn+ssh</filename> connections (mandatory for
 being able to commit files later), users must have an account on
-&alioth; and be authorized for commit to the repository they want to
-checkout. Replace <emphasis>alioth_username</emphasis> by this login
-name before using the SVN pseudo-URLS.
+&salsa; and be authorized for commit to the repository they want to
+checkout. Replace <emphasis>salsa_username</emphasis> by this login
+name before using the GIT pseudo-URLS.
 </para>
 
 <para>
-<filename>svn+ssh</filename> connections require you to use RSA key-based authentication to connect to &alioth;.
+<filename>svn+ssh</filename> connections require you to use RSA key-based
+authentication to connect to &salsa;.
 </para>
 
 <para>
-If you don't have an existing SSH keypair on your local system, you must create one with the <command>ssh-keygen</command> command.
+If you don't have an existing SSH keypair on your local system, you must create
+one with the <command>ssh-keygen</command> command:
 </para>
 
 <informalexample>
@@ -104,70 +97,29 @@ The key fingerprint is:
 </informalexample>
 
 <para>
-In the example below, the user <emphasis>spongebob</emphasis> creates a SSH RSA keypair, which is saved in a directory named <filename>.ssh</filename> in his/her home directory.
+In the example below, the user <emphasis>spongebob</emphasis> creates a SSH RSA
+keypair, which is saved in a directory named <filename>.ssh</filename> in his/her home directory.
 </para>
 
 <para>
-This keypair is protected by a passphrase. The passphrase has to be entered each time the keypair will be used to connect to a remote host. Take care to choose a non trivial passphrase.
+This keypair is protected by a passphrase. The passphrase has to be entered each
+time the keypair will be used to connect to a remote host. Take care to choose a non
+trivial passphrase.
 </para>
 
 <para>
-After doing so, the public part of that keypair must be put in your account on &alioth;. For this, you need to output the contents of <filename>.ssh/id_rsa.pub</filename> and paste it in the relevant field of the account management page on &alioth; (&alioth-account-page;), in the section named <emphasis>Shell account informations</emphasis>, by clicking on <emphasis>Edit keys</emphasis>.
+After doing so, the public part of that keypair must be put in your account on &salsa;.
+For this, you need to output the contents of <filename>.ssh/id_rsa.pub</filename> and
+paste it in the relevant field of the account management page on &salsa; (&salsa-account-page;),
+in the section named <emphasis>Shell account informations</emphasis>, by clicking on
+<emphasis>Edit keys</emphasis>.
 </para>
 
 
 <para>
-In case users have problems with <acronym>SVN</acronym> checkouts/commits, they can ask
+In case users have problems with <acronym>GIT</acronym> checkouts/commits, they can ask
 for help, either on IRC, &irc-channel; or by mail with the
 &i18n-coords;.</para>
-
-<para>
-MS-Windows users who want to use TortoiseSVN to checkout or commit can go to the <ulink url="http://tortoisesvn.net/node/5">TortoiseSVN SSH HowTo</ulink> page to get information about setting up TortoiseSVN to do SVN+SSH connections.
-</para>
-
-</sect1>
-
-<sect1>
-<title>
-Testing <acronym>SVN</acronym> commit access to &d-i; repository
-</title>
-
-<para>
-A <emphasis>sandbox</emphasis> directory has been setup for developers
-and translators to practice with <acronym>SVN</acronym> before doing
-real work.
-</para>
-
-The sequence for testing commit access should be similar to what
-follows. Please note that, depending whether your SSH keys have been
-added to your account on &svn-debian;, you can be prompted for a
-password up to three times. This is because of the special
-authentication setup on &svn-debian;.
-
-<informalexample>
-<screen>
-cd &lt;somedir&gt;
-svn co &svn-di-sandbox;
-Password:
-Password:
-Password:
-.../... (checkout should happen here)
-
-cd sandbox
-echo "Testcommit" >foo
-svn add foo
-svn ci -m "Testcommit of a file" foo
-.../...
-svn remove foo
-svn ci -m "Remove the test file"
-</screen>
-</informalexample>
-
-<para>
-As stated by the <filename>README.txt</filename> file in this
-directory, please avoid commiting large files for testing as this
-clutters up the SVN server history.
-</para>
 
 </sect1>
 
@@ -183,50 +135,10 @@ and related packages are listed in <xref linkend="translators"/>.
 </para>
 
 <para>
-Below is an example of a typical checkout for the console-data package:
+Below is an example of a typical checkout for the console-setup package:
 </para>
 
 <informalexample>
-<screen>
-user@host:~> &svn-console-data;
-TODO
-user@host:~> 
-</screen>
-<para>
-After this the <filename>console-data</filename> directory contains all
-files from the package. Updating this directory later needs running the <command>svn update</command>:
-</para>
-<screen>
-user@host:~> cd console-data
-user@host:~/console-data> svn up
-TODO
-user@host:~>
-</screen>
-<para>
-Subdirectories of a full <acronym>SVN</acronym> directory can also be checked out in case one want to work on specific parts. This can be very useful for &d-i; core translations as &d-i; <acronym>SVN</acronym> repository is very big:
-</para>
-<screen>
-user@host:~> &svn-level1; level1-po
-TODO
-user@host:~> cd level1-po/
-user@host:~/level1-po> ls -l
-total 19112
--rw-r--r--  1 user user 369598 2005-08-18 02:56 ar.po
--rw-r--r--  1 user user 266462 2005-08-18 02:56 be.po
-.../...
--rw-r--r--  1 user user   1120 2005-07-17 08:17 PROSPECTIVE
-.../...
--rw-r--r--  1 user user   2027 2005-07-31 08:54 README
--rw-r--r--  1 user user 353752 2005-08-18 02:56 ro.po
--rw-r--r--  1 user user    324 2005-08-16 16:30 run-l10n-sync
-.../...
--rw-r--r--  1 user user 237996 2005-08-18 02:56 template.pot
-.../...
--rw-r--r--  1 user user 350181 2005-08-18 02:56 xh.po
--rw-r--r--  1 user user 335898 2005-08-18 02:56 zh_CN.po
--rw-r--r--  1 user user 335413 2005-08-18 02:56 zh_TW.po
-user@host:~/level1-po>
-</screen>
 <para>
 If the translation file already exists, then just update the local copy:
 </para>
@@ -235,7 +147,8 @@ user@host:~/level1-po> lokalize fr.po
 .../...
 </screen>
 <para>
-(Use Lokalize or any other gettext utility, see <xref linkend="gettext-tools"/> for details about gettext files handling, editing and maintenance tools.)
+(Use Lokalize or any other gettext utility, see <xref linkend="gettext-tools"/> for
+details about gettext files handling, editing and maintenance tools.)
 </para>
 <para>
 Once you have saved the modified version of the file, the status can be
@@ -248,7 +161,8 @@ user@host:~/level1-po>
 </screen>
 <para>
 The above means that <filename>fr.po</filename> includes uncommited
-modifications. These modifications can be committed by using the <command>svn commit</command> command:
+modifications. These modifications can be committed by using the
+<command>svn commit</command> command:
 </para>
 <screen>
 user@host:~/level1-po> svn commit
@@ -358,7 +272,9 @@ the committer of this change was Christian Perrier.
 <para>
 Different Debian packages may use slightly different methods and
 styles for <filename>changelog</filename> maintenance. When working
-with <acronym>SVN</acronym>/<acronym>CVS</acronym> repositories, using <emphasis>UNRELEASED</emphasis> for the last entry is highly recommended for new unpublished changes.
+with <acronym>SVN</acronym>/<acronym>CVS</acronym> repositories, using
+<emphasis>UNRELEASED</emphasis> for the last entry is highly recommended
+for new unpublished changes.
 </para>
 
 <para>

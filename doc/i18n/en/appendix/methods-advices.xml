@@ -140,7 +140,8 @@ packages. &d-i; translators should follow the status of their
 translations for the various levels.
 </para>
 
-<para>The translation status pages are the recommended reference to use in order to follow each language's statistics. See 
+<para>The translation status pages are the recommended reference to use in
+order to follow each language's statistics. See 
 <xref linkend="gettext-tools"/> for details.
 </para>
 
