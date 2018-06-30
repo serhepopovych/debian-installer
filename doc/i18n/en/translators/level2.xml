@@ -184,7 +184,7 @@ Access to these files:
       </listitem>
       <listitem>
         <para>
-          &url-level2-po-link;, <filename>tasksel_tasks_&language;.po</filename> (tasks),
+          &url-level2-po;, <filename>tasksel_tasks_&language;.po</filename> (tasks),
 <filename>tasksel_debian_po_&language;.po</filename> (debconf) and <filename>tasksel_po_&language;.po</filename> (program)
         </para>
       </listitem>

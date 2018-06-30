@@ -18,7 +18,7 @@ translatable material in the &d-i; development tree.
 <para>
 Most parts of the translatable material is spread over core &d-i;
 packages. The package development is handled in the 
-<ulink url="https://salsa.debian.org/installer-team/d-i">main &d-i; GIT repository></ulink>.
+<ulink url="https://salsa.debian.org/installer-team/d-i">main &d-i; GIT repository</ulink>.
 </para>
 
 <para>
@@ -122,7 +122,7 @@ a mail to &email-debian-boot-list;.)
       </listitem>
       <listitem>
         <para>
-          &url-sublevel1-po-link;
+          &url-sublevel1-po;
         </para>
       </listitem>
       <listitem>
@@ -132,7 +132,7 @@ a mail to &email-debian-boot-list;.)
       </listitem>
       <listitem>
         <para>
-          &url-sublevel2-po-link;
+          &url-sublevel2-po;
         </para>
       </listitem>
       <listitem>
@@ -142,7 +142,7 @@ a mail to &email-debian-boot-list;.)
       </listitem>
       <listitem>
         <para>
-          &url-sublevel3-po-link;
+          &url-sublevel3-po;
         </para>
       </listitem>
       <listitem>
@@ -152,7 +152,7 @@ a mail to &email-debian-boot-list;.)
       </listitem>
       <listitem>
         <para>
-          &url-sublevel4-po-link;
+          &url-sublevel4-po;
         </para>
       </listitem>
       <listitem>
@@ -162,7 +162,7 @@ a mail to &email-debian-boot-list;.)
       </listitem>
       <listitem>
         <para>
-          &url-sublevel5-po-link;
+          &url-sublevel5-po;
         </para>
       </listitem>
     </itemizedlist>
