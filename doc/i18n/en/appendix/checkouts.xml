@@ -1,7 +1,7 @@
 <appendix id="checkouts"><title>Checkout commands</title>
 
 <para>
-First said, translators don't need to checkout the repositories by
+First said, translators don't need to checkout the repository by
 hand to translate the po files. They can get all files here:
 </para>
 
@@ -12,8 +12,8 @@ hand to translate the po files. They can get all files here:
 </informalexample>
 
 <para>
-where &lt;STAGE&gt; is either level1, level2, level3, level4 and
-level5 &lt;LANGUAGECODE&gt; your language code like de, es, zh_CN, ...
+where &lt;LEVEL&gt; is either level1, level2, level3, level4 or
+level5, and &lt;LANGUAGECODE&gt; is your language code like de, es, zh_CN, ...
 </para>
 
 <para>
@@ -41,10 +41,7 @@ translation material.
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&git-level1-anon;</command>
-</listitem>
-<listitem>
-Non anonymous: <command>&git-level1;</command>
+<command>&git-level1;</command>
 </listitem>
 </itemizedlist>
 
@@ -58,10 +55,7 @@ Non anonymous: <command>&git-level1;</command>
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&git-tasksel-anon;</command>
-</listitem>
-<listitem>
-Non anonymous: <command>&git-tasksel;</command>
+<command>&git-tasksel;</command>
 </listitem>
 </itemizedlist>
 
@@ -72,10 +66,7 @@ Non anonymous: <command>&git-tasksel;</command>
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&git-iso-codes-anon;</command>
-</listitem>
-<listitem>
-Non anonymous: <command>&git-iso-codes;</command>
+<command>&git-iso-codes;</command>
 </listitem>
 </itemizedlist>
 
@@ -86,7 +77,40 @@ Non anonymous: <command>&git-iso-codes;</command>
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&git-popcon;</command>
+<command>&git-popcon;</command>
+</listitem>
+</itemizedlist>
+
+</sect4>
+
+<sect4>
+<title>eject</title>
+
+<itemizedlist>
+<listitem>
+<command>????? &git-eject;</command>
+</listitem>
+</itemizedlist>
+
+</sect4>
+
+<sect4>
+<title>espeakup</title>
+
+<itemizedlist>
+<listitem>
+<command>&git-espeakup;</command>
+</listitem>
+</itemizedlist>
+
+</sect4>
+
+<sect4>
+<title>grub2</title>
+
+<itemizedlist>
+<listitem>
+<command>&git-grub2;</command>
 </listitem>
 </itemizedlist>
 
@@ -102,7 +126,7 @@ Anonymous: <command>&git-popcon;</command>
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&git-debconf;</command>
+<command>&git-debconf;</command>
 </listitem>
 </itemizedlist>
 
@@ -111,9 +135,11 @@ Anonymous: <command>&git-debconf;</command>
 <sect4>
 <title>Newt</title>
 
-<para>
-No repository yet
-</para>
+<itemizedlist>
+<listitem>
+<command>&git-newt;</command>
+</listitem>
+</itemizedlist>
 
 </sect4>
 
@@ -122,7 +148,7 @@ No repository yet
 
 <itemizedlist>
 <listitem>
-Anonymous: <command>&git-win32-loader-anon;</command>
+<command>&git-win32-loader-anon;</command>
 </listitem>
 </itemizedlist>
 

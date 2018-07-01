@@ -514,7 +514,7 @@ Account creation on Salsa
 <para>
 All &d-i; work is maintained in a revision control system,
 using <acronym>GIT</acronym>. For translators not familiar with
-<acronym>GIT</acronym>, <xref linkend="svn-basics"/> will give them
+<acronym>GIT</acronym>, <xref linkend="git-basics"/> will give them
 enough information to be able to commit their translations
 themselves.
 </para>
@@ -561,7 +561,7 @@ repository, (s)he should check that (s)he's able to checkout the
 </para>
 
 <para>
-For this, <xref linkend="svn-basics"/> will give him/her any needed
+For this, <xref linkend="git-basics"/> will give him/her any needed
 details.
 </para>
 

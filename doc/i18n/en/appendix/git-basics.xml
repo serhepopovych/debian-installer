@@ -1,4 +1,4 @@
-<appendix id="svn-basics"><title>Some basic notions about <acronym>git</acronym></title>
+<appendix id="git-basics"><title>Some basic notions about <acronym>git</acronym></title>
 
 <sect1>
 <title>Getting an account on &salsa;
@@ -6,8 +6,8 @@
 
 <para>
 <acronym>git</acronym> commit access requires the creation of an account on the &salsa;
-server. This is as simple as opening &url-salsa; and going to the
-account creation pages.
+server. This is as simple as opening &url-salsa; and clicking on <quote>Sign in / Register</quote>
+in the top right corner.
 </para>
 
 <para>
@@ -16,7 +16,7 @@ Debian login, but must go through the account creation process
 anyway. Non-Debian developers should be aware that the login they
 will choose on &salsa; will be followed by <quote>-guest</quote>. This has
 absolutely no meaning of any kind of <emphasis>second class
-citizens</emphasis> but is just an easy way for &salsa; system
+citizens</emphasis>, but is just an easy way for &salsa; system
 administrators to know who is an official Debian developer.
 </para>
 
@@ -29,18 +29,18 @@ Installing <acronym>git</acronym> and <acronym>myrepos</acronym>
 
 <para>
 Translators need to install <acronym>git</acronym>
-on their system. Just do <command>apt-get install git</command>
+on their system. Just do <command>apt install git</command>
 </para>
 
 <para>
 &d-i; contributors who want to work on the code of the installer (so not just translation
 work), additionally need to install <acronym>myrepos</acronym>
-by <command>apt-get install myrepos</command>
+by <command>apt install myrepos</command>
 </para>
 
 <para>
 Users of non-Debian Linux distributions will probably easily find
-installation sources for Subversion and git in their distribution packages
+installation sources for git and myrepos in their distribution packages
 list.
 </para>
 
@@ -60,10 +60,11 @@ checkout commands mentioned in <xref linkend="translators"/>.
 
 <para>
 Developers can download the full project source tree using
-svn and git checkout commands as detailed in <xref linkend="maintainers"/>.
+git and mr commands as detailed in <xref linkend="maintainers"/>.
 Note, that this is not necessary for translators!
 </para>
 
+<!--
 <para>
 For doing <filename>svn+ssh</filename> connections (mandatory for
 being able to commit files later), users must have an account on
@@ -71,9 +72,10 @@ being able to commit files later), users must have an account on
 checkout. Replace <emphasis>salsa_username</emphasis> by this login
 name before using the GIT pseudo-URLS.
 </para>
+-->
 
 <para>
-<filename>svn+ssh</filename> connections require you to use RSA key-based
+<filename>ssh</filename> connections require you to use RSA key-based
 authentication to connect to &salsa;.
 </para>
 
@@ -97,7 +99,7 @@ The key fingerprint is:
 </informalexample>
 
 <para>
-In the example below, the user <emphasis>spongebob</emphasis> creates a SSH RSA
+In the example above, the user <emphasis>spongebob</emphasis> creates a SSH RSA
 keypair, which is saved in a directory named <filename>.ssh</filename> in his/her home directory.
 </para>
 
@@ -109,10 +111,12 @@ trivial passphrase.
 
 <para>
 After doing so, the public part of that keypair must be put in your account on &salsa;.
+<!--
 For this, you need to output the contents of <filename>.ssh/id_rsa.pub</filename> and
 paste it in the relevant field of the account management page on &salsa; (&salsa-account-page;),
 in the section named <emphasis>Shell account informations</emphasis>, by clicking on
 <emphasis>Edit keys</emphasis>.
+-->
 </para>
 
 
@@ -135,15 +139,45 @@ and related packages are listed in <xref linkend="translators"/>.
 </para>
 
 <para>
-Below is an example of a typical checkout for the console-setup package:
+Below is an example of a checkout of the d-i GIT repository,
+containing the po files for level 1:
 </para>
 
 <informalexample>
+<screen>
+user@host:~$ &git-clone-d-i-repo;
+Cloning into 'd-i'...
+remote: Counting objects: 405013, done.
+remote: Compressing objects: 100% (72424/72424), done.
+remote: Total 405013 (delta 316140), reused 404965 (delta 316098)
+Receiving objects: 100% (405013/405013), 187.52 MiB | 199.00 KiB/s, done.
+Resolving deltas: 100% (316140/316140), done.
+user@host:~$ 
+</screen>
 <para>
-If the translation file already exists, then just update the local copy:
+After this the <filename>d-i</filename> directory contains all
+files from the repository. Updating this directory later needs running <command>git pull</command>:
 </para>
 <screen>
-user@host:~/level1-po> lokalize fr.po
+user@host:~$ cd d-i
+user@host:~/d-i$ git pull
+Already up-to-date.
+user@host:~/d-i$
+</screen>
+
+<para>
+Now find the po translation files in the subdirectories under
+<emphasis>packages/po</emphasis>.
+
+<screen>
+user@host:~/d-i$ cd packages/po/sublevel1
+user@host:~/d-i/packages/po/sublevel1$
+</screen>
+
+Just update the local copy:
+</para>
+<screen>
+user@host:~/d-i/packages/po/sublevel1$ lokalize fr.po
 .../...
 </screen>
 <para>
@@ -152,36 +186,29 @@ details about gettext files handling, editing and maintenance tools.)
 </para>
 <para>
 Once you have saved the modified version of the file, the status can be
-displayed with the <command>svn status</command> command:
+displayed with the <command>git status</command> command:
 </para>
 <screen>
-user@host:~/level1-po> svn status
-M      fr.po
-user@host:~/level1-po>
+user@host:~/d-i/packages/po/sublevel1$ git status -s
+ M  fr.po
+user@host:~/d-i/packages/po/sublevel1$
 </screen>
 <para>
 The above means that <filename>fr.po</filename> includes uncommited
-modifications. These modifications can be committed by using the
-<command>svn commit</command> command:
+modifications. The changed files need to be added to the staging area
+by <command>git add filename</command>.
+Then commit the modifications by using the
+<command>git commit</command> command:
 </para>
 <screen>
-user@host:~/level1-po> svn commit
+user@host:~/d-i/packages/po/sublevel1$ git add fr.po
+user@host:~/d-i/packages/po/sublevel1$ git commit -m "Insert a senseful commit message here, like 'Updated french translation'"
 </screen>
 <para>
-The user will then be dropped into a file editor (either
-<command>vi</command> or any other file editor pointed by the EDITOR
-variable. The changelog message can then be typed in the
-editor. Saving it and exiting the editor will trigger the commit
-action to the <acronym>SVN</acronym> repository.
-</para>
-<para>
-A more targeted commit command is also possible, as well as giving the
-commit message on the command line:
+Now you need to push your changings to the remote <acronym>GIT</acronym> repository:
 </para>
 <screen>
-user@host:~/level1-po> svn commit -m"French translation update" fr.po
-TODO
-user@host:~/level1-po>
+user@host:~/d-i/packages/po/sublevel1$ git push
 </screen>
 </informalexample>
 
@@ -191,14 +218,14 @@ In general, a few recommendations can be made to translators:
 
 <itemizedlist>
 <listitem>
-<para>Always use the <command>svn update</command> before working on a
+<para>Always use the <command>git pull</command> before working on a
 file or directory. This will minimize <emphasis>conflicts</emphasis>
 in case a file is changed in the repository while they work on it;
 </para>
 </listitem>
 <listitem>
 <para>
-Always use the <command>svn status</command> command before committing
+Always use the <command>git status</command> command before committing
 changes, to be sure that only relevant changes are committed.
 </para>
 </listitem>
@@ -210,7 +237,7 @@ changes, to be sure that only relevant changes are committed.
 <title>Changelog entries handling
 </title>
 <para>
-When committing translations directly to <acronym>SVN</acronym>
+When committing translations directly to <acronym>GIT</acronym>
 repositories for Debian packages (except for level 1 translations),
 translators must update the <filename>debian/changelog</filename> file
 accordingly.
@@ -252,7 +279,7 @@ base-config (2.38) unstable; urgency=high
 <itemizedlist>
 <listitem>
 <para>
-the last released version of the package is 2.38. The <acronym>SVN</acronym> repository
+the last released version of the package is 2.38. The <acronym>GIT</acronym> repository
   currently contains the future unpublished 2.39 release;
 </para>
 </listitem>
@@ -272,7 +299,7 @@ the committer of this change was Christian Perrier.
 <para>
 Different Debian packages may use slightly different methods and
 styles for <filename>changelog</filename> maintenance. When working
-with <acronym>SVN</acronym>/<acronym>CVS</acronym> repositories, using
+with <acronym>GIT</acronym> repositories, using
 <emphasis>UNRELEASED</emphasis> for the last entry is highly recommended
 for new unpublished changes.
 </para>

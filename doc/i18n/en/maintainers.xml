@@ -118,14 +118,14 @@ General recommendations
 &d-i; developers are strongly encouraged to read the
 <emphasis>po-debconf(7)</emphasis> man page and must have a good
 knowledge of <classname>po-debconf</classname> mechanisms. Please ask
-for advice in the &email-debian-boot-list; mailing list when in doubt.
+for advice on the &email-debian-boot-list; mailing list when in doubt.
 </para>
 
 <para>
 Templates files <emphasis>must</emphasis> be named
 <filename>&lt;package&gt;.templates</filename>. Developer
 <emphasis>should not</emphasis> use files named
-<filename>debian/templates</filename> though
+<filename>debian/templates</filename>, even though
 <command>debhelper</command> scripts properly handle such files. This
 requirement has been added because the translators work on a general
 file which groups together all templates from all &d-i; packages. This
@@ -246,9 +246,9 @@ understand the way translations are handled.
 <para>
 All PO files from all packages sitting under the
 <filename>packages</filename> directory of the &d-i; source tree are
-merged into one single file and translators update this file. These
-so-called <emphasis>master</emphasis> PO files are kept into
-<filename>packages/po</filename> into the &d-i; main directory.
+merged into five po files and translators work on these files. These
+so-called <emphasis>master</emphasis> PO files are kept in
+<filename>packages/po</filename> in the &d-i; main directory.
 </para>
 
 <para>

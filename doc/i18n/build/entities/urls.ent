@@ -69,6 +69,8 @@
 <!ENTITY url-level3-pot-link     '<ulink url="&url-level3-pot;">&url-level3-pot;</ulink>'>
 <!ENTITY url-level3-po-link     '<ulink url="&url-level3-po;">&url-level3-po;</ulink>'>
 
+<!ENTITY git-clone-d-i-repo "git clone git@salsa.debian.org:installer-team/d-i.git d-i">
+
 <!-- URLs for various files locations -->
 <!ENTITY git-level1 "git clone git@salsa.debian.org:installer-team/d-i.git">
 <!ENTITY git-level1-anon "git clone git@salsa.debian.org:installer-team/d-i.git">
@@ -76,15 +78,15 @@
 <!ENTITY git-tasksel-anon "git clone git@salsa.debian.org:installer-team/tasksel.git">
 <!ENTITY git-tasksel "git clone git@salsa.debian.org:installer-team/tasksel.git">
 <!ENTITY git-win32-loader-anon "git clone -q git@salsa.debian.org:installer-team/win32-loader.git">
-<!ENTITY git-win32-loader "git clone -q git@salsa.debian.org:installer-team/win32-loader.git">
-<!ENTITY git-iso-codes-anon "git clone -q git@salsa.debian.org:debian/iso-codes.git">
-<!ENTITY git-iso-codes "git clone -q git@salsa.debian.org:debian/iso-codes.git">
-<!ENTITY git-grub2 "git clone -q git@salsa.debian.org:grub-team/grub.git">
-<!ENTITY git-popcon "git clone -q git@salsa.debian.org:popularity-contest-team/popularity-contest.git">
-<!ENTITY git-debconf "git clone -q git@salsa.debian.org:pkg-debconf/debconf.git">
-<!ENTITY git-eject "git clone ssh://&git-debian;/git/collab-maint/eject">
-<!ENTITY git-espeakup "git clone -q git@salsa.debian.org:a11y-team/espeakup.git">
-<!ENTITY git-newt "git clone -q git@salsa.debian.org:mckinstry/newt.git">
+<!ENTITY git-win32-loader "git clone git@salsa.debian.org:installer-team/win32-loader.git">
+<!ENTITY git-iso-codes-anon "git clone git@salsa.debian.org:debian/iso-codes.git">
+<!ENTITY git-iso-codes "git clone git@salsa.debian.org:debian/iso-codes.git">
+<!ENTITY git-grub2 "git clone git@salsa.debian.org:grub-team/grub.git">
+<!ENTITY git-popcon "git clone git@salsa.debian.org:popularity-contest-team/popularity-contest.git">
+<!ENTITY git-debconf "git clone git@salsa.debian.org:pkg-debconf/debconf.git">
+<!ENTITY git-eject "git clone ssh://&git-debian;/git/collab-maint/eject"> <!-- FIXME: no upstream repo currently ??? -->
+<!ENTITY git-espeakup "git clone git@salsa.debian.org:a11y-team/espeakup.git">
+<!ENTITY git-newt "git clone git@salsa.debian.org:mckinstry/newt.git">
 
 <!-- Wiki page for fonts -->
 <!ENTITY wiki-fonts "https://wiki.debian.org/DebianInstaller/GUIFonts">

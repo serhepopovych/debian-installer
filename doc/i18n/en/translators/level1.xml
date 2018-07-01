@@ -169,6 +169,12 @@ a mail to &email-debian-boot-list;.)
   </listitem>
 </itemizedlist>
 
+</sect2>
+
+<sect2>
+<title>
+Beginning a new translation
+</title>
 
 <para>
 To begin a new translation for sublevel 1, translators should copy the
@@ -187,7 +193,7 @@ Updating/adding translations
 
 <para>
 Translation updates should be done by direct commits to the &d-i; <acronym>GIT</acronym>
-repository (see <xref linkend="svn-basics"/> for details about <acronym>GIT</acronym>
+repository (see <xref linkend="git-basics"/> for details about <acronym>GIT</acronym>
 use) or via <ulink url="&hosted-weblate;">Weblate</ulink>. In case either of this is absolutely
 impossible, updates can be sent as bug reports against the <classname>debian-installer</classname>
 package (see <xref linkend="bug-reports"/> for details).
