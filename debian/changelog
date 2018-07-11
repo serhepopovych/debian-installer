@@ -1,8 +1,8 @@
-debian-installer (20170615+deb9u4) UNRELEASED; urgency=medium
+debian-installer (20170615+deb9u4) stretch; urgency=medium
 
   * Bump Linux kernel version from 4.9.0-6 to 4.9.0-7.
 
- -- Cyril Brulebois <kibi@debian.org>  Wed, 11 Jul 2018 02:40:55 +0200
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 11 Jul 2018 05:19:58 +0200
 
 debian-installer (20170615+deb9u3) stretch; urgency=medium
 
