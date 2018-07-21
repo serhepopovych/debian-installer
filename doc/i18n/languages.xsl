@@ -100,6 +100,7 @@ Percent world population
     </tr>
 </table>
 
+<!--
 <p align="center"><strong>World geographical coverage</strong></p>
   <table border="1" align="center">
   <tr>
@@ -291,6 +292,7 @@ Future
     </tr>
     
 </table>
+-->
 
 <p align="center"><strong><a href="http://www.debian.org/devel/debian-installer">Debian Installer</a> translators and translation teams</strong></p>
   <p></p>
@@ -338,10 +340,10 @@ by Debian Installer developers when they feel it to be
 badly representing reality.
    </li>
   <li>
-    World population: <a href="http://www.geohive.com">www.geohive.com</a> as of 2011-04-21
+    World population: <a href="http://www.geohive.com">www.geohive.com</a> as of 2011-04-21 (link dead)
    </li>
   <li>
-    Maps: <a href="http://www.world66.com/myworld66/visitedCountries">Visited countries</a>
+    Maps: <a href="http://www.world66.com/myworld66/visitedCountries">Visited countries</a> (link dead)
    </li>
   <li>
     XSL Transform wizardry courtesy of Eugeniy Meshcheryakov
