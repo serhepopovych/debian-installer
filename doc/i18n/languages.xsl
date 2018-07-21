@@ -302,8 +302,9 @@ Future
 <th>Code</th>
 <th>Language</th>
 <th>Supported</th>
-<th>Coordinator</th>
-<th>Backup Coordinator</th>
+<th>Coordinator for installer</th>
+<th>Backup Coordinator / translator for installer</th>
+<th>Coordinator for installation-guide</th>
 <th>Number of Speakers (Ethnologue)</th>
 <th>Number of Speakers (Ethnologue <em>corrected</em>)</th>
 <th>Repository</th>
@@ -386,6 +387,12 @@ badly representing reality.
 <td>
 <xsl:if test="string-length(@bkp_coord_name)">
 	<xsl:value-of select="@bkp_coord_name"/>
+</xsl:if>
+&#160;
+</td>
+<td>
+<xsl:if test="string-length(@manual_coord_name)">
+	<xsl:value-of select="@manual_coord_name"/>
 </xsl:if>
 &#160;
 </td>
