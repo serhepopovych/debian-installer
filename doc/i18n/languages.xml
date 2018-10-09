@@ -74,8 +74,6 @@
 		coord_email="tefera@mekuria.com"
 		coord_account="teferra-guest"
 		last_commit_di="2014"
-		bkp_coord_name="Shwangizaw"
-		bkp_coord_email="shewan@gmail.com"
 		team_email="ubuntu-l10n-am@lists.ubuntu.com"
 		supported="lenny"
 		speakers="17417913"
@@ -83,6 +81,7 @@
 	      countries_official="ET"
 	      countries_most_spoken="ET"
 		/>
+<!-- Amharic - former translators: Shwangizaw, shewan@gmail.com -->
 	<language_entry
 		code="ar"
 		code3="arb"
@@ -91,8 +90,6 @@
 		coord_email="ButterflyOfFire@protonmail.com"
 		coord_account="via-weblate"
 		last_commit_di="2018"
-		bkp_coord_name="Abdelhak Bougouffa"
-		bkp_coord_account="via-weblate"
 		team_email="doc@arabeyes.org"
 		team_repository="cvs -d:pserver:perrier@cvs.arabeyes.org:/home/arabeyes/cvs co translate/debian"
 		supported="sarge"
@@ -101,6 +98,7 @@
 	      countries_official="SADZBHTDKMDJEGERIQILJOKWLBLYMANEOMQASOSDSYTNAEYE"
 	      countries_most_spoken="SADZBHEGIQJOKWLBLYMAOMQASDSYTNAEYE"
 		/>
+<!-- Arabic - former translators: Abdelhak Bougouffa -->
         <language_entry
                 code="ast"
                 code3="ast"
@@ -108,8 +106,6 @@
                 coord_name="Xuacu Saturio"
 		coord_account="via-weblate"
 		last_commit_di="2018"
-                bkp_coord_name="Iñigo Valera"
-                bkp_coord_email="malditoastur@gmail.com"
                 team_email="ubuntu-l10n-ast@lists.ubuntu.com"
 		supported="squeeze"
                 speakers="400000"
@@ -117,7 +113,7 @@
               countries_official="ES"
               countries_most_spoken=""
                 />
-<!-- Asturian - former translators: Marcos Alvarez Costales, maacub@gmail.com -->
+<!-- Asturian - former translators: Marcos Alvarez Costales, maacub@gmail.com | Iñigo Valera, malditoastur@gmail.com -->
 	<language_entry
 		code="be"
 		code3="bel"
@@ -153,17 +149,16 @@
 		code="bn"
 		code3="ben"
 		english_name="Bengali"
-		coord_name="MAK"
-		coord_email="mahayalamkhan@gmail.com"
-		last_commit_di=""
-		bkp_coord_name="Jamil Ahmed, Israt Jahan"
-		bkp_coord_email="itsjamil@gmail.com,isratjahan.ry@gmail.com"
+		coord_name="Robin Mehdee"
+		coord_email="robin@ankur.org.bd"
+		last_commit_di="2012"
 		supported="etch"
 		speakers="171070202"
 		speakers_corr="189000000"
 	      countries_official="BDIN"
 	      countries_most_spoken="BD"
 	        />
+<!-- Bengali - former translators: MAK, mahayalamkhan@gmail.com | Jamil Ahmed, itsjamil@gmail.com | Israt Jahan, isratjahan.ry@gmail.com -->
         <language_entry
 		code="bo"
 		code3="bod"
@@ -233,8 +228,8 @@
 		english_name="Valencian-Catalan"
 		last_commit_di="2007"
 		team_email="debian-l10n-catalan@lists.debian.org"
-		speakers="0"
-		speakers_corr="0"
+		speakers=""
+		speakers_corr=""
                 nlp_step="prospective"
 		supported="false"
 	      countries_official=""
@@ -463,10 +458,6 @@
 		coord_email="alban.vidal@zordhak.fr, baptiste@mailoo.org"
 		coord_account="baptiste-guest"
 		last_commit_di="2018"
-		bkp_coord_name="Christian Perrier"
-		bkp_coord_email="bubulle@debian.org"
-		bkp_coord_account="bubulle"
-		bkp_coord_gpg="0xC0143D2D"
 		manual_coord_name="Baptiste Jammet"
 		manual_coord_email="baptiste@mailoo.org"
 		manual_coord_account="baptiste-guest"
@@ -478,6 +469,7 @@
 	      countries_official="FRADBEBJBFBICMCACFTDKMCGCICDDJGQGFPFGAGPGNHTITLBLUMGMLMQMUMCNCNENIRERWSNSCCHTGVU"
 	      countries_most_spoken="FRGFPFGPGNHTMQMUMCRESC"
 		/>
+<!-- French - former translators: Christian Perrier, bubulle@debian.org -->
 	<language_entry
 		code="ga"
 		code3="gle"
