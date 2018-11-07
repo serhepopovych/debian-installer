@@ -29,6 +29,11 @@ debian-installer (20180622) UNRELEASED; urgency=medium
   [ Samuel Thibault ]
   * Keep grub resolution in EFI boot, to avoid tiny fonts (closes: #910227).
 
+  [ Vagrant Cascadian ]
+  * [armhf] Remove Firefly-RK3288 image, as u-boot fails to boot due to
+    #898520.
+  * Remove u-boot-rockchip from Built-Using, as no targets use it.
+
  -- Andreas B. Mundt <andi@debian.org>  Fri, 22 Jun 2018 17:25:42 +0200
 
 debian-installer (20180610) unstable; urgency=medium
