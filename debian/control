@@ -117,7 +117,7 @@ Build-Depends:
 	u-boot-imx [armhf],
 	u-boot-omap (>= 2016.09~rc1) [armhf],
 	u-boot-sunxi [armhf],
-	u-boot-sunxi (>= 2018.03) [arm64],
+	u-boot-sunxi (>= 2018.11) [arm64],
 	u-boot-rockchip (>= 2017.07+dfsg1-3) [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
 	atf-allwinner [arm64],
