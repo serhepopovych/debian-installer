@@ -44,6 +44,9 @@ debian-installer (20180622) UNRELEASED; urgency=medium
   * [arm64] Add u-boot image for pinebook.
   * [armhf] Add image for Sinovoip_BPI_M3. Thanks to Bernhard.
 
+  [ YunQiang Su ]
+  * [mips*el/loongson-3] add input modules to netboot image (Closes: #911664).
+
  -- Andreas B. Mundt <andi@debian.org>  Fri, 22 Jun 2018 17:25:42 +0200
 
 debian-installer (20180610) unstable; urgency=medium
