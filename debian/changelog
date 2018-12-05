@@ -47,7 +47,10 @@ debian-installer (20180622) UNRELEASED; urgency=medium
   [ YunQiang Su ]
   * [mips*el/loongson-3] add input modules to netboot image (Closes: #911664).
 
- -- Andreas B. Mundt <andi@debian.org>  Fri, 22 Jun 2018 17:25:42 +0200
+  [ Vagrant Cascadian ]
+  * [armel] Disable OpenRD targets, no longer present in u-boot.
+
+ -- Vagrant Cascadian <vagrant@ponder>  Wed, 05 Dec 2018 17:40:16 +0100
 
 debian-installer (20180610) unstable; urgency=medium
 
