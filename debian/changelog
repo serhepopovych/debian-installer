@@ -1,7 +1,11 @@
 debian-installer (20181209) UNRELEASED; urgency=medium
 
+  [ Vagrant Cascadian ]
   * [arm64] Use arm-trusted-firmware instead of atf-allwinner to build
     pine64_plus and pinebook images.
+
+  [ John Paul Adrian Glaubitz ]
+  * alpha: Clean up formatting of build configuration file.
 
  -- Vagrant Cascadian <vagrant@debian.org>  Sun, 09 Dec 2018 11:13:21 +0100
 
