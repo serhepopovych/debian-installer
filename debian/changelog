@@ -6,6 +6,7 @@ debian-installer (20181209) UNRELEASED; urgency=medium
 
   [ John Paul Adrian Glaubitz ]
   * alpha: Clean up formatting of build configuration file.
+  * alpha: Remove fb-modules from cdrom and netboot package lists.
   * hppa: Clean up formatting of build configuration file.
 
  -- Vagrant Cascadian <vagrant@debian.org>  Sun, 09 Dec 2018 11:13:21 +0100
