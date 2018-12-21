@@ -9,6 +9,9 @@ debian-installer (20181209) UNRELEASED; urgency=medium
   * alpha: Remove fb-modules from cdrom and netboot package lists.
   * hppa: Clean up formatting of build configuration file.
 
+  [ Cyril Brulebois ]
+  * Bump Linux kernel ABI from 4.18.0-3 to 4.19.0-1
+
  -- Vagrant Cascadian <vagrant@debian.org>  Sun, 09 Dec 2018 11:13:21 +0100
 
 debian-installer (20181206) unstable; urgency=medium
