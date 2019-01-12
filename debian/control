@@ -108,7 +108,10 @@ Build-Depends:
 	emile [m68k],
 	emile-bootblocks [m68k],
 #		Bootloader for m68k/mac machines.
-	grub-efi-amd64-bin [amd64], grub-efi-arm64-bin [arm64], grub-efi-ia32-bin [i386],
+	shim-signed [amd64], grub-efi-amd64-signed [amd64],
+#	        Signed bootloader components for UEFI Secure Boot
+	grub-efi-arm64-bin [arm64],
+	grub-efi-ia32-bin [i386],
 	grub-efi-arm-bin [armhf],
 	grub-common [amd64 arm64 i386], xorriso,
 #		Used to make EFI bootable images
