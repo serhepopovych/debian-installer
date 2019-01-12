@@ -136,7 +136,9 @@ Build-Depends:
 #		DOS.
 	mtools [i386 m68k amd64 armhf arm64 kfreebsd-i386 kfreebsd-amd64 hurd-i386],
 #		mcopy is used to put files onto FAT filesystems w/o
-#		mounting them.
+#		mounting them. Note that patches from #900409 and #900410
+#		are required for a reproducible build (available since
+#		4.0.18-2.1).
 # 
 	kmod [linux-any],
 #		depmod.
