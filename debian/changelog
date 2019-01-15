@@ -12,6 +12,11 @@ debian-installer (20181209) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI from 4.18.0-3 to 4.19.0-1
 
+  [ Vagrant Cascadian ]
+  * [armhf] Re-enable Firefly-RK3288 image.
+  * [armhf] Update Build-Depends for u-boot-rockchip.
+  * Add u-boot-rockchip to Built-Using.
+
  -- Vagrant Cascadian <vagrant@debian.org>  Sun, 09 Dec 2018 11:13:21 +0100
 
 debian-installer (20181206) unstable; urgency=medium
