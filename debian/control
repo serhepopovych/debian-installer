@@ -8,7 +8,7 @@ Vcs-Git: https://salsa.debian.org/installer-team/debian-installer.git
 Vcs-Browser: https://salsa.debian.org/installer-team/debian-installer
 Build-Depends:
 # Base build dependencies:
-	debhelper (>= 7.0.0),
+	debhelper (>= 11),
 #		Of course.
 	apt (>= 0.8.16),
 # 		Used for downloading udebs.
