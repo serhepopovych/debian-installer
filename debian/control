@@ -121,7 +121,7 @@ Build-Depends:
 	u-boot-omap (>= 2016.09~rc1) [armhf],
 	u-boot-sunxi (>= 2018.09) [armhf],
 	u-boot-sunxi (>= 2018.11+dfsg-2) [arm64],
-	u-boot-rockchip (>= 2019.01+dfsg-1) [armhf],
+	u-boot-rockchip (>= 2019.01+dfsg-1~) [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
 	arm-trusted-firmware [arm64],
 	device-tree-compiler [arm64],
