@@ -88,6 +88,8 @@ if [ $signed = 1 ]; then
 else
 	# Build the core image for disc/CD boot
 	echo "$0: Building non-signed grub-efi binaries for $efi_name"
+	find "$workdir" -newermt "@$SOURCE_DATE_EPOCH" -print0 \
+		| xargs -0r touch --no-dereference --date="@$SOURCE_DATE_EPOCH"
 	(cd "$workdir"; find boot -print0 | LC_ALL=C sort -z | tar --null -T - -cf -) >"$memdisk_img"
 	grub-mkimage -O "$platform" -m "$memdisk_img" \
 		-o "$workdir/boot$efi_name.efi" -p '(memdisk)/boot/grub' \
