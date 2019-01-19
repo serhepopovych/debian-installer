@@ -16,6 +16,7 @@ debian-installer (20190119) UNRELEASED; urgency=medium
     fontconfig's cache and xorriso calls.
   * gen-tarball: specify the complete gzip command through a tar option
     instead of using the now-deprecated GZIP environment variable.
+  * gen-tarball: use pigz if available, reducing build time.
 
   [ Chris Lamb ]
   * Set BUILD_DATE based on SOURCE_DATE_EPOCH, rather than the other way
