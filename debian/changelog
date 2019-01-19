@@ -14,6 +14,8 @@ debian-installer (20190119) UNRELEASED; urgency=medium
   * Review and merge Chris Lamb's work making d-i build reproducibly
     (Closes: #900918), with many thanks! Remaining issues seem related to
     fontconfig's cache and xorriso calls.
+  * gen-tarball: specify the complete gzip command through a tar option
+    instead of using the now-deprecated GZIP environment variable.
 
   [ Chris Lamb ]
   * Set BUILD_DATE based on SOURCE_DATE_EPOCH, rather than the other way
