@@ -38,6 +38,10 @@ debian-installer (20190119) UNRELEASED; urgency=medium
   * debian/control: Document that #900409 and #900410 are required for a
     reproducible build.
 
+  [ John Paul Adrian Glaubitz ]
+  * config: Set DEBIAN_RELEASE to unstable for all architectures
+    in Debian Ports. (Closes: #920353)
+
  -- Cyril Brulebois <kibi@debian.org>  Fri, 18 Jan 2019 22:07:29 +0000
 
 debian-installer (20190118) unstable; urgency=medium
