@@ -27,7 +27,7 @@ if [ -z "$DST" ]; then
 	else
 		FILTER="! -name spk.cfg ! -name adspk.cfg ! -name rqspk.cfg"
 	fi
-	find . -type f $FILTER | sed "s:\./::"
+	find . -type f $FILTER | LC_ALL=C sort | sed "s:\./::"
 	exit 0
 elif [ ! -d "$DST" ]; then
 	exit 1
