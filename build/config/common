@@ -69,6 +69,11 @@ SOURCE_DATE_EPOCH ?= $(shell date '+%s')
 # to reproduce the build.
 BUILD_DATE ?= $(shell date -u '+%Y%m%d-%H:%M:%S' -d '@$(SOURCE_DATE_EPOCH)')
 
+# Set consistent file creation modes for a reproducible build, taking care
+# not to modify existing executable bits on files.
+DIR_MODE = 755
+FILE_MODE = u+rw,g+r-w,o+r-w
+
 # Produce a beep at boot menu
 BOOTMENU_BEEP ?= n
 

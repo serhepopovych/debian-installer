@@ -146,6 +146,11 @@ define clamp_mtimes
   find $(1) -newermt "@$(SOURCE_DATE_EPOCH)" -print0 | xargs -0r touch --no-dereference --date="@$(SOURCE_DATE_EPOCH)"
 endef
 
+define normalise_permissions
+  find $(1) -type d -print0 | xargs -0r chmod $(DIR_MODE)
+  find $(1) -not -type d -print0 | xargs -0r chmod $(FILE_MODE)
+endef
+
 # Limit on mfsroot size. It is determined by NKPT (in <machine/pmap.h).
 # On amd64, it can be increased by increasing this variable.  On i386,
 # this is a hard limit due to constraints of 4 GiB VM space.
@@ -312,6 +317,7 @@ release:
 	cd $(BASE_DEST) && sha256sum `find -L . -type f | sort` > SHA256SUMS
 	# We have just modified files
 	$(clamp_mtimes) $(BASE_DEST)
+	$(normalise_permissions) $(BASE_DEST)
 
 # The general tree target.
 $(STAMPS)tree-unpack-$(targetstring)-stamp: $(STAMPS)get_udebs-$(targetstring)-stamp
@@ -649,9 +655,10 @@ endif
 	# Remove extra udebs now that we're done with them.
 	rm -rf $(EXTRAUDEBSDIR)
 
-	# Clamp timestamps to be no later than SOURCE_DATE_EPOCH before they
-	# get added to media.
+	# Clamp timestamps to be no later than SOURCE_DATE_EPOCH and normalise
+	# file modes before they get added to media.
 	$(clamp_mtimes) $(TREE)
+	$(normalise_permissions) $(TREE)
 
 	# Tree target ends here. Whew!
 	@touch $@
@@ -749,9 +756,10 @@ ifeq ($(DEB_HOST_ARCH_OS),hurd)
 	fi
 endif
 
-	# We may have modified $(TREE)/lib, so re-clamp before placing these
-	# files into archives.
+	# We may have modified $(TREE)/lib, so re-clamp and normalise before
+	# placing these files into archives.
 	$(clamp_mtimes) $(TREE)/lib
+	$(normalise_permissions) $(TREE)/lib
 
 	install -d $(TEMP)
 
