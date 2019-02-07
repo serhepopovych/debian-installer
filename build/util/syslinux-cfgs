@@ -51,8 +51,6 @@ case $TYPE in
 	cp -r "$SRC"/*.cfg "$DST"/
 	if [ -z "$INCLUDE_GTK" ]; then
 		rm -f "$DST"/*gtk.cfg
-		rm -f "$DST"/*spkgtk.cfg
-		rm -f "$DST"/*spgtk.cfg
 	fi
 	if [ "$IS_PURE_GTK" != 1 ]; then
 		rm -f "$DST"/*spk.cfg
