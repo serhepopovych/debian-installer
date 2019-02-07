@@ -128,6 +128,7 @@ sub menuentry ($;%)
     $xattr{Auto} ||= 0;
     $xattr{Rescue} ||= 0;
     $xattr{Speech} ||= 0;
+    $xattr{Dark} ||= 0;
 
     $xattr{Quiet} = !$xattr{Expert} unless defined $xattr{Quiet};
 
@@ -152,6 +153,7 @@ sub menuentry ($;%)
     push @cmdline, @OPTS;
     push @cmdline, "rescue/enable=true" if $xattr{Rescue};
     push @cmdline, "speakup.synth=soft" if $xattr{Speech};
+    push @cmdline, "theme=dark" if $xattr{Dark};
     push @cmdline, "---";
     push @cmdline, "quiet" if $xattr{Quiet};
 
@@ -223,4 +225,19 @@ start_submenu("Advanced options ...", Hotkey => 'a'); {
         } # Desktop loop
     } end_submenu(); # Desktop submenu
 } end_submenu(); # Advanced
+
+start_submenu("Dark theme option...", Hotkey => 'd'); {
+    menuentry("... Install", Dark => 1);
+    menuentry("... Graphical install", Graphical => 1, Dark => 1);
+
+    start_submenu("... Advanced visually-impaired options ...", Hotkey => 'a'); {
+        menuentry("... Graphical expert install", Graphical => 1, Expert => 1, Dark => 1);
+        menuentry("... Graphical rescue mode", Graphical => 1, Rescue => 1, Dark => 1);
+        menuentry("... Graphical automated install", Graphical => 1, Auto => 1, Dark => 1);
+        menuentry("... Expert install", Expert => 1, Dark => 1);
+        menuentry("... Rescue mode", Rescue => 1, Dark => 1);
+        menuentry("... Automated install", Auto => 1, Dark => 1);
+    } end_submenu(); # Advanced visually-impaired
+} end_submenu(); # Visually-impaired
+
 menuentry('Install with speech synthesis', Graphical => $graphical, Speech => 1, Hotkey => 's')

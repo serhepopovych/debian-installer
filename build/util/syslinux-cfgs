@@ -37,9 +37,9 @@ fi
 create_standard_config() {
 	cp "$SRC"/syslinux.cfg "$SRC"/menu.cfg "$SRC"/stdmenu.cfg \
 	   "$SRC"/prompt.cfg "$SRC"/exithelp.cfg "$DST"/
-	cp "$SRC"/{,ad,rq}txt.cfg "$DST"/
+	cp "$SRC"/{,ad,rq}{txt,drk}.cfg "$DST"/
 	if [ -n "$INCLUDE_GTK" ]; then
-		cp "$SRC"/{ad,rq,}{,spk}gtk.cfg "$DST"/
+		cp "$SRC"/{ad,rq,}{,spk,drk}gtk.cfg "$DST"/
 	fi
 	if [ "$IS_PURE_GTK" = 1 ]; then
 		cp "$SRC"/{,ad,rq}spk.cfg "$DST"/
@@ -60,7 +60,7 @@ case $TYPE in
     prompt)
 	cp "$SRC"/prompt.cfg "$DST"/syslinux.cfg
 	cp "$SRC"/menu.cfg "$DST"/
-	cp "$SRC"/{,ad,rq}txt.cfg "$DST"/
+	cp "$SRC"/{,ad,rq}{txt,drk}.cfg "$DST"/
 	if [ "$IS_PURE_GTK" = 1 ]; then
 		cp "$SRC"/{,ad,rq}spk.cfg "$DST"/
 	fi
