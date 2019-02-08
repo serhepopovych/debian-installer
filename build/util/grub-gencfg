@@ -94,6 +94,7 @@ sub start_submenu ($;%)
     my ($title,%xattr) = @_;
 
     $xattr{Hotkey} ||= 0;
+    $xattr{Dark} ||= 0;
 
     my $hotkey = "";
     $hotkey = " --hotkey=".$xattr{Hotkey}
@@ -104,8 +105,16 @@ sub start_submenu ($;%)
     my $theme = menu_theme();
     push @menu_number, 1;
 
-    print_indented("set menu_color_normal=cyan/blue\n");
-    print_indented("set menu_color_highlight=white/blue\n");
+    if ($xattr{Dark})
+    {
+        print_indented("set menu_color_normal=white/black\n");
+        print_indented("set menu_color_highlight=yellow/black\n");
+    }
+    else
+    {
+        print_indented("set menu_color_normal=cyan/blue\n");
+        print_indented("set menu_color_highlight=white/blue\n");
+    }
     print_set_theme($theme);
 }
 sub end_submenu ()
@@ -226,11 +235,11 @@ start_submenu("Advanced options ...", Hotkey => 'a'); {
     } end_submenu(); # Desktop submenu
 } end_submenu(); # Advanced
 
-start_submenu("Dark theme option...", Hotkey => 'd'); {
+start_submenu("Dark theme option...", Hotkey => 'd', Dark => 1); {
     menuentry("... Install", Dark => 1);
     menuentry("... Graphical install", Graphical => 1, Dark => 1);
 
-    start_submenu("... Advanced visually-impaired options ...", Hotkey => 'a'); {
+    start_submenu("... Advanced options ...", Hotkey => 'a', Dark => 1); {
         menuentry("... Graphical expert install", Graphical => 1, Expert => 1, Dark => 1);
         menuentry("... Graphical rescue mode", Graphical => 1, Rescue => 1, Dark => 1);
         menuentry("... Graphical automated install", Graphical => 1, Auto => 1, Dark => 1);
