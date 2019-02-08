@@ -109,6 +109,8 @@ sub start_submenu ($;%)
     {
         print_indented("set menu_color_normal=white/black\n");
         print_indented("set menu_color_highlight=yellow/black\n");
+        print_indented("set color_normal=white/black\n");
+        print_indented("set color_highlight=yellow/black\n");
         print_indented("background_image\n");
     }
     else
