@@ -51,6 +51,7 @@ debian-installer (20190119) UNRELEASED; urgency=medium
   [ Samuel Thibault ]
   * Rework dark theme shortcut.
   * Introduce dark menu theme.
+  * Fix loading background image on netboot grub.
 
  -- Cyril Brulebois <kibi@debian.org>  Fri, 18 Jan 2019 22:07:29 +0000
 
