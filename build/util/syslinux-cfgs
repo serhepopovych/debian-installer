@@ -36,7 +36,7 @@ fi
 # Create config for default desktop environment
 create_standard_config() {
 	cp "$SRC"/syslinux.cfg "$SRC"/menu.cfg "$SRC"/stdmenu.cfg \
-	   "$SRC"/prompt.cfg "$SRC"/exithelp.cfg "$DST"/
+	   "$SRC"/drkmenu.cfg "$SRC"/prompt.cfg "$SRC"/exithelp.cfg "$DST"/
 	cp "$SRC"/{,ad,rq}{txt,drk}.cfg "$DST"/
 	if [ -n "$INCLUDE_GTK" ]; then
 		cp "$SRC"/{ad,rq,}{,spk,drk}gtk.cfg "$DST"/
