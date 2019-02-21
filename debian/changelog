@@ -38,6 +38,10 @@ debian-installer (20190119) UNRELEASED; urgency=medium
     under dest/.
   * debian/control: Document that #900409 and #900410 are required for a
     reproducible build.
+  * Ensure build is reproducible regardless of the user's
+    umask(2). (Closes: #920631)
+  * Ensure build is reproducible regardless of the underlying filesystem
+    ordering. (Closes: #920676)
 
   [ John Paul Adrian Glaubitz ]
   * config: Set DEBIAN_RELEASE to unstable for all architectures
