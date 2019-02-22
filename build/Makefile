@@ -147,7 +147,7 @@ define clamp_mtimes
 endef
 
 define normalise_permissions
-  find $(1) -type d -and -not -type l -print0 | xargs -0r chmod $(DIR_MODE)
+  find $(1) -type d -print0 | xargs -0r chmod $(DIR_MODE)
   find $(1) -not -type d -and -not -type l -print0 | xargs -0r chmod $(FILE_MODE)
 endef
 
