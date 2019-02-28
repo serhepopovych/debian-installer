@@ -4,8 +4,8 @@
 
 0frescue07
   Boot into rescue mode.
-
-
+0frescue_serial07
+  Boot into rescue mode using serial console.
 
 
 

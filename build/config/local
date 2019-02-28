@@ -1,0 +1,30 @@
+
+# Do not provide GTK installer
+INITRD_GTK = ""
+INITRD32_GTK = ""
+
+IS_PURE_GTK = 1
+
+MEDIUM_SUPPORTED := $(filter-out %gtk gtk%,$(MEDIUM_SUPPORTED))
+FLAVOUR_SUPPORTED := $(filter-out gtk,$(FLAVOUR_SUPPORTED))
+
+# Standard syslinux configuration Debian GNU/Linux
+SYSLINUX_CFG = standard
+
+# No desktop environment to install
+DESKTOP = ""
+
+# No beep when menu ready to accept commands.
+BOOTMENU_BEEP = n
+
+# No splash screen images
+SPLASH_PNG = ""
+SPLASH_SVG = ""
+
+# The font to load in GRUB
+GRUB_FONT = /usr/share/grub/unicode.pf2
+
+# These should be kept in sync with win32-loader's preseed line as
+# defined in graphics.nsi around line 58
+VIDEO_MODE=""
+VIDEO_MODE_GTK=""
