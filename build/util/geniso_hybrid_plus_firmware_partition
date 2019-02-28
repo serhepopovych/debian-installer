@@ -28,7 +28,7 @@ isohybrid -h "$heads" -s "$sectors" -u "$iso"
 # Make the firmware volume.
 tmpdir="$(mktemp -d)"
 firmware_volume_file="$tmpdir/fat"
-mkfs.msdos -n "$firmware_volume_name" -C "$firmware_volume_file" \
+mkfs.msdos -v -n "$firmware_volume_name" -C "$firmware_volume_file" \
 	$(expr $firmware_volume_size_M \* 1024)
 
 # Combine images. 
