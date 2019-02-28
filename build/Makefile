@@ -383,6 +383,18 @@ endif
 		perl -nle '$$p = $$_; $$v = <>; chomp $$v; $$a = <>; chomp $$a; <>; print "$$p $$v $$a"' | \
 		sort > $(TEMP_UDEB_LIST)
 
+	# Since https://salsa.debian.org/installer-team/rootskel/commit/4f74903822f7ef39f378984920dd1841bfd1db04
+	# included in rootskel 1.103 udeb /lib64 symlink was removed to fix build with recent mklibs.
+	#
+	# However to build old debian-installer with new mklibs we may need to fix symlink
+	# to point to relative location in tree instead of removing it.
+	if [ -L "$(TREE)/lib64" ]; then \
+		target="`readlink -q "$(TREE)/lib64"`"; \
+		if [ -z "$${target##/*}" ]; then \
+			ln -snf "$${target#/}" "$(TREE)/lib64"; \
+		fi; \
+	fi
+
 	# Clean up after dpkg.
 	rm -rf $(DPKGDIR)/updates
 	rm -f $(DPKGDIR)/available $(DPKGDIR)/*-old $(DPKGDIR)/lock
