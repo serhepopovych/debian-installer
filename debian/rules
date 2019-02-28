@@ -15,7 +15,7 @@ else
 USE_UDEBS_FROM=stretch
 USE_PROPOSED_UPDATES=1
 TRANSSTATUS=translation-status
-BOOTMENU_BEEP=y
+BOOTMENU_BEEP=n
 endif
 
 # Adjust for non-released ports if needed:
