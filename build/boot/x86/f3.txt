@@ -4,10 +4,12 @@
 
 0finstall07
   Start the installation -- this is the default ${MEDIA_TYPE} install.
+0finstall_serial07
+  Start the installation using serial console.
 0fexpert07
   Start the installation in expert mode, for maximum control.
-
-
+0fexpert_serial07
+  Start the installation in expert mode using serial console.
 
 
 
