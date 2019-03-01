@@ -7,6 +7,7 @@
 MX53LOCO /usr/lib/u-boot/mx53loco/u-boot.imx 2
 MX6_Cubox-i /usr/lib/u-boot/mx6cuboxi/SPL 2 /usr/lib/u-boot/mx6cuboxi/u-boot.img 138
 Wandboard /usr/lib/u-boot/wandboard/SPL 2 /usr/lib/u-boot/wandboard/u-boot.img 138
+Novena  /usr/lib/u-boot/novena-rawsd/SPL 2 /usr/lib/u-boot/novena-rawsd/u-boot.img 138
 #
 # Images from u-boot-omap
 BeagleBoneBlack /usr/lib/u-boot/am335x_boneblack/MLO 256 /usr/lib/u-boot/am335x_boneblack/u-boot.img 768

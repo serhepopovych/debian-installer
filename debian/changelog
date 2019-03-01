@@ -60,6 +60,10 @@ debian-installer (20190119) UNRELEASED; urgency=medium
   [ Ben Hutchings ]
   * armel: Delete unused package list for ixp4xx (Closes: #921951)
 
+  [ Vagrant Cascadian ]
+  * [armhf] Add images for Novena.
+  * Update versioned Build-Depends on u-boot-imx.
+
  -- Cyril Brulebois <kibi@debian.org>  Fri, 18 Jan 2019 22:07:29 +0000
 
 debian-installer (20190118) unstable; urgency=medium
