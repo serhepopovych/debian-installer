@@ -1,2 +1,1 @@
 deb http://archive.debian.org/debian jessie main/debian-installer
-deb http://archive.debian.org/debian jessie-proposed-updates main/debian-installer
