@@ -5,17 +5,24 @@
 # USB stick.
 
 # This needs to be big enough to hold the uncompressed firmware.tar.gz
-# file. Currently that is 4.4M; add a few more to grow.
-firmware_volume_size_M=6
+# file. Currently that is ~36M; add a few more to grow.
+firmware_volume_size_M=64
 # max size 11 chars:  ----------- 
 firmware_volume_name="Firmware"
 
 iso="$1"
+fw_dir="$2"
 
 if [ -z "$iso" ]; then
-	echo "usage: $0 iso" >&2
+	echo "usage: ${0##*/} <iso> [<fw_dir>]" >&2
 	exit 1
 fi
+
+exit_handler()
+{
+	[ ! -d "$tmpdir" ] || rm -rf "$tmpdir"
+}
+trap exit_handler EXIT
 
 set -e
 
@@ -23,7 +30,9 @@ set -e
 heads=64
 sectors=32
 
-isohybrid -h "$heads" -s "$sectors" -u "$iso"
+# Skip isohybrid if needed
+[ -n "$NO_ISOHYBRID" ] || \
+	isohybrid -h "$heads" -s "$sectors" -u "$iso"
 
 # Make the firmware volume.
 tmpdir="$(mktemp -d)"
@@ -31,11 +40,14 @@ firmware_volume_file="$tmpdir/fat"
 mkfs.msdos -v -n "$firmware_volume_name" -C "$firmware_volume_file" \
 	$(expr $firmware_volume_size_M \* 1024)
 
+# Copy firmware files
+[ ! -d "$fw_dir" ] || \
+	find "$fw_dir" -type f -a -exec mcopy -i "$firmware_volume_file" '{}' '::' ';'
+
 # Combine images. 
 # XXX This wastes some space because isohybrid pads the iso to one
 # megabyte. Could reuse that padding for the start of the firmware volume.
 cat "$firmware_volume_file" >> "$iso"
-rm -r "$tmpdir"
 
 cylinders="$(($(stat -c %s "$iso") / $heads / $sectors))"
 
