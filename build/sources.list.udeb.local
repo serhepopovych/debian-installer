@@ -1,0 +1,2 @@
+deb http://deb.debian.org/debian bullseye main/debian-installer
+deb http://deb.debian.org/debian bullseye-proposed-updates main/debian-installer
