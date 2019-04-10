@@ -1,2 +1,1 @@
 deb http://archive.debian.org/debian wheezy main/debian-installer
-deb http://archive.debian.org/debian wheezy-proposed-updates main/debian-installer
