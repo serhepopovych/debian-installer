@@ -25,3 +25,6 @@ ca-certificates-udeb
 
 libkmod2-udeb [linux]
 kldutils-udeb [kfreebsd]
+
+# Avoid entropy starvation issues (#923675):
+haveged-udeb [linux]
