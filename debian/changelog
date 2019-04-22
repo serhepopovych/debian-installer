@@ -6,7 +6,8 @@ debian-installer (20190411) UNRELEASED; urgency=medium
     by S50entropy-source in rootskel.
 
   [ Samuel Thibault ]
-  * Make hurd-i386 use debian-ports keyring.
+  * Make hurd-i386 use debian-ports keyring and include
+    debian-ports-archive-keyring-udeb.
 
  -- Cyril Brulebois <kibi@debian.org>  Fri, 19 Apr 2019 22:45:44 +0200
 
