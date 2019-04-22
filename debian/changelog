@@ -1,8 +1,12 @@
 debian-installer (20190411) UNRELEASED; urgency=medium
 
+  [ Cyril Brulebois ]
   * Add haveged-udeb [linux] to the pkg-lists/base, so that entropy
     starvation issues can be avoided (Closes: #923675). To be used
     by S50entropy-source in rootskel.
+
+  [ Samuel Thibault ]
+  * Make hurd-i386 use debian-ports keyring.
 
  -- Cyril Brulebois <kibi@debian.org>  Fri, 19 Apr 2019 22:45:44 +0200
 
