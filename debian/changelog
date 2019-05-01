@@ -18,6 +18,8 @@ debian-installer (20190411) UNRELEASED; urgency=medium
   * [arm64] Add u-boot images for a64-olinuxino, orangepi_zero_plus2 and
     teres_i.
   * [arm64] Update Build-Depends to u-boot-sunxi (>= 2019.01+dfsg-5).
+  * [armhf] Compress u-boot images with "gzip -n" to avoid embedding
+    timestamps which cause reproducibility issues.
 
  -- Cyril Brulebois <kibi@debian.org>  Fri, 19 Apr 2019 22:45:44 +0200
 
