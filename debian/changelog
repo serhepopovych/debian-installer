@@ -15,6 +15,8 @@ debian-installer (20190411) UNRELEASED; urgency=medium
   * ia64: Switch bootloader from elilo to grub-efi-ia64.
   * powerpc: Switch bootloader from yaboot to grub-ieee1275.
   * ppc64: Switch bootloader from yaboot to grub-ieee1275.
+  * sparc: Switch bootloader from silo to grub-ieee1275.
+  * sparc64: Switch bootloader from silo to grub-ieee1275.
 
   [ Vagrant Cascadian ]
   * [arm64] Add u-boot images for a64-olinuxino, orangepi_zero_plus2 and

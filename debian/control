@@ -86,10 +86,6 @@ Build-Depends:
 #		A previous version didn't have netabootwrap.
 	palo [hppa],
 #		Bootloader for hppa machines, to make netboot images.
-	silo [sparc64],
-#		Using silo is problematic since it needs to run as root,
-#		so images that need it are not built by default, but we
-#		include it for completeness.
 	sparc-utils [sparc sparc64],
 #		For elftoaout and piggyback, to make netboot images.
 	atari-bootstrap [m68k],
@@ -112,7 +108,7 @@ Build-Depends:
 	grub-efi-arm-bin [armhf],
 	grub-common [amd64 arm64 i386], xorriso,
 #		Used to make EFI bootable images
-	grub-ieee1275-bin [powerpc ppc64 ppc64el sparc],
+	grub-ieee1275-bin [powerpc ppc64 ppc64el sparc sparc64],
 #		IEEE1275 bootloader support.
 	u-boot-imx (>= 2019.01+dfsg-3) [armhf],
 	u-boot-omap (>= 2016.09~rc1) [armhf],
