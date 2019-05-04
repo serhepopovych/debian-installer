@@ -55,8 +55,6 @@ Build-Depends:
 	genromfs [sparc sparc64],
 #		Used for creating sparc floppies (which are not built by
 #		default.)
-	hfsutils [powerpc],
-#		For making bootable HFS USB sticks for powerpc.
 	dosfstools [i386 ia64 m68k amd64 armhf arm64],
 #		For creating FAT filesystems with mkfs.msdos.
 #		Of course i386/amd64 use this for floppies, CDs etc.
@@ -84,7 +82,7 @@ Build-Depends:
 	pxelinux [i386 amd64],
 	syslinux-common (>= 3:6) [i386 amd64],
 #		With isohybrid.
-	yaboot [powerpc ppc64],
+	yaboot [ppc64],
 #		For all our powerpc boot needs. Well, not really.
 	aboot (>= 0.9b-2) [alpha],
 #		A previous version didn't have netabootwrap.
@@ -116,7 +114,7 @@ Build-Depends:
 	grub-efi-arm-bin [armhf],
 	grub-common [amd64 arm64 i386], xorriso,
 #		Used to make EFI bootable images
-	grub-ieee1275-bin [ppc64el],
+	grub-ieee1275-bin [powerpc ppc64el],
 #		IEEE1275 bootloader support.
 	u-boot-imx (>= 2019.01+dfsg-3) [armhf],
 	u-boot-omap (>= 2016.09~rc1) [armhf],
@@ -147,7 +145,7 @@ Build-Depends:
 	bf-utf-source [!s390 !s390x],
 #		Contains the unicode font we use. Not a udeb since we
 #		perform font reduction at build time.
-	mkvmlinuz [powerpc ppc64],
+	mkvmlinuz [ppc64],
 #		Used to make powerpc images that can boot direct from
 #		firmware w/o using a boot loader.
 	openssl,
