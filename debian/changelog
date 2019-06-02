@@ -11,6 +11,7 @@ debian-installer (20190411) UNRELEASED; urgency=medium
     debian-ports-archive-keyring-udeb.
   * Add œŒ glyphs for the french translation.
   * Make hurd and kfreebsd boot menu use new theme.
+  * Update size limits.
 
   [ John Paul Adrian Glaubitz ]
   * alpha: Add pata-modules to cdrom package list.
