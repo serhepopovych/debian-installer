@@ -38,6 +38,13 @@ debian-installer (20190411) UNRELEASED; urgency=medium
   [ Vagrant Cascadian ]
   * [arm64] Add support for netboot SD-card-images.
 
+  [ Steve McIntyre ]
+  * Add Build-Depends on shim-signed and grub-efi-ARCH-signed for
+    amd64/i386/arm64
+  * Use the signed shim and grub for all 3 arches for EFI images
+  * efi-image: use an extra command-line arg to track if we should be
+    using signed grub and shim etc.
+
  -- Cyril Brulebois <kibi@debian.org>  Fri, 19 Apr 2019 22:45:44 +0200
 
 debian-installer (20190410) unstable; urgency=medium

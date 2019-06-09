@@ -21,7 +21,7 @@ set -e
 # Make an EFI boot image.
 
 if [ -z "$1" ] || [ -z "$2" ]; then
-	echo "usage: $0 OUTPUT-DIRECTORY GRUB-PLATFORM EFI-NAME NETBOOT-PREFIX"
+	echo "usage: $0 OUTPUT-DIRECTORY GRUB-PLATFORM EFI-NAME NETBOOT-PREFIX EFI-SIGNED"
 	exit 1
 fi
 
@@ -29,15 +29,7 @@ outdir="$1"
 platform="$2"
 efi_name="$3"
 netboot_prefix="$4"
-
-# Should we be using already-built and already-signed monolithic grub
-# and shim binaries? If not, fall back to old code and generate
-# non-signed grub here. So far, we only have shim-signed for amd64 so
-# that's the only architecture where we do things differently.
-signed=0
-if [ "$platform"x = "x86_64-efi"x ]; then
-	signed=1
-fi
+efi_signed="$5"
 
 memdisk_img=
 workdir=
@@ -69,7 +61,7 @@ mkdir -p "$outdir/boot/grub/$platform"
  done; \
  echo "source /boot/grub/grub.cfg") >"$outdir/boot/grub/$platform/grub.cfg"
 
-if [ $signed = 1 ]; then
+if [ $efi_signed = y ]; then
 	# Just copy existing binaries into place
 	# First, the binaries we use for disc or CD boot
 	echo "$0: Using pre-signed grub-efi binaries for $efi_name"
@@ -122,7 +114,7 @@ mmd -i "$outdir/efi.img" ::efi/boot
 mcopy -i "$outdir/efi.img" "$workdir/boot$efi_name.efi" \
 	"::efi/boot/boot$efi_name.efi"
 
-if [ $signed = 1 ]; then
+if [ $efi_signed = y ]; then
 	# In this case, also add the grub binary
 	mcopy -i "$outdir/efi.img" "$workdir/grub$efi_name.efi" \
 		"::efi/boot/grub$efi_name.efi"
