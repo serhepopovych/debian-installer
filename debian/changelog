@@ -22,6 +22,7 @@ debian-installer (20190411) UNRELEASED; urgency=medium
   * powerpc: Switch bootloader from yaboot to grub-ieee1275.
   * ppc64: Switch bootloader from yaboot to grub-ieee1275.
   * sh4: Set KERNELVERSION to LINUX_KERNEL_ABI.
+  * sparc: Strip KERNELVERSION suffix from KERNELNAME.
   * sparc: Switch bootloader from silo to grub-ieee1275.
   * sparc64: Switch bootloader from silo to grub-ieee1275.
 
