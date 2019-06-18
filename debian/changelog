@@ -14,6 +14,8 @@ debian-installer (20190411) UNRELEASED; urgency=medium
   * Add œŒ glyphs for the french translation.
   * Make hurd and kfreebsd boot menu use new theme.
   * Update size limits.
+  * Relabel "dark theme" entry to "accessible high contrast" entry
+    (Closes: #930569)
 
   [ John Paul Adrian Glaubitz ]
   * alpha: Add pata-modules to cdrom package list.
