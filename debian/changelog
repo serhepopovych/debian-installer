@@ -7,6 +7,7 @@ debian-installer (20190411) UNRELEASED; urgency=medium
   * Bump Linux kernel ABI from 4.19.0-4 to 4.19.0-5
   * Drop volatile.debian.{net,org} exclusion from gen-sources.list.udeb,
     they went away with Squeeze(!).
+  * Update translation-status for the release.
 
   [ Samuel Thibault ]
   * Make hurd-i386 use debian-ports keyring and include
