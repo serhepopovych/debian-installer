@@ -1,3 +1,10 @@
+debian-installer (20190624) UNRELEASED; urgency=medium
+
+  [ John Paul Adrian Glaubitz ]
+  * sparc: Remove VERSIONED_SYSTEM_MAP from config file
+
+ -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Mon, 24 Jun 2019 10:12:03 +0200
+
 debian-installer (20190623) unstable; urgency=medium
 
   [ Cyril Brulebois ]
