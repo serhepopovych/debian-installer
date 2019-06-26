@@ -1,6 +1,7 @@
 debian-installer (20190624) UNRELEASED; urgency=medium
 
   [ John Paul Adrian Glaubitz ]
+  * ia64: Add grub stub configuration file grub-efi.cfg.
   * sparc: Remove VERSIONED_SYSTEM_MAP from config file.
   * sparc64: Remove VERSIONED_SYSTEM_MAP from config file.
 
