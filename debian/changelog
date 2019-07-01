@@ -1,11 +1,14 @@
-debian-installer (20190624) UNRELEASED; urgency=medium
+debian-installer (20190702) unstable; urgency=medium
+
+  [ Cyril Brulebois ]
+  * Rebuild to pick up the last changes for D-I Buster RC 3.
 
   [ John Paul Adrian Glaubitz ]
   * ia64: Add grub stub configuration file grub-efi.cfg.
   * sparc: Remove VERSIONED_SYSTEM_MAP from config file.
   * sparc64: Remove VERSIONED_SYSTEM_MAP from config file.
 
- -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Mon, 24 Jun 2019 10:12:03 +0200
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 02 Jul 2019 00:39:57 +0200
 
 debian-installer (20190623) unstable; urgency=medium
 
