@@ -1,6 +1,8 @@
 debian-installer (20190703) UNRELEASED; urgency=medium
 
   * hurd-i386: Set USE_UNRELEASED to 1.
+  * gen-sources.list.udeb: Allow to have several spaces around [] qualifiers in
+    sources.list entries.
 
  -- Samuel Thibault <sthibault@debian.org>  Wed, 07 Aug 2019 10:19:26 +0200
 
