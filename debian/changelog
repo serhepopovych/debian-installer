@@ -4,6 +4,8 @@ debian-installer (20190703) UNRELEASED; urgency=medium
   * hurd-i386: Set USE_UNRELEASED to 1.
   * gen-sources.list.udeb: Allow to have several spaces around [] qualifiers in
     sources.list entries.
+  * build/boot/x86: Restore 'd' shortcut for the dark theme. 'c' can obviously
+    not work in grub.
 
   [ Karsten Merker ]
   * riscv64: Include nic-modules and scsi-modules for virtio targets
