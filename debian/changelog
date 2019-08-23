@@ -1,3 +1,9 @@
+debian-installer (20190702+deb10u1) UNRELEASED; urgency=medium
+
+  * 
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 23 Aug 2019 21:58:21 +0200
+
 debian-installer (20190702) unstable; urgency=medium
 
   [ Cyril Brulebois ]
