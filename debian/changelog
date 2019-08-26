@@ -18,6 +18,11 @@ debian-installer (20190703) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI from 4.19.0-5 to 5.2.0-2
 
+  [ Martin Michlmayr ]
+  * Remove images for QNAP TS-11x/TS-21x/HS-21x, QNAP TS-41x/TS-42x
+    and HP Media Vault mv2120 due to size problems with the Linux
+    kernel.
+
  -- Samuel Thibault <sthibault@debian.org>  Wed, 07 Aug 2019 10:19:26 +0200
 
 debian-installer (20190702) unstable; urgency=medium
