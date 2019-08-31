@@ -1,7 +1,11 @@
 debian-installer (20190702+deb10u1) UNRELEASED; urgency=medium
 
+  [ Samuel Thibault ]
   * build/boot/x86: Restore 'd' shortcut for the dark theme. 'c' can obviously
     not work in grub (Closes: #935545).
+
+  [ Cyril Brulebois ]
+  * Enable proposed-updates for the buster stable branch.
 
  -- Samuel Thibault <sthibault@debian.org>  Fri, 23 Aug 2019 21:58:21 +0200
 
