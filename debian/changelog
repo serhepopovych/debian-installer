@@ -7,6 +7,9 @@ debian-installer (20190702+deb10u1) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Enable proposed-updates for the buster stable branch.
 
+  [ Julien Cristau ]
+  * Bump linux ABI to 4.19.0-6.
+
  -- Samuel Thibault <sthibault@debian.org>  Fri, 23 Aug 2019 21:58:21 +0200
 
 debian-installer (20190702) unstable; urgency=medium
