@@ -6,6 +6,9 @@ debian-installer (20190703) UNRELEASED; urgency=medium
     sources.list entries.
   * build/boot/x86: Restore 'd' shortcut for the dark theme. 'c' can obviously
     not work in grub (Closes: #935545).
+  * build/util/grub-gencfg: Set gfxpayload=keep in submenus too, to fix
+    unreadable fonts on hidpi displays in netboot images booted with EFI.
+    (See: #935546)
 
   [ Karsten Merker ]
   * riscv64: Include nic-modules and scsi-modules for virtio targets
