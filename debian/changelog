@@ -26,6 +26,9 @@ debian-installer (20190703) UNRELEASED; urgency=medium
     and HP Media Vault mv2120 due to size problems with the Linux
     kernel.
 
+  [ John Paul Adrian Glaubitz ]
+  * Always force USE_PROPOSED_UPDATES=0 for Debian Ports architectures.
+
  -- Samuel Thibault <sthibault@debian.org>  Wed, 07 Aug 2019 10:19:26 +0200
 
 debian-installer (20190702) unstable; urgency=medium
