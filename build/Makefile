@@ -297,6 +297,7 @@ _build:
 	@[ -n "$(SUBARCH) $(MEDIUM) $(FLAVOUR)" ] || { echo "invalid target"; false; }
 	@$(submake) tree_umount $(EXTRATARGETS) $(TARGET)
 	# Ensure build results have reproducible mtimes
+	mkdir -p $(BASE_DEST)
 	@$(clamp_mtimes) $(BASE_DEST)
 
 # Convenience rules to clean and build.
