@@ -76,7 +76,7 @@ binary-arch: install
 	dh_testroot
 	dh_installchangelogs
 	dh_installdocs doc/* -X Makefile -X build.sh -X .xsl \
-		-X internals.xml -X partman-doc.sgml -X .gitignore
+		-X internals.xml -X partman-doc.dbk -X .gitignore
 	dh_compress
 	dh_fixperms
 

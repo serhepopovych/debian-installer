@@ -24,12 +24,10 @@ Build-Depends:
 #		Used to test validity of mirrors.
 	bc,
 #		Used for some image size calculations.
-	debiandoc-sgml,
-#		partman's manual is in debiandoc.
 	xsltproc,
 	docbook-xml,
 	docbook-xsl,
-#		The d-i internals manual is in DocBook XML.
+#		The d-i partman-doc and internals manual is in DocBook XML 4.x.
 	libbogl-dev,
 #		For bdftobogl used in font reduction.
 #
