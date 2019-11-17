@@ -53,7 +53,7 @@ Build-Depends:
 	genromfs [sparc sparc64],
 #		Used for creating sparc floppies (which are not built by
 #		default.)
-	dosfstools [i386 ia64 m68k amd64 armhf arm64],
+	dosfstools [hurd-i386 i386 ia64 m68k amd64 armhf arm64],
 #		For creating FAT filesystems with mkfs.msdos.
 #		Of course i386/amd64 use this for floppies, CDs etc.
 #		m68k uses it for atari floppies
@@ -104,7 +104,7 @@ Build-Depends:
 	grub-efi-arm64-signed [arm64],
 #	        Signed bootloader components for UEFI Secure Boot
 	grub-efi-arm64-bin [arm64],
-	grub-efi-ia32-bin [i386],
+	grub-efi-ia32-bin [hurd-i386 i386],
 	grub-efi-ia64-bin [ia64],
 	grub-efi-arm-bin [armhf],
 	grub-common [amd64 arm64 i386], xorriso,
