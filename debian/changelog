@@ -1,3 +1,10 @@
+debian-installer (20190702+deb10u3) UNRELEASED; urgency=medium
+
+  [ Steve McIntyre ]
+  * Tweak mini.iso generation on arm so EFI netboot will work.
+
+ -- Steve McIntyre <93sam@debian.org>  Sun, 01 Dec 2019 15:43:49 +0000
+
 debian-installer (20190702+deb10u2) buster; urgency=medium
 
   [ Samuel Thibault ]
