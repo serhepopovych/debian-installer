@@ -8,6 +8,7 @@ debian-installer (20190702+deb10u3) UNRELEASED; urgency=medium
     uses heuristics to set the right value anyway, but that should help
     users perform local builds without having to know about those
     heuristics. Thanks to Carsten Schoenert for the report.
+  * Bump Linux ABI to 4.19.0-8.
 
  -- Steve McIntyre <93sam@debian.org>  Sun, 01 Dec 2019 15:43:49 +0000
 
