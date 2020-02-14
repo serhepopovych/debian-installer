@@ -9,6 +9,9 @@ debian-installer (20191130) UNRELEASED; urgency=medium
   [ Raphaël Hertzog ]
   * Make write-built-using more robust.
 
+  [ Vagrant Cascadian ]
+  * Update Firefly-RK3288 image for new u-boot version.
+
  -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Fri, 29 Nov 2019 14:00:08 +0100
 
 debian-installer (20191129) unstable; urgency=medium
