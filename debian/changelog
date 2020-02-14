@@ -3,6 +3,9 @@ debian-installer (20191130) UNRELEASED; urgency=medium
   [ John Paul Adrian Glaubitz ]
   * hppa: Strip -smp suffix from 64-bit kernel version string.
 
+  [ YunQiang Su ]
+  * Switch from vmlinux to vmlinuz for mips* except on Octeon.
+
  -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Fri, 29 Nov 2019 14:00:08 +0100
 
 debian-installer (20191129) unstable; urgency=medium
