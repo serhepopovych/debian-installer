@@ -6,6 +6,9 @@ debian-installer (20191130) UNRELEASED; urgency=medium
   [ YunQiang Su ]
   * Switch from vmlinux to vmlinuz for mips* except on Octeon.
 
+  [ Raphaël Hertzog ]
+  * Make write-built-using more robust.
+
  -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Fri, 29 Nov 2019 14:00:08 +0100
 
 debian-installer (20191129) unstable; urgency=medium
