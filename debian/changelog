@@ -14,6 +14,7 @@ debian-installer (20191130) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI to 5.4.0-4
+  * Update translation-status for the release.
 
  -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Fri, 29 Nov 2019 14:00:08 +0100
 
