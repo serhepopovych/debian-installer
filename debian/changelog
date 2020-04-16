@@ -9,6 +9,10 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   [ Lubomir Rintel ]
   * Add OLPC XO-1.75 laptop support. Closes: #949306
 
+  [ Aurelien Jarno ]
+  * Drop build-dependency on libgcc1. It has been renamed and it is not
+    needed since r62791.
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
