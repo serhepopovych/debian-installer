@@ -37,4 +37,4 @@ Sinovoip_BPI_M3 /usr/lib/u-boot/Sinovoip_BPI_M3/u-boot-sunxi-with-spl.bin 16
 
 #
 # Images from u-boot-rockchip
-Firefly-RK3288 /usr/lib/u-boot/firefly-rk3288/u-boot-tpl-spl.rksd 64 /usr/lib/u-boot/firefly-rk3288/u-boot.bin 16384
+Firefly-RK3288 /usr/lib/u-boot/firefly-rk3288/idbloader.img 64 /usr/lib/u-boot/firefly-rk3288/u-boot.img 16384

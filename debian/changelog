@@ -1,6 +1,10 @@
 debian-installer (20200315) UNRELEASED; urgency=medium
 
+  [ Cyril Brulebois ]
   * Bump Linux kernel ABI to 5.5.0-1
+
+  [ Vagrant Cascadian ]
+  * Update Firefly-RK3288 image for new u-boot version.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
