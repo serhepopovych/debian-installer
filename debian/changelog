@@ -6,6 +6,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   [ Vagrant Cascadian ]
   * Update Firefly-RK3288 image for new u-boot version.
 
+  [ Lubomir Rintel ]
+  * Add OLPC XO-1.75 laptop support
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
