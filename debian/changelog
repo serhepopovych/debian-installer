@@ -5,6 +5,11 @@ debian-installer (20200315) UNRELEASED; urgency=medium
 
   [ Vagrant Cascadian ]
   * Update Firefly-RK3288 image for new u-boot version.
+  * [arm64] Add support for firefly-rk3399, pinebook-pro-rk3399,
+    rockpro64-rk3399, rock64-rk3328 and rock-pi-4-rk3399 to u-boot images
+    and netboot SD card images.
+  * [arm64] Make all netboot sdcard images start at offset 32768, for
+    compatibility with rockchip platforms.
 
   [ Lubomir Rintel ]
   * Add OLPC XO-1.75 laptop support. Closes: #949306

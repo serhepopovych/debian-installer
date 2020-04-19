@@ -110,6 +110,7 @@ Build-Depends:
 	u-boot-sunxi (>= 2019.01+dfsg-3) [armhf],
 	u-boot-sunxi (>= 2019.01+dfsg-6) [arm64],
 	u-boot-rockchip (>= 2020.04+dfsg-1~) [armhf],
+	u-boot-rockchip (>= 2020.04+dfsg-2~) [arm64],
 #		U-boot binaries for armhf systems without u-boot in flash memory
 	arm-trusted-firmware [arm64],
 	device-tree-compiler [arm64],
