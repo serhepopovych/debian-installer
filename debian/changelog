@@ -15,6 +15,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   * Add libgcc-s1 to the fake packages list as it doesn't have an udeb just
     like libgcc1. Remove libc* and libnewt0.52 from that list.
 
+  [ Wookey, Steve McIntyre, Alper Nebi Yasak ]
+  * Enable gtk build for arm64
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
