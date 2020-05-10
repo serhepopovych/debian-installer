@@ -21,6 +21,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
     like libgcc1. Remove libc* and libnewt0.52 from that list.
   * Install kmod-udeb instead of libkmod2-udeb now that the library and the
     binaires are properly packaged in different udebs.
+  * Remove the mklibs library reduction pass. Add a hack to copy
+    libgcc_s.so.[124] from the host filesystem as it is not done anymore by
+    mklibs. This needs to be replaced by a proper udeb.
 
   [ Wookey, Steve McIntyre, Alper Nebi Yasak ]
   * Enable gtk build for arm64

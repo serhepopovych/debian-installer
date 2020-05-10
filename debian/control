@@ -30,6 +30,10 @@ Build-Depends:
 #		The d-i partman-doc and internals manual is in DocBook XML 4.x.
 	libbogl-dev,
 #		For bdftobogl used in font reduction.
+	libgcc-s1 [!hppa !m68k], libgcc-s2 [m68k], libgcc-s4 [hppa],
+#		The GCC support library is copied to the to the installation
+#		image. This is a hack and needs to be replaced by a proper
+#		udeb.
 #
 # Filesystem tools:
 	genext2fs (>= 1.3-7.1),
@@ -40,8 +44,6 @@ Build-Depends:
 #		them.
 #		Lintian: Yes, we know it's essential. We prefer not to
 #		count on it remaining so.
-	mklibs (>= 0.1.40), mklibs-copy (>= 0.1.40),
-#		We use mklibs for library reduction.
 	genisoimage [!s390 !s390x],
 #		For making mini isos.
 	genromfs [sparc sparc64],
