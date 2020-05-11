@@ -24,6 +24,8 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   * Remove the mklibs library reduction pass. Add a hack to copy
     libgcc_s.so.[124] from the host filesystem as it is not done anymore by
     mklibs. This needs to be replaced by a proper udeb.
+  * Add explicit build-depends on fdisk on arm64, amd64 and i386 now that
+    util-linux doesn't depends on it anymore.
 
   [ Wookey, Steve McIntyre, Alper Nebi Yasak ]
   * Enable gtk build for arm64
