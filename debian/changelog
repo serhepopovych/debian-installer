@@ -60,6 +60,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   [ Ben Hutchings ]
   * Add wireless-regdb-udeb to Linux builds that include nic-wireless-modules
 
+  [ Alper Nebi Yasak ]
+  * Include a /gtk/initrd.gz in graphical arm mini.iso builds
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
