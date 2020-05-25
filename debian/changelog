@@ -30,6 +30,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   [ Wookey, Steve McIntyre, Alper Nebi Yasak ]
   * Enable gtk build for arm64
 
+  [ Domenico Andreoli ]
+  * Add support for NanoPi NEO Air. Closes: #928863
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium

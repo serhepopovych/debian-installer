@@ -109,7 +109,7 @@ Build-Depends:
 #		IEEE1275 bootloader support.
 	u-boot-imx (>= 2019.01+dfsg-3) [armhf],
 	u-boot-omap (>= 2016.09~rc1) [armhf],
-	u-boot-sunxi (>= 2019.01+dfsg-3) [armhf],
+	u-boot-sunxi (>= 2019.07+dfsg-1) [armhf],
 	u-boot-sunxi (>= 2019.01+dfsg-6) [arm64],
 	u-boot-rockchip (>= 2020.04+dfsg-1~) [armhf],
 	u-boot-rockchip (>= 2020.04+dfsg-2~) [arm64],
