@@ -21,16 +21,50 @@ set -e
 
 # Make an EFI boot image.
 
-if [ -z "$1" ] || [ -z "$2" ]; then
-	echo "usage: $0 OUTPUT-DIRECTORY GRUB-PLATFORM EFI-NAME NETBOOT-PREFIX EFI-SIGNED"
+usage () {
+	echo "usage: $0 [OPTIONS]"
+	echo "Options:"
+	echo "-o <output directory>    Set the output directory. Must be specified."
+	echo "-g <grub platform name>  Set the grub platform name. Must be specified."
+	echo "-e <efi platform name>   Set the EFI platform name. Must be specified."
+	echo "-n <netboot prefix>      Set the netboot prefix for Grub. Must be specified."
+	echo "-s <y|n>                 Whether to set up for EFI Secure Boot. Must be specified."
+}
+
+outdir=""
+platform=""
+efi_name=""
+netboot_prefix=""
+efi_signed=""
+
+while getopts ":o:g:e:n:s:" o; do
+    case "${o}" in
+        o)
+            outdir="${OPTARG}"
+            ;;
+        g)
+            platform="${OPTARG}"
+            ;;
+        e)
+            efi_name="${OPTARG}"
+            ;;
+        n)
+            netboot_prefix="${OPTARG}"
+            ;;
+        s)
+            efi_signed="${OPTARG}"
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+# Validate inputs
+if [ "$outdir"x = ""x ] || [ "$platform"x = ""x ] || \
+	[ "$efi_name"x = ""x ] || [ "$netboot_prefix"x = ""x ] || \
+	[ "$efi_signed"x = ""x ]; then
+	usage
 	exit 1
 fi
-
-outdir="$1"
-platform="$2"
-efi_name="$3"
-netboot_prefix="$4"
-efi_signed="$5"
 
 memdisk_img=
 workdir=
