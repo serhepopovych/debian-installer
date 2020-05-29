@@ -29,6 +29,7 @@ usage () {
 	echo "-e <efi platform name>   Set the EFI platform name. Must be specified."
 	echo "-n <netboot prefix>      Set the netboot prefix for Grub. Must be specified."
 	echo "-s <y|n>                 Whether to set up for EFI Secure Boot. Must be specified."
+	echo "-d <dtb directory>       Set the input directory for DTB files to be included. Optional."
 }
 
 outdir=""
@@ -36,8 +37,9 @@ platform=""
 efi_name=""
 netboot_prefix=""
 efi_signed=""
+dtb_dir=""
 
-while getopts ":o:g:e:n:s:" o; do
+while getopts ":o:g:e:n:s:d:" o; do
     case "${o}" in
         o)
             outdir="${OPTARG}"
@@ -53,6 +55,9 @@ while getopts ":o:g:e:n:s:" o; do
             ;;
         s)
             efi_signed="${OPTARG}"
+            ;;
+        d)
+            dtb_dir="${OPTARG}"
             ;;
     esac
 done
@@ -137,13 +142,16 @@ else
 fi
 
 # Stuff it into a FAT filesystem, making it as small as
-# possible. Count up the sizes of all the files we need to fit in there.
+# possible. Count up the sizes of all the files and directories we need to fit in there.
 #
 # 32KiB headroom seems to be enough; (x+31)/32*32 rounds up to multiple of 32.
 size=0
-for file in $(find $workdir -type f -name *.efi -o -name grub.cfg); do
+for file in $(find $workdir $dtb_dir -type f -name *.efi -o -name grub.cfg -o -name *.dtb); do
 	this_size=$(( ($(stat -c %s $file) / 1024 + 1 + 32 + 31) / 32 * 32 ))
 	size=$(($size + $this_size))
+done
+for dir in $(find $workdir $dtbdir -type d); do
+	size=$(($size + 1)) # Is 1 block enough for each directory?
 done
 
 # Specify a deterministic volume ID; we use DOS_VOLUME_ID here for
@@ -166,6 +174,12 @@ if [ $efi_signed = y ]; then
 	mmd -i "$outdir/efi.img" ::efi/debian
 	mcopy -i "$outdir/efi.img" "$workdir/boot/grub/grub.cfg" \
 		"::efi/debian/grub.cfg"
+fi
+
+# Copy in any DTB files we might have/want
+if [ "$dtb_dir"x != ""x ]; then
+	mmd -i "$outdir/efi.img" ::device-tree
+	mcopy -s -i "$outdir/efi.img" "$dtb_dir/." ::device-tree
 fi
 
 grub-cpmodules "$outdir" "$platform"
