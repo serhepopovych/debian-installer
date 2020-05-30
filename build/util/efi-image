@@ -101,8 +101,8 @@ copy_files_into_image () {
 
 	# Copy in any DTB files we might have/want
 	if [ "$dtb_dir"x != ""x ]; then
-		mmd -i "$outdir/efi.img" ::device-tree
-		mcopy -s -i "$outdir/efi.img" "$dtb_dir/." ::device-tree
+		mmd -i "$outdir/efi.img" ::dtb
+		mcopy -s -i "$outdir/efi.img" "$dtb_dir/." ::dtb
 	fi
 }
 
