@@ -36,6 +36,12 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   [ Holger Wansing]
   * d-i i18n guide: update for util-linux's eject overtaking.
 
+  [ Steve McIntyre ]
+  * Tweaks for efi-image:
+    + Improve sizing calculation to reduce wasted space
+    + Include DTB files in the ESP for armhf and arm64 systems. Should
+      make U-Boot based systems work better when booting via UEFI
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
