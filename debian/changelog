@@ -42,6 +42,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
     + Include DTB files in the ESP for armhf and arm64 systems. Should
       make U-Boot based systems work better when booting via UEFI
 
+  [ Samuel Thibault ]
+  * Copy over libmach/hurduser, until the fixed glibc is installed.
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
