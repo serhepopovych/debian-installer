@@ -62,6 +62,7 @@ debian-installer (20200315) UNRELEASED; urgency=medium
 
   [ Alper Nebi Yasak ]
   * Include a /gtk/initrd.gz in graphical arm mini.iso builds
+  * Include fb-modules in non-gtk arm64 cdrom builds as well
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
