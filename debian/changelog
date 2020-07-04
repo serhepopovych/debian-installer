@@ -44,6 +44,7 @@ debian-installer (20200315) UNRELEASED; urgency=medium
 
   [ Samuel Thibault ]
   * Copy over libmach/hurduser, until the fixed glibc is installed.
+  * Fix monolithic hurd build by excluding more packages.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
