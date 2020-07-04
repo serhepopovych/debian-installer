@@ -15,6 +15,10 @@ debian-installer (20201203) UNRELEASED; urgency=medium
   * [arm64] Add support for puma-rk3399.
   * [arm64] Update to use u-boot-install-sunxi.
 
+  [ Samuel Thibault ]
+  * On hurd-i386, mips, and powerpc, add debian-ports-archive-keyring-udeb also
+    in the monolithic images for bootstraping from debian-ports' unreleased.
+
  -- Shawn Guo <shawn.guo@linaro.org>  Sat, 12 Dec 2020 12:11:26 +0000
 
 debian-installer (20201202) unstable; urgency=medium
