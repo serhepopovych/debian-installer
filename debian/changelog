@@ -1,3 +1,9 @@
+debian-installer (20170615+deb9u9) UNRELEASED; urgency=medium
+
+  * Bump linux ABI to 4.9.0-13.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 11 Jul 2020 17:11:40 +0200
+
 debian-installer (20170615+deb9u8) stretch; urgency=medium
 
   [ Samuel Thibault ]
