@@ -41,6 +41,10 @@ debian-installer (20200315) UNRELEASED; urgency=medium
     + Improve sizing calculation to reduce wasted space
     + Include DTB files in the ESP for armhf and arm64 systems. Should
       make U-Boot based systems work better when booting via UEFI
+  * Fix build failures related to #940056 "fakeroot does not fake
+    statx()". Don't use "ls" to check if /dev/console is a character
+    device, instead use "file". Thanks to JH Chatenet for helping to
+    debug this.
 
   [ Samuel Thibault ]
   * Copy over libmach/hurduser, until the fixed glibc is installed.

@@ -710,10 +710,11 @@ $(TEMP_INITRD): $(STAMPS)tree-$(targetstring)-stamp arch_tree
 ifneq ($(DEB_HOST_ARCH_OS),hurd)
 	# Check for lost file attributes
 	@if [ -e $(TREE)/dev/console ] && \
-	    ! ls -l $(TREE)/dev/console | grep -q "^c"; then \
+	    ! file $(TREE)/dev/console | grep -q "character special"; then \
 		echo "Error: incorrect file attributes detected in initrd tree."; \
 		echo "Did you restart a (failed) fakeroot build?"; \
 		echo "See fakeroot(1) ('-s' and '-i' options) for additional information."; \
+		file $(TREE)/dev/console; \
 		exit 1; \
 	fi
 endif
