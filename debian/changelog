@@ -52,6 +52,7 @@ debian-installer (20200315) UNRELEASED; urgency=medium
 
   [ Jessica Clarke ]
   * kfreebsd: Update to use debian-ports-archive-keyring.
+  * kfreebsd: Don't try to build build_cdrom_gtk on kfreebsd-i386.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
