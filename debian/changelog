@@ -54,6 +54,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   * kfreebsd: Update to use debian-ports-archive-keyring.
   * kfreebsd: Don't try to build build_cdrom_gtk on kfreebsd-i386.
 
+  [ Julien Cristau ]
+  * Add grub & shim to built-using (closes: #968998).
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
