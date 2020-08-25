@@ -1,3 +1,9 @@
+debian-installer (20190702+deb10u7) UNRELEASED; urgency=medium
+
+  * Add grub & shim to built-using (closes: #968998).
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 26 Sep 2020 12:20:21 +0200
+
 debian-installer (20190702+deb10u6) buster; urgency=medium
 
   * Bump Linux ABI to 4.19.0-11.
