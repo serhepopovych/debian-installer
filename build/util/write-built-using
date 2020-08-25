@@ -8,7 +8,7 @@ cat build/tmp/*/built-using.txt \
 echo >> debian/debian-installer.substvars
 
 EXTRA_PACKAGES="bf-utf-source syslinux u-boot-imx u-boot-omap u-boot-sunxi u-boot-rockchip arm-trusted-firmware
-shim-signed grub-efi-amd64-signed grub-efi-ia32-signed grub-efi-arm64-signed grub-common"
+grub-efi-amd64-signed grub-efi-ia32-signed grub-efi-arm64-signed grub-common"
 echo -n "extra:Built-Using=" >> debian/debian-installer.substvars
 for package in $EXTRA_PACKAGES; do
   dpkg-query -f '${source:Package} (= ${source:Version}), ' -W $package 2>/dev/null

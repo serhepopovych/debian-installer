@@ -1,6 +1,6 @@
 debian-installer (20190702+deb10u7) UNRELEASED; urgency=medium
 
-  * Add grub & shim to built-using (closes: #968998).
+  * Add grub2 to built-using (closes: #968998).
 
  -- Julien Cristau <jcristau@debian.org>  Sat, 26 Sep 2020 12:20:21 +0200
 
