@@ -955,7 +955,7 @@
 		supported="bullseye"
 		speakers="789000"
 		speakers_corr=""
-		nlp_step="language_name"
+		nlp_step="localechooser_entry"
 		countries_official="FR"
 		countries_most_spoken=""
                         />
