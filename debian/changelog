@@ -35,6 +35,7 @@ debian-installer (20200315) UNRELEASED; urgency=medium
 
   [ Holger Wansing]
   * d-i i18n guide: update for util-linux's eject overtaking.
+  * Add Occitan as new language for the installer (thanks to Quentin PAGÈS).
 
   [ Steve McIntyre ]
   * Tweaks for efi-image:
