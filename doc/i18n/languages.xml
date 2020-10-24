@@ -656,7 +656,20 @@
 	      countries_official="GE"
 	      countries_most_spoken="GE"
                 />
-
+	<language_entry
+		code="kab"
+		code3="kab"
+		english_name="Kabyle"
+		coord_name="Slimane Selyan Amiri"
+		coord_email="selyan.kab@gmail.com"
+		last_commit_di="2020"
+		supported="bullseye"
+                nlp_step="locale"
+		speakers="6000000"
+		speakers_corr="7000000"
+	      countries_official="DZFRCA"
+	      countries_most_spoken=""
+                />
 	<language_entry
 		code="kk"
 		code3="kaz"
