@@ -953,8 +953,8 @@
 		last_commit_di="2020"
 		team_email="ubuntu-l10n-oci@lists.ubuntu.com"
 		supported="bullseye"
-		speakers="1996000"
-		speakers_corr=""
+		speakers="789000"
+		speakers_corr="1996000"
 		countries_official="FRITESMC"
 		countries_most_spoken=""
                         />
