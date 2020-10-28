@@ -664,7 +664,6 @@
 		coord_email="selyan.kab@gmail.com"
 		last_commit_di="2020"
 		supported="bullseye"
-                nlp_step="needed_characters"
 		speakers="6000000"
 		speakers_corr="7000000"
 	      countries_official="DZFRCA"
