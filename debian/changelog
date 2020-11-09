@@ -68,6 +68,7 @@ debian-installer (20200315) UNRELEASED; urgency=medium
 
   [ John Paul Adrian Glaubitz ]
   * powerpc: Add cdrom-core-modules and isofs-modules to cdrom pkg-lists
+  * ppc64: Add cdrom-core-modules and isofs-modules to cdrom pkg-lists
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
