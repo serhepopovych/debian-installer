@@ -66,6 +66,9 @@ debian-installer (20200315) UNRELEASED; urgency=medium
   * Include fb-modules in non-gtk arm64 cdrom builds as well
   * Build concatenateable images for arm64 netboot-gtk
 
+  [ John Paul Adrian Glaubitz ]
+  * powerpc: Add cdrom-core-modules and isofs-modules to cdrom pkg-lists
+
  -- Cyril Brulebois <kibi@debian.org>  Thu, 09 Apr 2020 09:06:18 +0200
 
 debian-installer (20200314) unstable; urgency=medium
