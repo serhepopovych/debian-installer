@@ -16,6 +16,7 @@ debian-installer (20200315) UNRELEASED; urgency=medium
      - https://bugs.debian.org/956612
      - https://gitlab.gnome.org/GNOME/pango/-/issues/404
      - https://github.com/harfbuzz/harfbuzz/issues/1892
+  * Convert doc/devel/anna-install.txt to UTF-8.
 
   [ Vagrant Cascadian ]
   * Update Firefly-RK3288 image for new u-boot version.
