@@ -2,6 +2,20 @@ debian-installer (20200315) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI to 5.9.0-2
+  * Drop fontconfig tweaks introduced in version 20170828 (See: #873462):
+     - Full hinting support was removed upstream, in pango 1.44.
+     - Forcing truetype:interpreter-version=35 through FREETYPE_PROPERTIES
+       now leads to arguably worse rendering than with default settings.
+  * With or without the aforementioned changes, the rendering looks much
+    worse than it used to (until Debian Installer Bullseye Alpha 3), due
+    to a behavioral change in pango. Since it affects default fonts, and
+    not only in the installer's context, one might have hoped for a fix
+    at some point but that doesn't seem to be happening. We might try to
+    use different fonts to try and dodge this issue… Until then, here
+    are some pointers to bugtracker entries:
+     - https://bugs.debian.org/956612
+     - https://gitlab.gnome.org/GNOME/pango/-/issues/404
+     - https://github.com/harfbuzz/harfbuzz/issues/1892
 
   [ Vagrant Cascadian ]
   * Update Firefly-RK3288 image for new u-boot version.
