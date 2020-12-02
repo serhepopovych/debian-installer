@@ -1,7 +1,7 @@
 debian-installer (20201202) unstable; urgency=medium
 
   [ Cyril Brulebois ]
-  * Bump Linux kernel ABI to 5.9.0-3
+  * Bump Linux kernel ABI to 5.9.0-4
   * Drop fontconfig tweaks introduced in version 20170828 (See: #873462):
      - Full hinting support was removed upstream, in pango 1.44.
      - Forcing truetype:interpreter-version=35 through FREETYPE_PROPERTIES
