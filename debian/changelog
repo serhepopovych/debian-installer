@@ -18,6 +18,7 @@ debian-installer (20200315) UNRELEASED; urgency=medium
      - https://github.com/harfbuzz/harfbuzz/issues/1892
   * Convert doc/devel/anna-install.txt to UTF-8.
   * Clean whitespaces in doc/i18n/ChangeLog, making it UTF-8.
+  * Update translation-status for the release.
 
   [ Vagrant Cascadian ]
   * Update Firefly-RK3288 image for new u-boot version.
