@@ -1,4 +1,4 @@
-debian-installer (20201202+nmu1) UNRELEASED; urgency=medium
+debian-installer (20201203) UNRELEASED; urgency=medium
 
   [ Shawn Guo ]
   * Build in libinput instead of evdev driver for gtk installer.
