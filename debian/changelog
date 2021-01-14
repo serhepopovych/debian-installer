@@ -8,6 +8,8 @@ debian-installer (20201203) UNRELEASED; urgency=medium
 
   [ Holger Wansing ]
   * Add wireless-regdb-udeb to all Linux arch images (#979104).
+  * Correct keyword for bootloader arguments in netboot/xen/debian.cfg
+    example file. Closes: #904131
 
  -- Shawn Guo <shawn.guo@linaro.org>  Sat, 12 Dec 2020 12:11:26 +0000
 
