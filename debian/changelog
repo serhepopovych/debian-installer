@@ -1,7 +1,11 @@
 debian-installer (202306XX) UNRELEASED; urgency=medium
 
+  [ Cyril Brulebois ]
   * Install trixie, using trixie udebs.
   * Bump Linux kernel ABI to 6.3.0-2.
+
+  [ harry88@gmx.ph ]
+  * Add support for Orange Pi One Plus (Closes: #980493)
 
  -- Cyril Brulebois <kibi@debian.org>  Tue, 13 Jun 2023 19:42:29 +0200
 
