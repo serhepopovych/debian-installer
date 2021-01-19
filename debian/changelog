@@ -11,6 +11,10 @@ debian-installer (20201203) UNRELEASED; urgency=medium
   * Correct keyword for bootloader arguments in netboot/xen/debian.cfg
     example file. Closes: #904131
 
+  [ Vagrant Cascadian ]
+  * [arm64] Add support for puma-rk3399.
+  * [arm64] Update to use u-boot-install-sunxi.
+
  -- Shawn Guo <shawn.guo@linaro.org>  Sat, 12 Dec 2020 12:11:26 +0000
 
 debian-installer (20201202) unstable; urgency=medium
