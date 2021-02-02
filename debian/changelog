@@ -1,3 +1,9 @@
+debian-installer (20190702+deb10u8) UNRELEASED; urgency=medium
+
+  * Bump Linux ABI to 4.19.0-14.
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 02 Feb 2021 15:03:54 +0100
+
 debian-installer (20190702+deb10u7) buster; urgency=medium
 
   [ Julien Cristau ]
