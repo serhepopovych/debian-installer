@@ -29,7 +29,7 @@
 
 <!ENTITY url-status "https://d-i.debian.org/l10n-stats">
 
-<!ENTITY url-languagelist "https://d-i.debian.org/doc/i18n/languages.html">
+<!ENTITY url-languagelist "https://d-i.debian.org/doc/languages.html">
 
 <!ENTITY url-spellchecker-status "https://d-i.debian.org/l10n-spellcheck/">
 
