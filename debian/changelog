@@ -10,6 +10,7 @@ debian-installer (20201203) UNRELEASED; urgency=medium
   * Add wireless-regdb-udeb to all Linux arch images (#979104).
   * Correct keyword for bootloader arguments in netboot/xen/debian.cfg
     example file. Closes: #904131
+  * Update of debian-internals manual to current development state.
 
   [ Vagrant Cascadian ]
   * [arm64] Add support for puma-rk3399.
