@@ -15,6 +15,8 @@ debian-installer (20201203) UNRELEASED; urgency=medium
   [ Vagrant Cascadian ]
   * [arm64] Add support for puma-rk3399.
   * [arm64] Update to use u-boot-install-sunxi.
+  * [armhf] Make hd-media and netboot sdcard images start at offset 32768,
+    for compatibility with rockchip platforms.
 
   [ Samuel Thibault ]
   * On hurd-i386, mips, and powerpc, add debian-ports-archive-keyring-udeb also
