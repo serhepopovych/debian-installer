@@ -23,6 +23,7 @@ debian-installer (20201203) UNRELEASED; urgency=medium
   * On hurd-i386, mips, and powerpc, add debian-ports-archive-keyring-udeb also
     in the monolithic images for bootstraping from debian-ports' unreleased.
   * Update minimum disk and memory sizes.
+  * Makefile: Drop libmachuser/libhurduser manual copy, now fixed in glibc.
 
  -- Shawn Guo <shawn.guo@linaro.org>  Sat, 12 Dec 2020 12:11:26 +0000
 

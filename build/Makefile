@@ -527,11 +527,6 @@ ifdef EXTRAUDEBS
 endif
 
 ifeq ($(DEB_HOST_ARCH_OS),hurd)
-	# Missing in the current libc0.3-udeb
-	# To remove with glibc >= 2.31-10~1
-	cp /lib/i386-gnu/libmachuser* $(TREE)/lib
-	cp /lib/i386-gnu/libhurduser* $(TREE)/lib
-
 	# We need /servers/exec and startup at boot time
 	touch $(TREE)/servers/exec
 	touch $(TREE)/servers/startup
