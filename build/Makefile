@@ -526,12 +526,6 @@ ifdef EXTRAUDEBS
 		$(foreach udeb,$(EXTRAUDEBS),$(UDEBDIR)/$(udeb).udeb)
 endif
 
-ifeq ($(DEB_HOST_ARCH_OS),hurd)
-	# We need /servers/exec and startup at boot time
-	touch $(TREE)/servers/exec
-	touch $(TREE)/servers/startup
-endif
-
 	# HACK ALERT: copy libgcc_s.so.[124] from the host system as
 	# libgcc-s[124] is not packaged as a udeb
 	cp /lib/$(DEB_HOST_MULTIARCH)/libgcc_s.so.[124] $(TREE)/lib

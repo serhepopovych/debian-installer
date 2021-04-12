@@ -24,6 +24,7 @@ debian-installer (20201203) UNRELEASED; urgency=medium
     in the monolithic images for bootstraping from debian-ports' unreleased.
   * Update minimum disk and memory sizes.
   * Makefile: Drop libmachuser/libhurduser manual copy, now fixed in glibc.
+  * Makefile: Drop /servers manual creation, now done in hurd-udeb package.
 
  -- Shawn Guo <shawn.guo@linaro.org>  Sat, 12 Dec 2020 12:11:26 +0000
 
