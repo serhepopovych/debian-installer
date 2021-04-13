@@ -4,7 +4,7 @@ debian-installer (20201203) UNRELEASED; urgency=medium
   * Build in libinput instead of evdev driver for gtk installer.
 
   [ Steve McIntyre ]
-  * Bump Linux kernel ABI to 5.10.0-1
+  * Bump Linux kernel ABI to 5.10.0-6
 
   [ Holger Wansing ]
   * Add wireless-regdb-udeb to all Linux arch images (#979104).
