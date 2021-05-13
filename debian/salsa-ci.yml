@@ -24,7 +24,7 @@ stages:
   if [ "${B2R_PIPELINE_ID}" ] ; then
     export B2R_APTLY_JOB_ID=$(curl -s  ${CI_API_V4_URL}/projects/${B2R_PROJECT_NAMESPACE}%2F${B2R_PROJECT_NAME}/pipelines/${B2R_PIPELINE_ID}/jobs | jq -r '.[0].id')
 
-    echo -e "# This file was created by the salsa-ci debian-installer job.\ndeb [trusted=yes] copy:/builds/philh/debian-installer/build/ localudebs/\ndeb http://deb.debian.org/debian unstable main/debian-installer" > build/sources.list.udeb.local
+    echo -e "# This file was created by the salsa-ci debian-installer job.\ndeb http://deb.debian.org/debian unstable main/debian-installer" > build/sources.list.udeb.local
     echo -e "deb [trusted=yes] ${CI_SERVER_URL}/${B2R_PROJECT_NAMESPACE}/${B2R_PROJECT_NAME}/-/jobs/${B2R_APTLY_JOB_ID}/artifacts/raw/public ${B2R_PROJECT_NAME} main/debian-installer" >> build/sources.list.udeb.local
   fi
 
