@@ -97,7 +97,9 @@ nudge-openqa:
   stage: test
   image: $SALSA_CI_IMAGES_BASE
   script:
+    - export
     - *install-openqa-client
+    - 'echo "about to run: openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL=\"$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso\" ISO=\"salsa-$CI_PROJECT_NAMESPACE-$CI_JOB_ID-gtk-mini.iso\" BUILD=-salsa-$CI_PROJECT_NAMESPACE-$CI_JOB_ID"'
     - openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$CI_PROJECT_NAMESPACE-$CI_JOB_ID-gtk-mini.iso" BUILD=-salsa-$CI_PROJECT_NAMESPACE-$CI_JOB_ID
   dependencies:
     - miniiso
