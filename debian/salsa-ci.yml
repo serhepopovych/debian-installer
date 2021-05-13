@@ -52,7 +52,7 @@ stages:
 
   cd ${CI_PROJECT_DIR}
 
-  find /builds/philh -name gtk-mini.iso
+  find ${CI_PROJECT_DIR} -name gtk-mini.iso
 
   echo "MINIISO_JOB_URL=$CI_JOB_URL" >> ${CI_PROJECT_DIR}/miniiso.env
 
