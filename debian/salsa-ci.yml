@@ -1,0 +1,103 @@
+---
+variables:
+  GIT_DEPTH: 1
+  RELEASE: 'unstable'
+  SOURCE_DIR: 'source_dir'
+  SALSA_CI_IMAGES: 'registry.salsa.debian.org/salsa-ci-team/pipeline'
+  SALSA_CI_IMAGES_BASE: ${SALSA_CI_IMAGES}/base:${RELEASE}
+  SALSA_CI_IMAGES_BASE_I386: ${SALSA_CI_IMAGES}/i386/base:${RELEASE}
+
+stages:
+  - build
+  - test
+
+.build-script: &build-script |
+  export
+  apt-get update && eatmydata apt-get install --no-install-recommends -y \
+  aptitude \
+  devscripts \
+  equivs \
+  build-essential \
+  curl \
+  jq
+
+  if [ "${B2R_PIPELINE_ID}" ] ; then
+    export B2R_APTLY_JOB_ID=$(curl -s  ${CI_API_V4_URL}/projects/${B2R_PROJECT_NAMESPACE}%2F${B2R_PROJECT_NAME}/pipelines/${B2R_PIPELINE_ID}/jobs | jq -r '.[0].id')
+
+    echo -e "# This file was created by the salsa-ci debian-installer job.\ndeb [trusted=yes] copy:/builds/philh/debian-installer/build/ localudebs/\ndeb http://deb.debian.org/debian unstable main/debian-installer" > build/sources.list.udeb.local
+    echo -e "deb [trusted=yes] ${CI_SERVER_URL}/${B2R_PROJECT_NAMESPACE}/${B2R_PROJECT_NAME}/-/jobs/${B2R_APTLY_JOB_ID}/artifacts/raw/public ${B2R_PROJECT_NAME} main/debian-installer" >> build/sources.list.udeb.local
+  fi
+
+  # Install package build dependencies
+  eatmydata install-build-deps.sh .
+
+  # If not disabled, bump package version
+  if ! echo "$SALSA_CI_DISABLE_VERSION_BUMP" | grep -qE '^(1|yes|true)$'; then
+  sed -i -e '1 s/)/+salsaci)/' debian/changelog
+  fi
+
+  # Create salsaci user and fix permissions
+  useradd salsaci
+  chown -R salsaci. build
+
+  # Build miniiso as user salsaci
+  set -x
+  cd build
+  su salsaci -c "eatmydata fakeroot make build_netboot-gtk"
+  head sources.list.udeb* /etc/apt/sources.list
+  echo "CI_PROJECT_DIR = $CI_PROJECT_DIR"
+  mkdir ${CI_PROJECT_DIR}/public
+  ln dest/netboot/gtk/mini.iso ${CI_PROJECT_DIR}/public/gtk-mini.iso
+  echo "ISO URL: $CI_PROJECT_URL/-/jobs/$CI_JOB_ID/artifacts/raw/public/gtk-mini.iso"
+
+  cd ${CI_PROJECT_DIR}
+
+  find /builds/philh -name gtk-mini.iso
+
+  echo "MINIISO_JOB_URL=$CI_JOB_URL" >> ${CI_PROJECT_DIR}/miniiso.env
+
+
+.build-definition: &build-definition
+  stage: build
+  image: $SALSA_CI_IMAGES_BASE
+  script:
+       - *build-script
+
+.build-package: &build-package
+  extends:
+    - .build-definition
+    #- .artifacts-default-expire
+  except:
+    variables:
+      - $CI_COMMIT_TAG != null && $SALSA_CI_ENABLE_PIPELINE_ON_TAGS !~ /^(1|yes|true)$/
+  artifacts:
+    reports:
+      dotenv: miniiso.env
+
+miniiso:
+  extends:
+    - .build-package
+  artifacts:
+    paths:
+      - public
+
+
+.install-openqa-client: &install-openqa-client |
+    apt update
+    apt install -y curl unzip
+    # FIXME -- when this eventually gets into the archive, use that version
+    curl -Lo aptly.zip https://salsa.debian.org/philh/openqa/-/jobs/artifacts/debian/download?job=aptly
+    unzip -d scratch aptly.zip
+    find scratch
+    echo "deb [trusted=yes] file:$PWD/scratch/aptly unstable main" > /etc/apt/sources.list.d/openqa_on_salsa.list
+    apt update
+    apt install -y openqa-client
+
+nudge-openqa:
+  stage: test
+  image: $SALSA_CI_IMAGES_BASE
+  script:
+    - *install-openqa-client
+    - openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$CI_PROJECT_NAMESPACE-$CI_JOB_ID-gtk-mini.iso" BUILD=-salsa-$CI_PROJECT_NAMESPACE-$CI_JOB_ID
+  dependencies:
+    - miniiso
