@@ -42,7 +42,9 @@ stages:
   # Build miniiso as user salsaci
   set -x
   cd build
-  su salsaci -c "eatmydata fakeroot make build_netboot-gtk"
+  PRESEED=${CI_PROJECT_DIR}/devel_repo_preseed.cfg
+  echo d-i retriever/devel-udeb/url string ${CI_SERVER_URL}/${B2R_PROJECT_NAMESPACE}/${B2R_PROJECT_NAME}/-/jobs/${B2R_APTLY_JOB_ID}/artifacts/raw/public/ > $PRESEED
+  su salsaci -c "eatmydata fakeroot make PRESEED=$PRESEED build_netboot-gtk"
   head sources.list.udeb* /etc/apt/sources.list
   echo "CI_PROJECT_DIR = $CI_PROJECT_DIR"
   mkdir ${CI_PROJECT_DIR}/public
