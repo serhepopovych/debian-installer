@@ -102,6 +102,6 @@ nudge-openqa:
     - export
     - '[ -n "$openqa_secret" ] || { echo "ERROR: openqa_secret is undefined -- did you forget to make this a protected branch?" ; false ; }'
     - *install-openqa-client
-    - openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$B2R_TRIG_PIPELINE_ID-gtk-mini.iso" BUILD=-salsa-$B2R_TRIG_PIPELINE_ID-$B2R_TRIG_PROJECT_NAMESPACE-$B2R_TRIG_PROJECT_NAME-$B2R_TRIG_BUILD_REF_NAME CI_PIPELINE_URL=$CI_SERVER_URL/$B2R_TRIG_PROJECT_NAMESPACE/$B2R_TRIG_PROJECT_NAME/-/pipelines/$B2R_TRIG_PIPELINE_ID
+    - openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$B2R_TRIG_PIPELINE_ID-gtk-mini.iso" BUILD=-salsa-$B2R_TRIG_PIPELINE_ID:$B2R_TRIG_PROJECT_NAMESPACE:$B2R_TRIG_PROJECT_NAME:$B2R_TRIG_BUILD_REF_NAME CI_PIPELINE_URL=$CI_SERVER_URL/$B2R_TRIG_PROJECT_NAMESPACE/$B2R_TRIG_PROJECT_NAME/-/pipelines/$B2R_TRIG_PIPELINE_ID
   needs:
     - job: miniiso
