@@ -2,6 +2,7 @@ debian-installer (20210416) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI to 5.10.0-7
+  * Update translation-status for the release.
 
  -- Cyril Brulebois <kibi@debian.org>  Sat, 22 May 2021 21:52:03 +0200
 
