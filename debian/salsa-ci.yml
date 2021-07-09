@@ -85,7 +85,7 @@ miniiso:
   artifacts:
     paths:
       - public
-
+    when: manual
 
 .install-openqa-client: &install-openqa-client |
     apt update
@@ -101,10 +101,12 @@ miniiso:
 nudge-openqa:
   stage: test
   image: $SALSA_CI_IMAGES_BASE
+  needs:
+    - job: miniiso
   script:
     - export
     - '[ -n "$openqa_secret" ] || { echo "ERROR: openqa_secret is undefined -- did you forget to make this a protected branch?" ; false ; }'
     - *install-openqa-client
-    - openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$B2R_TRIG_PIPELINE_ID-gtk-mini.iso" BUILD=-salsa-$B2R_TRIG_PIPELINE_ID:$B2R_TRIG_PROJECT_NAMESPACE:$B2R_TRIG_PROJECT_NAME:$B2R_TRIG_BUILD_REF_NAME CI_PIPELINE_URL=$CI_SERVER_URL/$B2R_TRIG_PROJECT_NAMESPACE/$B2R_TRIG_PROJECT_NAME/-/pipelines/$B2R_TRIG_PIPELINE_ID
-  needs:
-    - job: miniiso
+    - 'openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$B2R_TRIG_PIPELINE_ID-gtk-mini.iso" BUILD=-salsa-$B2R_TRIG_PIPELINE_ID:$B2R_TRIG_PROJECT_NAMESPACE:$B2R_TRIG_PROJECT_NAME:$B2R_TRIG_BUILD_REF_NAME CI_PIPELINE_URL=$CI_SERVER_URL/$B2R_TRIG_PROJECT_NAMESPACE/$B2R_TRIG_PROJECT_NAME/-/pipelines/$B2R_TRIG_PIPELINE_ID
+SALSA_RESULT_URL="$CI_API_V4_URL/projects/$CI_PROJECT_ID/statuses/$CI_BUILD_REF?pipeline_id=$CI_PIPELINE_ID&name=openqa&target_url=:target_url&state=:state" | tee openqa-clone-job.output'
+    - 'if [ -n "$LOCAL_API_TOKEN" ] ; then for JOBID in $(perl -nle \'if (/^.*ids => \[(\d*) \.\. (\d*)],$/) { for (my $x=$1; $x <= $2 ; $x++ ) { print $x }; last }\' openqa-clone-job.output) ; do curl --request POST --header "PRIVATE-TOKEN: $LOCAL_API_TOKEN" "$CI_API_V4_URL/projects/$CI_PROJECT_ID/statuses/$CI_BUILD_REF?pipeline_id=$CI_PIPELINE_ID&name=openqa-$JOBID&target_url=$OPENQA_JOB_URL&state=pending" ; done ; else "ERROR: LOCAL_API_TOKEN undefined.  Perhaps you forgot to set it for your forked repo?" ; fi'
