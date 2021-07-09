@@ -85,7 +85,7 @@ miniiso:
   artifacts:
     paths:
       - public
-    when: manual
+  when: manual
 
 .install-openqa-client: &install-openqa-client |
     apt update
