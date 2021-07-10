@@ -9,7 +9,7 @@ variables:
 
 stages:
   - build
-  - test
+  - bridge
 
 .build-script: &build-script |
   apt-get update && eatmydata apt-get install --no-install-recommends -y \
@@ -85,31 +85,13 @@ miniiso:
   artifacts:
     paths:
       - public
-  when: manual
 
-.install-openqa-client: &install-openqa-client |
-    apt update
-    apt install -y curl unzip
-    # FIXME -- when this eventually gets into the archive, use that version
-    curl -Lo aptly.zip https://salsa.debian.org/philh/openqa/-/jobs/artifacts/debian/download?job=aptly
-    unzip -d scratch aptly.zip
-    find scratch
-    echo "deb [trusted=yes] file:$PWD/scratch/aptly unstable main" > /etc/apt/sources.list.d/openqa_on_salsa.list
-    apt update
-    apt install -y openqa-client
-
-nudge-openqa:
-  stage: test
-  image: $SALSA_CI_IMAGES_BASE
+openqa-link:
+  stage: bridge
   needs:
-    - job: miniiso
-  script:
-    - export
-    - '[ -n "$openqa_secret" ] || { echo "ERROR: openqa_secret is undefined -- did you forget to make this a protected branch?" ; false ; }'
-    - *install-openqa-client
-    - 'openqa-client --host openqa.debian.net -v --apikey $openqa_key --apisecret $openqa_secret isos post DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$B2R_TRIG_PIPELINE_ID-gtk-mini.iso" BUILD=-salsa-$B2R_TRIG_PIPELINE_ID:$B2R_TRIG_PROJECT_NAMESPACE:$B2R_TRIG_PROJECT_NAME:$B2R_TRIG_BUILD_REF_NAME CI_PIPELINE_URL=$CI_SERVER_URL/$B2R_TRIG_PROJECT_NAMESPACE/$B2R_TRIG_PROJECT_NAME/-/pipelines/$B2R_TRIG_PIPELINE_ID
-SALSA_RESULT_URL="$CI_API_V4_URL/projects/$CI_PROJECT_ID/statuses/$CI_BUILD_REF?pipeline_id=$CI_PIPELINE_ID&name=openqa-:job_id&target_url=:target_url&state=:state" | tee openqa-clone-job.output'
-    - export OPENQA_JOB_IDS=$(perl -nle 'if (/^.*ids => \[(\d*) \.\. (\d*)],$/) { for (my $x=$1; $x <= $2 ; $x++ ) { print $x }; last }' openqa-clone-job.output)
-    - 'echo "OPENQA_JOB_IDS: $OPENQA_JOB_IDS"'
-    - set -x
-    - 'if [ -n "$LOCAL_API_TOKEN" ] ; then for JOB_ID in $OPENQA_JOB_IDS ; do curl --request POST --header "PRIVATE-TOKEN: $LOCAL_API_TOKEN" "$CI_API_V4_URL/projects/$CI_PROJECT_ID/statuses/$CI_BUILD_REF?pipeline_id=$CI_PIPELINE_ID&name=openqa-$JOB_ID&target_url=$OPENQA_JOB_URL&state=pending" ; done ; else "ERROR: LOCAL_API_TOKEN undefined.  Perhaps you forgot to set it for your forked repo?" ; fi'
+    miniiso
+  variables:
+    - CLI_EXTRA_ARGS: 'DISTRI=debian VERSION=testing FLAVOR=mini-iso ARCH=x86_64 ISO_URL="$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso" ISO="salsa-$B2R_TRIG_PIPELINE_ID-gtk-mini.iso" BUILD=-salsa-$B2R_TRIG_PIPELINE_ID:$B2R_TRIG_PROJECT_NAMESPACE:$B2R_TRIG_PROJECT_NAME:$B2R_TRIG_BUILD_REF_NAME CI_PIPELINE_URL=$CI_SERVER_URL/$B2R_TRIG_PROJECT_NAMESPACE/$B2R_TRIG_PROJECT_NAME/-/pipelines/$B2R_TRIG_PIPELINE_ID'
+  trigger:
+    project: philh/openqa-link
+    #branch: main
