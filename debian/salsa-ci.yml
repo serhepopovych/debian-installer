@@ -89,7 +89,7 @@ miniiso:
 openqa-link:
   stage: bridge
   needs:
-    miniiso
+    - miniiso
   variables:
     OQA_ISO_URL: '$MINIISO_JOB_URL/artifacts/raw/public/gtk-mini.iso'
     OQA_ISO: 'salsa-$B2R_TRIG_PIPELINE_ID-gtk-mini.iso'
