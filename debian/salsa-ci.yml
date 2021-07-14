@@ -96,5 +96,6 @@ openqa-link:
     OQA_BUILD: '-salsa-$B2R_TRIG_PIPELINE_ID:$B2R_TRIG_PROJECT_NAMESPACE:$B2R_TRIG_PROJECT_NAME:$B2R_TRIG_BUILD_REF_NAME'
     OQA_CI_PIPELINE_URL: '$CI_SERVER_URL/$B2R_TRIG_PROJECT_NAMESPACE/$B2R_TRIG_PROJECT_NAME/-/pipelines/$B2R_TRIG_PIPELINE_ID'
   trigger:
+    strategy: depend
     project: philh/openqa-link
     #branch: main
