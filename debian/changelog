@@ -1,11 +1,11 @@
 debian-installer (20210606) unstable; urgency=medium
 
   [ Cyril Brulebois ]
-  * Bump Linux kernel ABI to 5.10.0-7
   * Update translation-status for the release.
 
   [ Steve McIntyre ]
   * Make mini.iso work with UEFI boot
+  * Bump Linux kernel ABI to 5.10.0-8
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 06 Jun 2021 13:48:38 +0200
 
