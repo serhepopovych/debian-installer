@@ -6,6 +6,7 @@ debian-installer (20210731) unstable; urgency=medium
   [ Steve McIntyre ]
   * Make mini.iso work with UEFI boot
   * Bump Linux kernel ABI to 5.10.0-8
+  * Update more gzip calls (-n addition)
 
  -- Cyril Brulebois <kibi@debian.org>  Sat, 31 Jul 2021 06:20:00 +0200
 
