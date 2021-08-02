@@ -88,6 +88,9 @@ miniiso:
 
 openqa-link:
   stage: bridge
+  rules:
+    - if: $B2R_TRIG_PIPELINE_ID == null
+      when: never
   needs:
     - miniiso
   variables:
