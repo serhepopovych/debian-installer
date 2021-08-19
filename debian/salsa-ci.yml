@@ -91,6 +91,7 @@ openqa-link:
   rules:
     - if: $B2R_TRIG_PIPELINE_ID == null
       when: never
+    - when: manual
   needs:
     - miniiso
   variables:
