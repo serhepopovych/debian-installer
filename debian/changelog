@@ -1,3 +1,9 @@
+debian-installer (2021XXXX) UNRELEASED; urgency=medium
+
+  * Double the number of available inodes on the hurd initrd.
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 22 Aug 2021 22:55:13 +0200
+
 debian-installer (20210731) unstable; urgency=medium
 
   [ Cyril Brulebois ]
