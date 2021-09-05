@@ -1,6 +1,10 @@
 debian-installer (2021XXXX) UNRELEASED; urgency=medium
 
+  [ Samuel Thibault ]
   * Double the number of available inodes on the hurd initrd.
+
+  [ Youngtaek Yoon ]
+  * Support multiple udeb components.
 
  -- Samuel Thibault <sthibault@debian.org>  Sun, 22 Aug 2021 22:55:13 +0200
 
