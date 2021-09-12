@@ -107,7 +107,7 @@ Build-Depends:
 #		Used to make EFI bootable images
 	grub-ieee1275-bin [powerpc ppc64 ppc64el sparc sparc64],
 #		IEEE1275 bootloader support.
-	u-boot-imx (>= 2019.01+dfsg-3) [armhf],
+	u-boot-imx (>= 2021.04~rc4+dfsg-1) [armhf],
 	u-boot-omap (>= 2016.09~rc1) [armhf],
 	u-boot-sunxi (>= 2019.07+dfsg-1) [armhf],
 	u-boot-sunxi (>= 2021.01+dfsg-1~) [arm64],

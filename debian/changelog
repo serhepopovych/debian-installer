@@ -8,6 +8,7 @@ debian-installer (2021XXXX) UNRELEASED; urgency=medium
 
   [ Vagrant Cascadian ]
   * [armhf] Add support for Bananapi_M2_Ultra (Closes: #982913).
+  * [armhf] Update MX53LOCO filename with newer u-boot.
 
  -- Samuel Thibault <sthibault@debian.org>  Sun, 22 Aug 2021 22:55:13 +0200
 
