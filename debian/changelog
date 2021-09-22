@@ -10,6 +10,9 @@ debian-installer (2021XXXX) UNRELEASED; urgency=medium
   * [armhf] Add support for Bananapi_M2_Ultra (Closes: #982913).
   * [armhf] Update MX53LOCO filename with newer u-boot.
 
+  [ John Paul Adrian Glaubitz ]
+  * ia64: Remove ide-core-modules and ide-modules from pkg-lists
+
  -- Samuel Thibault <sthibault@debian.org>  Sun, 22 Aug 2021 22:55:13 +0200
 
 debian-installer (20210731) unstable; urgency=medium
