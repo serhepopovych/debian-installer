@@ -1,6 +1,9 @@
 debian-installer (20210731+deb11u1) UNRELEASED; urgency=medium
 
   * Set USE_PROPOSED_UPDATES=1 for the bullseye stable branch.
+  * Update USE_UDEBS_FROM default from unstable to bullseye, so that
+    users don't have to know about the debian/rules heuristics when
+    performing manual, local builds.
 
  -- Cyril Brulebois <kibi@debian.org>  Mon, 04 Oct 2021 09:04:39 +0200
 
