@@ -239,7 +239,7 @@ start_submenu("Advanced options ...", Hotkey => 'a'); {
     } end_submenu(); # Desktop submenu
 } end_submenu(); # Advanced
 
-start_submenu("Dark theme option...", Hotkey => 'd', Dark => 1); {
+start_submenu("Accessible dark contrast installer menu ...", Hotkey => 'd', Dark => 1); {
     menuentry("... Install", Dark => 1);
     menuentry("... Graphical install", Graphical => 1, Dark => 1);
 
