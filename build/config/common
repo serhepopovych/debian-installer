@@ -92,7 +92,8 @@ WRITE_MEDIA = floppy
 # some mapping MEDIUM -> TYPE
 TYPE = $(MEDIUM)
 
-# Used to write a /etc/lsb-release file in the installer initrd.
+# Used to write a /etc/lsb-release file in the installer initrd
+# and to brand the installer menu.
 LSB_DISTRIB_ID=Debian
 LSB_DISTRIB_DESCRIPTION=Debian $(shell uname -o) installer
 # Inlude the build date of the installer in here.
