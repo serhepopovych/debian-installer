@@ -16,6 +16,9 @@
 #    THEME_PATH         Path (in boot env) where themes are kept
 #    HEADER             Local path to file cat include as a header
 #
+#    IS_PURE_GTK        Set to 1 for netboot-gtk where the normal initrd
+#                       is a GTK one.
+#
 # At least KERNEL and INITRD must be given.
 #
 # Unsupported:
@@ -253,4 +256,6 @@ start_submenu("Accessible dark contrast installer menu ...", Hotkey => 'd', Dark
     } end_submenu(); # Advanced visually-impaired
 } end_submenu(); # Visually-impaired
 
-menuentry('Install with speech synthesis', Graphical => $graphical, Speech => 1, Hotkey => 's')
+if ($VARS{IS_PURE_GTK} == 1 || $graphical) {
+    menuentry('Install with speech synthesis', Graphical => $graphical, Speech => 1, Hotkey => 's')
+}
