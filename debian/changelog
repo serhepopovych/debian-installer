@@ -20,6 +20,12 @@ debian-installer (2021XXXX) UNRELEASED; urgency=medium
   * Bump Linux kernel ABI to 5.15.0-2.
   * Install bookworm, using bookworm udebs.
 
+  [ Sophie Brun ]
+  * Harmonize UEFI (grub) and BIOS (syslinux) boot menus:
+    - use same label for "dark theme menu"
+    - use same inclusion rules for the "Install with speech synthesis" menu
+  * Do not hardcode the name of the distribution in syslinux's menu.cfg
+
  -- Samuel Thibault <sthibault@debian.org>  Sun, 22 Aug 2021 22:55:13 +0200
 
 debian-installer (20210731) unstable; urgency=medium
