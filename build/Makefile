@@ -485,8 +485,8 @@ ifndef OMIT_LSB
 		set -e; \
 		mkdir -p $(TREE)/etc; \
 		echo 'DISTRIB_ID=$(LSB_DISTRIB_ID)' > $(TREE)/etc/lsb-release; \
-		echo 'DISTRIB_DESCRIPTION=$(LSB_DISTRIB_DESCRIPTION)' >> $(TREE)/etc/lsb-release; \
-		echo 'DISTRIB_RELEASE=$(LSB_DISTRIB_RELEASE)' >> $(TREE)/etc/lsb-release; \
+		echo 'DISTRIB_DESCRIPTION="$(LSB_DISTRIB_DESCRIPTION)"' >> $(TREE)/etc/lsb-release; \
+		echo 'DISTRIB_RELEASE="$(LSB_DISTRIB_RELEASE)"' >> $(TREE)/etc/lsb-release; \
 		echo 'X_INSTALLATION_MEDIUM=$(MEDIUM)' >> $(TREE)/etc/lsb-release; \
 	fi
 endif
