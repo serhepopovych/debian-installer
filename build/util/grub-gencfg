@@ -66,6 +66,7 @@ my $graphical = defined $VARS{INITRD_GTK};
 my $thirtytwo = defined $VARS{KERNEL32} && defined $VARS{INITRD32}
     && (!$graphical || defined $VARS{INITRD32_GTK});
 my $themed = defined $VARS{THEME_PATH};
+my $is_pure_gtk = defined $VARS{IS_PURE_GTK} ? $VARS{IS_PURE_GTK} : 0;
 
 my @menu_number = (1);
 
@@ -256,6 +257,6 @@ start_submenu("Accessible dark contrast installer menu ...", Hotkey => 'd', Dark
     } end_submenu(); # Advanced visually-impaired
 } end_submenu(); # Visually-impaired
 
-if ($VARS{IS_PURE_GTK} == 1 || $graphical) {
+if ($is_pure_gtk || $graphical) {
     menuentry('Install with speech synthesis', Graphical => $graphical, Speech => 1, Hotkey => 's')
 }
