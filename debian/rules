@@ -1,6 +1,6 @@
 #! /usr/bin/make -f
 
-ARCH=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
+ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
 VERSION=$(shell LC_ALL=C dpkg-parsechangelog | grep ^Version: | cut -d ' ' -f 2)
 DATE=$(shell echo $(VERSION) | cut -d '.' -f 1)
 SOURCE_DATE_EPOCH = $(shell date -d "$$(dpkg-parsechangelog -SDate)" +%s)
