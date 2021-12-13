@@ -1,3 +1,9 @@
+debian-installer (20210731+deb11u2) UNRELEASED; urgency=medium
+
+  * Bump Linux kernel ABI to 5.10.0-10.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 13 Dec 2021 16:23:31 +0100
+
 debian-installer (20210731+deb11u1) bullseye; urgency=medium
 
   * Set USE_PROPOSED_UPDATES=1 for the bullseye stable branch.
