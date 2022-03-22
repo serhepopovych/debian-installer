@@ -1,8 +1,8 @@
-debian-installer (20210731+deb11u3) UNRELEASED; urgency=medium
+debian-installer (20210731+deb11u3) bullseye; urgency=medium
 
   * Bump Linux kernel ABI to 5.10.0-13.
 
- -- Cyril Brulebois <kibi@debian.org>  Tue, 22 Mar 2022 18:37:12 +0100
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 22 Mar 2022 18:37:47 +0100
 
 debian-installer (20210731+deb11u2) bullseye; urgency=medium
 
