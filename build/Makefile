@@ -529,6 +529,8 @@ endif
 	# HACK ALERT: copy libgcc_s.so.[124] from the host system as
 	# libgcc-s[124] is not packaged as a udeb
 	cp /lib/$(DEB_HOST_MULTIARCH)/libgcc_s.so.[124] $(TREE)/lib
+	# HACK ALERT: ditto for libatomic1
+	cp /usr/lib/$(DEB_HOST_MULTIARCH)/libatomic.so.1* $(TREE)/usr/lib/$(DEB_HOST_MULTIARCH)
 
 	# Reduce status file to contain only the elements we care about.
 	egrep -i '^((Status|Provides|Depends|Package|Version|Description|installer-menu-item|Description-..):|$$)' \

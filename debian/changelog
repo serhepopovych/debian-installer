@@ -20,6 +20,9 @@ debian-installer (2021XXXX) UNRELEASED; urgency=medium
   [ Cyril Brulebois ]
   * Bump Linux kernel ABI to 5.18.0-2.
   * Install bookworm, using bookworm udebs.
+  * Work around FTBFS on armel and mipsel, where libcrypto3-udeb depends
+    on libatomic1: use libatomic1.so* from the host system (as that's done
+    for libgcc_s.so*), instead of introducing libatomic1-udeb.
 
   [ Sophie Brun ]
   * Harmonize UEFI (grub) and BIOS (syslinux) boot menus:
