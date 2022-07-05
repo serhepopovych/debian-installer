@@ -5,6 +5,7 @@ debian-installer (20210731+deb11u4) UNRELEASED; urgency=medium
      - openrd-base
      - openrd-client
      - openrd-ultimate
+  * Bump Linux kernel ABI to 5.10.0-16.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2022 19:33:05 +0200
 
