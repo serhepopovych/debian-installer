@@ -28,6 +28,8 @@ Build-Depends:
 	docbook-xml,
 	docbook-xsl,
 #		The d-i partman-doc and internals manual is in DocBook XML 4.x.
+	unifont-bin,
+#		For hex2bdf used in font building.
 	libbogl-dev:native,
 #		For bdftobogl used in font reduction.
 	libgcc-s1 [!hppa !m68k], libgcc-s2 [m68k], libgcc-s4 [hppa],
@@ -138,7 +140,7 @@ Build-Depends:
 	kmod [linux-any],
 #		depmod.
 #
-	bf-utf-source [!s390 !s390x],
+	unifont [!s390 !s390x],
 #		Contains the unicode font we use. Not a udeb since we
 #		perform font reduction at build time.
 	openssl,

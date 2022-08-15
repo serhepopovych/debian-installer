@@ -669,7 +669,13 @@ $(TEMP)/unifont.bdf: $(TEMP)/all.utf
 		echo "a version of glibc with a different locale data format.)"; \
 	        exit 1; \
 	    fi
-	LOCPATH=$(LOCALE_PATH) LC_ALL=C.UTF-8 reduce-font /usr/src/unifont.bdf < $(TEMP)/all.utf > $@.tmp
+	hex2bdf \
+	    -v "`dpkg-query -W -f '$${Version}' unifont`" \
+	    -c "`dpkg-query -W -f '$${Homepage}' unifont`" \
+	    < /usr/share/unifont/unifont.hex \
+	    > $@.full
+	LOCPATH=$(LOCALE_PATH) LC_ALL=C.UTF-8 reduce-font $@.full < $(TEMP)/all.utf > $@.tmp
+	rm $@.full
 	mv $@.tmp $@
 
 $(TREE)/lib/unifont.bgf: $(TEMP)/unifont.bdf
@@ -698,13 +704,13 @@ endif
 
 	# Only build the font if we have installation-locale
 ifeq ($(DEB_HOST_ARCH_OS),linux)
-	if [ -d "$(LOCALE_PATH)/C.UTF-8" ] && [ -e /usr/src/unifont.bdf ]; then \
+	if [ -d "$(LOCALE_PATH)/C.UTF-8" ] && [ -e /usr/share/unifont/unifont.hex ]; then \
 		$(submake) $(TREE)/lib/unifont.bgf; \
 	fi
 endif
 ifeq ($(DEB_HOST_ARCH_OS),hurd)
 	# The hurd console uses a BDF font
-	if [ -d "$(LOCALE_PATH)/C.UTF-8" ] && [ -e /usr/src/unifont.bdf ]; then \
+	if [ -d "$(LOCALE_PATH)/C.UTF-8" ] && [ -e /usr/share/unifont/unifont.hex ]; then \
 		$(submake) $(TREE)/lib/unifont.bdf; \
 	fi
 endif
