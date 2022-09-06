@@ -1,3 +1,9 @@
+debian-installer (20210731+deb11u5) UNRELEASED; urgency=medium
+
+  * Bump Linux kernel ABI to 5.10.0-18.
+
+ -- Cyril Brulebois <cyril@debamax.com>  Tue, 06 Sep 2022 00:09:48 +0200
+
 debian-installer (20210731+deb11u4) bullseye; urgency=medium
 
   * Reinstate some armel netboot targets, as suggested by Martin
