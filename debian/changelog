@@ -1,6 +1,7 @@
 debian-installer (2022XXXX) UNRELEASED; urgency=medium
 
   * Revert the build-dependencies changes of "Add support for cross-building".
+  * Build-depend on bogl-utils instead of libbogl-dev for getting bdftobogl.
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 17 Sep 2022 23:35:03 +0200
 
