@@ -1,7 +1,11 @@
 debian-installer (2022XXXX) UNRELEASED; urgency=medium
 
+  [ Samuel Thibault ]
   * Revert the build-dependencies changes of "Add support for cross-building".
   * Build-depend on bogl-utils instead of libbogl-dev for getting bdftobogl.
+
+  [ Cyril Brulebois ]
+  * Bump Linux kernel ABI to 5.19.0-2.
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 17 Sep 2022 23:35:03 +0200
 
