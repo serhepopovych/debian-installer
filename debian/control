@@ -67,6 +67,8 @@ Build-Depends:
 #		For building firmware images for the D-Link DNS-32(0|3).
 	u-boot-tools [armel armhf arm64],
 #		For creating u-boot images
+	depthcharge-tools [amd64 arm64],
+#		For creating images for ChromeOS devices
 #
 # Boot loaders:
 #	On many arches boot loaders are copied onto or ran on the boot

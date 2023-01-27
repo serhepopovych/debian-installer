@@ -825,6 +825,11 @@ $(NETBOOT_DIR): $(NETBOOT_DIR_TARGETS) $(TEMP_BOOT_SCREENS) $(TEMP_NETBOOT_DIR)
 		rm -f $@/../$(link); \
 		cp -a $(TEMP_NETBOOT_DIR)/$(link) $@/..; \
 	)
+	if [ -d $(TEMP_NETBOOT_DIR)/depthcharge ]; then \
+		rm -rf $(SOME_DEST)/$(EXTRANAME)/depthcharge; \
+		mkdir -p $(SOME_DEST)/$(EXTRANAME)/depthcharge; \
+		cp -a $(TEMP_NETBOOT_DIR)/depthcharge $@/..; \
+	fi
 	update-manifest $@ $(MANIFEST-NETBOOT_DIR) $(UDEB_LISTS)
 
 # a tarball for netbooting
