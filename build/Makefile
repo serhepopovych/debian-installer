@@ -829,6 +829,7 @@ $(NETBOOT_DIR): $(NETBOOT_DIR_TARGETS) $(TEMP_BOOT_SCREENS) $(TEMP_NETBOOT_DIR)
 		rm -rf $(SOME_DEST)/$(EXTRANAME)/depthcharge; \
 		mkdir -p $(SOME_DEST)/$(EXTRANAME)/depthcharge; \
 		cp -a $(TEMP_NETBOOT_DIR)/depthcharge $@/..; \
+		update-manifest $@/../depthcharge $(MANIFEST-DEPTHCHARGE) $(UDEB_LISTS); \
 	fi
 	update-manifest $@ $(MANIFEST-NETBOOT_DIR) $(UDEB_LISTS)
 
