@@ -16,6 +16,7 @@ debian-installer (2022XXXX) UNRELEASED; urgency=medium
   * [amd64, arm64] Build netboot images for ChromeOS devices
     - Make the disk images reproducible
     - Add the images to manifests
+    - Refactor into a Makefile target
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 17 Sep 2022 23:35:03 +0200
 

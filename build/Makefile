@@ -825,12 +825,6 @@ $(NETBOOT_DIR): $(NETBOOT_DIR_TARGETS) $(TEMP_BOOT_SCREENS) $(TEMP_NETBOOT_DIR)
 		rm -f $@/../$(link); \
 		cp -a $(TEMP_NETBOOT_DIR)/$(link) $@/..; \
 	)
-	if [ -d $(TEMP_NETBOOT_DIR)/depthcharge ]; then \
-		rm -rf $(SOME_DEST)/$(EXTRANAME)/depthcharge; \
-		mkdir -p $(SOME_DEST)/$(EXTRANAME)/depthcharge; \
-		cp -a $(TEMP_NETBOOT_DIR)/depthcharge $@/..; \
-		update-manifest $@/../depthcharge $(MANIFEST-DEPTHCHARGE) $(UDEB_LISTS); \
-	fi
 	update-manifest $@ $(MANIFEST-NETBOOT_DIR) $(UDEB_LISTS)
 
 # a tarball for netbooting
@@ -844,6 +838,15 @@ $(NETBOOT_TAR): $(TEMP_NETBOOT_DIR)
 $(TEMP_BOOT_SCREENS): arch_boot_screens
 $(TEMP_CD_INFO_DIR): arch_cd_info_dir
 $(TEMP_NETBOOT_DIR): arch_netboot_dir
+
+# disk/partition images for ChromeOS devices
+$(DEPTHCHARGE): $(TEMP_DEPTHCHARGE)
+	rm -rf $(SOME_DEST)/$(EXTRANAME)/depthcharge
+	mkdir -p $(SOME_DEST)/$(EXTRANAME)/depthcharge
+	cp -a $(TEMP_DEPTHCHARGE)/* $@
+	update-manifest $@ $(MANIFEST-DEPTHCHARGE) $(UDEB_LISTS)
+
+$(TEMP_DEPTHCHARGE): arch_depthcharge
 
 $(MISC): TEMP_REAL_MISC = $(shell echo ./$@ |sed 's,$(SOME_DEST)/$(EXTRANAME),,')
 $(MISC): 
