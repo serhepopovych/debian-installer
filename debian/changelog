@@ -5,6 +5,8 @@ debian-installer (20230217) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Update translation-status for the release.
+  * Fix build-depends-on-1-revision lintian warning for u-boot-imx and
+    u-boot-sunxi.
 
  -- Cyril Brulebois <kibi@debian.org>  Fri, 17 Feb 2023 04:04:24 +0100
 
