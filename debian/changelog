@@ -1,3 +1,10 @@
+debian-installer (20230217) UNRELEASED; urgency=medium
+
+  [ Steve McIntyre ]
+  * Switch to using bookworm artwork for the splash screens (Emerald).
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 17 Feb 2023 04:04:24 +0100
+
 debian-installer (20230207) unstable; urgency=medium
 
   [ Samuel Thibault ]
