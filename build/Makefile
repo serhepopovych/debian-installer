@@ -59,7 +59,6 @@ export MTOOLS_SKIP_CHECK=1
 # Add to PATH so dpkg will always work, and so local programs will be found.
 PATH := util:$(PATH):/usr/sbin:/sbin
 EATMYDATA = $(shell which eatmydata 2>/dev/null)
-gzip = $(shell which pigz >/dev/null 2>&1 && echo "pigz -n -T" || echo "gzip -n")
 
 # We don't want this to be run each time we re-enter.
 ifndef DEB_HOST_ARCH
@@ -167,6 +166,10 @@ endef
 
 define e2fsck
   e2fsck -fy
+endef
+
+define gzip
+  pigz -nm
 endef
 
 # Define MKFS_JFFS2 in the config file for your target.
