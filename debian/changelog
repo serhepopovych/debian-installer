@@ -1,6 +1,7 @@
 debian-installer (20230218) UNRELEASED; urgency=medium
 
   * Bump Linux kernel ABI to 6.1.0-5.
+  * Add pigz to Build-Depends.
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 19 Feb 2023 18:03:33 +0100
 

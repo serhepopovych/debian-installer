@@ -58,6 +58,8 @@ Build-Depends:
 #		armhf uses it for building bootable SD card images
 	cpio (>= 2.11+dfsg-6),
 #		For creating (reproducible) initramfs images.
+	pigz,
+#		For compressing various files.
 	xz-utils,
 #		For compressing initramfs images.
 	devio [armeb armel],
