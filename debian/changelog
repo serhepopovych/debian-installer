@@ -1,7 +1,7 @@
 debian-installer (20230218) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
-  * Bump Linux kernel ABI to 6.1.0-5.
+  * Bump Linux kernel ABI to 6.1.0-6.
   * Add pigz to Build-Depends.
   * Replace `gzip -n` with `pigz -nm` in various places (keeping other
     flags like -9, -v, -f):
