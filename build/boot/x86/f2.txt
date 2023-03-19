@@ -8,7 +8,7 @@ disk space to install additional packages, depending on what you wish
 to do with your new Debian system.
 
 See the Installation Guide or the FAQ for more information; both
-documents are available at the Debian web site, 0fhttp://www.debian.org/07
+documents are available at the Debian web site, 0fhttp://www.debian.org/doc/07
 
 Thank you for choosing Debian!
 

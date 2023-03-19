@@ -14,6 +14,8 @@ debian-installer (20230218) UNRELEASED; urgency=medium
   * build/boot/x86/f2.txt: Update minimum disk size for installation.
   * build/pkg-lists/{cdrom/grub/gtk/arm64.cfg,netboot/gtk/arm64.cfg}: Enable
     sound modules and speakup on arm64 gtk images.
+  * build/boot/x86/f[29].txt: Make documentation link more precise.
+    Closes: #1033193.
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 19 Feb 2023 18:03:33 +0100
 
