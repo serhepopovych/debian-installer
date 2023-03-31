@@ -9,6 +9,7 @@ debian-installer (20230218) UNRELEASED; urgency=medium
      - build/config/*.cfg (x86 and arm* only)
      - build/util/gen-hd-image
      - build/util/gen-tarball
+  * Update translation-status for the release.
 
   [ Samuel Thibault ]
   * build/boot/x86/f2.txt: Update minimum disk size for installation.
