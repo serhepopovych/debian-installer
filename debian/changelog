@@ -1,3 +1,9 @@
+debian-installer (20230428) UNRELEASED; urgency=medium
+
+  * Bump Linux kernel ABI to 6.1.0-8.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Apr 2023 22:52:15 +0200
+
 debian-installer (20230427) unstable; urgency=medium
 
   [ Cyril Brulebois ]
