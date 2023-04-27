@@ -1,6 +1,11 @@
 debian-installer (20230427) unstable; urgency=medium
 
+  [ Cyril Brulebois ]
   * Update translation-status for the release.
+
+  [ Steve McIntyre ]
+  * Fix grub font loading, making sure we get the nice graphical splash
+    screen in secure boot mode too (Closes: #1034535).
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Apr 2023 16:51:19 +0200
 
