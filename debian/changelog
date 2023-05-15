@@ -2,6 +2,7 @@ debian-installer (20230428) UNRELEASED; urgency=medium
 
   * Bump Linux kernel ABI to 6.1.0-9.
   * Switch source format from 1.0 to 3.0 (native).
+  * Update translation-status for the release.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Apr 2023 22:52:15 +0200
 
