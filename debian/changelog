@@ -3,6 +3,22 @@ debian-installer (20230428) UNRELEASED; urgency=medium
   * Bump Linux kernel ABI to 6.1.0-9.
   * Switch source format from 1.0 to 3.0 (native).
   * Update translation-status for the release.
+  * Add temporary workaround for broken graphics when using the “bochs”
+    graphics driver (default in QEMU, where it is known as “std”) or the
+    “cirrus” one, under UEFI/Secure Boot (See: #1036019):
+     - The previous upload seems to trigger a color depth mismatch between
+       GRUB which defaults to 24 bpp in its bochs and cirrus video
+       modules, and Linux (efifb, built-in) that reports 32 bpp.
+     - This affects both the text installer and the graphical installer.
+     - To avoid running into those issues, and until a better solution is
+       determined, ship extra DRM modules for those graphics drivers:
+       bochs.ko, cirrus.ko, plus their dependencies.
+     - Limit the workaround to amd64, arm64, and i386 (where UEFI/Secure
+       Boot are relevant), when drm.ko is detected in the build tree,
+       copying files from the relevant linux-image package.
+     - Add linux-image-6.1.0-9-amd64-{amd64,arm64,686,686-pae} to
+       Build-Depends accordingly.
+  * Many thanks to Ben Hutchings for the kernel-side insights!
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Apr 2023 22:52:15 +0200
 
