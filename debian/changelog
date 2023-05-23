@@ -1,3 +1,11 @@
+debian-installer (20230523) UNRELEASED; urgency=medium
+
+  [ Emanuele Rocca ]
+  * build/config/x86.cfg: add /splash.png symlink to make grub load the splash
+    screen when using netboot. (Closes: #1036215)
+
+ -- Emanuele Rocca <ema@debian.org>  Tue, 23 May 2023 14:50:32 +0200
+
 debian-installer (20230515) unstable; urgency=medium
 
   * Bump Linux kernel ABI to 6.1.0-9.
