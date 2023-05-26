@@ -652,6 +652,13 @@ $(STAMPS)get_udebs-$(targetstring)-stamp: sources.list.udeb
 	dh_testroot
 	@rm -f $@
 
+	# Check mirror freshness:
+	for pv in $(CHECK_MINIMAL_VERSION); do \
+		p=$$(echo $$pv|sed 's/_.*//'); \
+		v=$$(echo $$pv|sed 's/.*_//'); \
+		CHECKMINVER=$$v get-packages udeb $$p; \
+	done
+
 	get-packages udeb $(UDEBS)
 	@touch $@
 
