@@ -1,8 +1,8 @@
 debian-installer (20230523) UNRELEASED; urgency=medium
 
   [ Emanuele Rocca ]
-  * build/config/x86.cfg: add /splash.png symlink to make grub load the splash
-    screen when using netboot. (Closes: #1036215)
+  * build/config/x86.cfg: add /splash.png symlink to make GRUB load the
+    splash screen when using netboot (Closes: #1036215).
 
   [ Cyril Brulebois ]
   * Update translation-status for the release.
