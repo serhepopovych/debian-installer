@@ -6,6 +6,7 @@ debian-installer (20230523) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Update translation-status for the release.
+  * Fix colors in GRUB submenus for x86 netboot (Closes: #1036771).
 
  -- Emanuele Rocca <ema@debian.org>  Tue, 23 May 2023 14:50:32 +0200
 
