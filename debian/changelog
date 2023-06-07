@@ -1,3 +1,9 @@
+debian-installer (20230607) unstable; urgency=medium
+
+  * Release early, release often!
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 07 Jun 2023 03:01:56 +0200
+
 debian-installer (20230526) unstable; urgency=medium
 
   [ Emanuele Rocca ]
