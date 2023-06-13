@@ -1,3 +1,9 @@
+debian-installer (202306XX) UNRELEASED; urgency=medium
+
+  * Install trixie, using trixie udebs.
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 13 Jun 2023 19:42:29 +0200
+
 debian-installer (20230607) unstable; urgency=medium
 
   * Release early, release often!
