@@ -15,7 +15,7 @@ LINUX_KERNEL_ABI ?= 6.1.0-9
 
 # Make sure the mirror is sufficiently up-to-date, by checking minimal
 # version (list of package_version):
-CHECK_MINIMAL_VERSION ?= rootskel_1.136
+CHECK_MINIMAL_VERSION ?=
 
 # Always "di" these days
 KERNEL_FLAVOUR ?= di
