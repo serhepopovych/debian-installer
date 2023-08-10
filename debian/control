@@ -166,10 +166,10 @@ Build-Depends:
 #		when creating ISO hybrid images on amd64 and i386 systems.
 	fontconfig,
 #		Used to generate a font cache through fc-cache, for gtk flavours
-	linux-image-6.4.0-1-amd64 [amd64],
-	linux-image-6.4.0-1-arm64 [arm64],
-	linux-image-6.4.0-1-686 [i386],
-	linux-image-6.4.0-1-686-pae [i386],
+	linux-image-6.4.0-2-amd64 [amd64],
+	linux-image-6.4.0-2-arm64 [arm64],
+	linux-image-6.4.0-2-686 [i386],
+	linux-image-6.4.0-2-686-pae [i386],
 #		Ship some more drm modules, without waiting on fb-modules (#1036019)
 
 Package: debian-installer
