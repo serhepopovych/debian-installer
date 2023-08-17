@@ -26,6 +26,15 @@ USE_UDEBS_FROM=unstable
 USE_PROPOSED_UPDATES=0
 endif
 
+# Make sure that we don't exceed salsa's artifact limit when building in CI
+ifneq ($(filter salsa-ci,$(DEB_BUILD_PROFILES)),)
+	APPENDAGE = miniiso
+	BUILD_TARGETS = build_netboot-gtk
+else
+	APPENDAGE = tarball
+	BUILD_TARGETS = all_build stats release
+endif
+
 ARCHIVEDIR=debian/tmp/installer-$(ARCH)
 DESTDIR=$(ARCHIVEDIR)/$(DATE)
 IMAGEDIR=$(DESTDIR)/images
@@ -43,11 +52,19 @@ clean:
 
 # Must run as root, so is not run as part of regular build.
 build-images:
-	$(MAKE) -C build all_build stats release \
+	$(MAKE) -C build $(BUILD_TARGETS) \
 		USE_UDEBS_FROM=$(USE_UDEBS_FROM) BUILD_DATE=$(DATE) \
 		USE_PROPOSED_UPDATES=$(USE_PROPOSED_UPDATES) \
 		USE_UNRELEASED=$(USE_UNRELEASED) \
+		PRESEED=$(PRESEED) \
 		TRANSSTATUS=$(TRANSSTATUS) BOOTMENU_BEEP=$(BOOTMENU_BEEP)
+
+append-tarball:
+	./build/util/gen-tarball debian/tmp ../$(TARNAME)
+	dpkg-distaddfile $(TARNAME) raw-installer -
+
+append-miniiso:
+	cp ./build/tmp/netboot-gtk/mini.iso ../debian-$(VERSION)-$(ARCH)-gtkmini.iso
 
 build: build-arch build-indep
 build-arch: build-stamp
@@ -85,8 +102,8 @@ binary-arch: install
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
-	./build/util/gen-tarball debian/tmp ../$(TARNAME)
-	dpkg-distaddfile $(TARNAME) raw-installer -
+
+	debian/rules append-$(APPENDAGE)
 
 binary-indep:
 
