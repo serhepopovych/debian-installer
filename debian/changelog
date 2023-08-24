@@ -8,6 +8,9 @@ debian-installer (202306XX) UNRELEASED; urgency=medium
   [ harry88@gmx.ph ]
   * Add support for Orange Pi One Plus (Closes: #980493)
 
+  [ Holger Wansing ]
+  * Update minimal RAM size value for amd64, according to lowmem value.
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 13 Jun 2023 19:42:29 +0200
 
 debian-installer (20230607) unstable; urgency=medium
