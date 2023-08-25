@@ -79,7 +79,7 @@ mini-ISO:
       if [ "$APTLY_REPO" ]; then
         # decode & save the repo's base64-encoded key
         keyfile=/usr/share/keyrings/salsaCI_aptly_tmp_key.gpg
-        printf '%s' "$APTLY_REPO_KEY" | base64 -d > "$keyfile"
+        printf '%s' "$APTLY_REPO_KEY_BASE64" | base64 -d > "$keyfile"
 
         # create a sources.list.udeb.local so that the aptly repo gets used at build time.
         # FIXME: the deb.debian.org line should probably be generated from /etc/apt/sources.list**
@@ -100,7 +100,7 @@ mini-ISO:
         cat > "$PRESEED" <<-EOF
       		d-i apt-setup/_DEVEL_/comment string NOT FOR PRODUCTION USE! (preseed: apt-setup/_DEVEL_/...)
       		d-i apt-setup/_DEVEL_/repository string $APTLY_REPO
-      		d-i apt-setup/_DEVEL_/key string base64://$APTLY_REPO_KEY
+      		d-i apt-setup/_DEVEL_/key string base64://$APTLY_REPO_KEY_BASE64
       		EOF
       fi
 
