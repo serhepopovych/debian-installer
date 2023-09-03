@@ -112,10 +112,10 @@ mini-ISO:
   variables:
     OQA_ISO_URL: '$BUILD_JOB_URL/artifacts/raw/$BUILD_JOB_ISO'
     OQA_ISO: 'salsa-$CI_PIPELINE_ID-gtk-mini.iso'
-    OQA_BUILD: '-salsa-$CI_PIPELINE_ID:$CI_PROJECT_PATH:$CI_BUILD_REF_NAME'
+    OQA_BUILD: '-salsa-$CI_PIPELINE_ID:$CI_PROJECT_PATH:$CI_COMMIT_REF_NAME'
     OQA_CI_PIPELINE_URL: '$CI_SERVER_URL/$CI_PROJECT_PATH/-/pipelines/$CI_PIPELINE_ID'
-    OQA_SALSA_RESULT_LINK: "$CI_API_V4_URL/projects/$CI_PROJECT_ID/statuses/$CI_BUILD_REF?pipeline_id=$CI_PIPELINE_ID&name=openqa&target_url=:target_url&state=:state"
-    CLONE_NAME_SUFFIX: '$CI_PROJECT_NAMESPACE-$CI_BUILD_REF_SLUG'
+    # OQA_SALSA_RESULT_LINK: "$CI_API_V4_URL/projects/$CI_PROJECT_ID/statuses/$CI_COMMIT_SHA?pipeline_id=$CI_PIPELINE_ID&name=openqa&target_url=:target_url&state=:state"
+    CLONE_NAME_SUFFIX: '$CI_PROJECT_NAMESPACE-$CI_COMMIT_REF_SLUG'
     OQA_JOBSTOCLONE: $DI_OQA_JOBSTOCLONE
   trigger:
     project: philh/openqa-link
