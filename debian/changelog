@@ -13,6 +13,7 @@ debian-installer (202306XX) UNRELEASED; urgency=medium
 
   [ Aurelien Jarno ]
   * Build riscv64 from the official archive.
+  * Dot not include debian-ports-archive-keyring-udeb on riscv64.
 
  -- Cyril Brulebois <kibi@debian.org>  Tue, 13 Jun 2023 19:42:29 +0200
 
