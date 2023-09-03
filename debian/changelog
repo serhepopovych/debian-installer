@@ -11,6 +11,9 @@ debian-installer (202306XX) UNRELEASED; urgency=medium
   [ Holger Wansing ]
   * Update minimal RAM size value for amd64, according to lowmem value.
 
+  [ Aurelien Jarno ]
+  * Build riscv64 from the official archive.
+
  -- Cyril Brulebois <kibi@debian.org>  Tue, 13 Jun 2023 19:42:29 +0200
 
 debian-installer (20230607) unstable; urgency=medium
