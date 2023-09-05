@@ -13,12 +13,6 @@ variables:
   SALSA_CI_DISABLE_BLHC: 1
   SALSA_CI_DISABLE_CROSSBUILD_ARM64: 1
 
-# add the ability to disable the source build, which branch2repo uses:
-build source:
-  extends: .build-source-only
-  rules:
-    - if: $DI_DISABLE_BUILD_SOURCE !~ /^(1|yes|true)$/
-
 # In the normal pipeline, we run `build` as usual, and then provide an
 # `Test with openQA` job for launching some openQA tests of the mini-ISO
 # result. (on salsa, building anything more than a mini-ISO exceeds limits)
@@ -63,6 +57,19 @@ build:
     - if: $CI_PIPELINE_SOURCE == "parent_pipeline"
       when: never
     - when: on_success
+
+# no need for us to build source or aptly when running under branch2repo
+aptly:
+  extends: .publish-aptly
+  rules:
+    - if: $APTLY_REPO
+      when: never
+    - !reference [.publish-aptly, rules]
+
+build source:
+  extends: .build-source-only
+  rules:
+    - if: $APTLY_REPO == null
 
 mini-ISO:
   extends: .di-build-definition
