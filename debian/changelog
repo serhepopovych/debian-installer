@@ -2,7 +2,7 @@ debian-installer (202306XX) UNRELEASED; urgency=medium
 
   [ Cyril Brulebois ]
   * Install trixie, using trixie udebs.
-  * Bump Linux kernel ABI to 6.4.0-4.
+  * Bump Linux kernel ABI to 6.5.0-1.
   * Bump (temporary) linux-image build-deps accordingly.
 
   [ harry88@gmx.ph ]
